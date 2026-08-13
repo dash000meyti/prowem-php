@@ -1,0 +1,166 @@
+/* ========================================================================== MYCLUB PAGE: HERO SECTION ========================================================================== */
+.club-hero-section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; background: #070a0f; overflow: hidden; box-sizing: border-box; padding: 160px 0 100px 0; }
+.club-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.club-hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: right center; display: block; }
+.club-hero-container { position: relative; z-index: 10; width: 100%; max-width: 1520px; margin: 0 auto; padding: 0 60px; box-sizing: border-box; display: flex; justify-content: flex-start; }
+.club-hero-content { max-width: 680px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.club-hero-sub { color: #0091ff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 16px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 36px; display: block; }
+.club-hero-content h1.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 92px; font-weight: 400; line-height: 0.95; letter-spacing: 1px; color: #ffffff; margin: 0 0 36px 0; text-transform: uppercase; }
+.club-hero-content .text-blue { color: #0091ff; display: block; }
+.club-hero-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 16px; line-height: 1.65; color: #8a99ad; margin: 0 0 52px 0; max-width: 520px; }
+.club-hero-actions { display: flex; align-items: center; gap: 32px; }
+.btn-primary-blue { background: #0091ff; color: #ffffff; padding: 15px 34px; border-radius: 999px; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.2s ease; border: none; box-shadow: 0 8px 25px rgba(0, 145, 255, 0.3); }
+.btn-primary-blue:hover { background: #1aa0ff; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0, 145, 255, 0.45); }
+.btn-primary-blue .btn-arrow { font-size: 18px; line-height: 1; }
+.btn-secondary-link { color: #ffffff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.4); padding-bottom: 2px; transition: all 0.2s ease; }
+.btn-secondary-link:hover { border-color: #ffffff; opacity: 0.9; }
+@media (max-width: 1280px) { .club-hero-container { padding: 0 30px; } .club-hero-content h1.font-bebas { font-size: 72px; } }
+@media (max-width: 840px) { .club-hero-content h1.font-bebas { font-size: 52px; } .club-hero-lead { font-size: 15px; } .club-hero-actions { flex-direction: column; align-items: flex-start; gap: 20px; } }
+
+
+
+
+/* ========================================================================== MYCLUB PAGE: SECTION 2 (WHAT YOU GET) ========================================================================== */
+.club-features-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
+.club-header { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto 60px auto; padding: 0 20px; text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; }
+.club-bg-watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -65%); font-family: 'Bebas Neue', sans-serif; font-size: 160px; color: rgba(255, 255, 255, 0.02); letter-spacing: 4px; pointer-events: none; white-space: nowrap; z-index: 1; text-transform: uppercase; }
+.club-sub-title { position: relative; z-index: 2; color: #0091ff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 16px; text-transform: uppercase; display: block; }
+.club-main-title.font-bebas { position: relative; z-index: 2; font-family: 'Bebas Neue', sans-serif; font-size: 64px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 20px 0; text-transform: uppercase; }
+.club-lead-text { position: relative; z-index: 2; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0; max-width: 780px; }
+
+/* 5 Cards Row Container */
+.club-features-container { position: relative; z-index: 10; width: 100%; max-width: 1580px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+.club-feature-card { position: relative; width: 290px; height: 339px; border-radius: 24px; background: rgba(13, 19, 28, 0.85); border: 1px solid rgba(255, 255, 255, 0.06); box-sizing: border-box; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 0 24px 24px 24px; transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+.club-feature-card:hover { transform: translateY(-4px); border-color: rgba(0, 145, 255, 0.4); box-shadow: 0 16px 40px rgba(0, 145, 255, 0.15); }
+
+/* Card Background Assets */
+.club-card-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.club-card-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; display: block; }
+.club-card-bg .bg-base { opacity: 0.9; }
+.club-card-bg .bg-lines { opacity: 0.6; }
+
+/* 100% x 100% Overlay Grafik */
+.club-card-full-icon { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+.club-card-full-icon img { width: 100%; height: 100%; object-fit: fill; display: block; }
+
+/* Text Content Container (Höhe auf 115px reduziert & nach unten ausgerichtet) */
+.club-card-content { position: relative; z-index: 5; width: 100%; height: 115px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; }
+.club-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 8px 0; line-height: 1; text-transform: uppercase; height: 28px; display: flex; align-items: center; justify-content: center; }
+.club-card-text { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13.5px; line-height: 1.45; color: #8a99ad; margin: 0; text-align: center; }
+
+/* Responsive Layout */
+@media (max-width: 1540px) { .club-features-container { gap: 16px; } .club-feature-card { width: 270px; } }
+@media (max-width: 1440px) { .club-features-container { justify-content: center; } }
+@media (max-width: 640px) { .club-feature-card { width: 100%; max-width: 320px; } }
+
+
+
+
+
+/* ========================================================================== MYCLUB PAGE: SECTION 3 (CONTENT LIBRARY) ========================================================================== */
+.club-library-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
+.library-layout-container { position: relative; z-index: 10; width: 100%; max-width: 1600px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.library-column { display: flex; flex-direction: column; gap: 20px; width: 414px; flex-shrink: 0; position: relative; z-index: 5; }
+.library-center-visual { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 4; }
+
+/* Blaues Leuchten hinter dem Laptop */
+.library-blue-glow-bg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 145, 255, 0.45) 0%, rgba(0, 145, 255, 0.1) 45%, rgba(7, 10, 15, 0) 70%); z-index: 1; pointer-events: none; }
+.library-laptop-img { position: relative; z-index: 2; width: 100%; max-width: 720px; height: auto; display: block; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.6)); }
+
+/* Card mit festem Pfad zu Card-Bg.png */
+.library-card { position: relative; width: 414px; height: 140px; background-image: url('../../../img/sections/myClub/sec_3/Card-Bg.png'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; border-radius: 20px; box-sizing: border-box; flex-shrink: 0; overflow: hidden; display: flex; align-items: center; transition: transform 0.2s ease; }
+.library-card:hover { transform: translateY(-2px); }
+.library-icon-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.library-icon-overlay img { width: 100%; height: 100%; object-fit: fill; display: block; }
+.library-card-content { position: relative; z-index: 3; padding-left: 135px; padding-right: 20px; display: flex; flex-direction: column; justify-content: center; text-align: left; }
+.library-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 24px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 4px 0; line-height: 1.1; text-transform: uppercase; }
+.library-card-title .text-blue { color: #0091ff; margin-right: 6px; }
+.library-card-desc { font-family: var(--font-main, 'Inter', sans-serif); font-size: 14px; line-height: 1.45; color: #8a99ad; margin: 0; max-width: 255px; }
+@media (max-width: 1400px) { .library-layout-container { flex-direction: column; } .library-column { width: 100%; max-width: 414px; } }
+
+
+
+/* ========================================================================== MYCLUB PAGE: SECTION 4 (WEBSITE OPTIONS) ========================================================================== */
+.club-options-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
+.club-options-layout { position: relative; z-index: 10; width: 100%; max-width: 1540px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 60px; }
+.club-options-content { max-width: 580px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; flex-shrink: 0; }
+.club-options-sub { color: #0091ff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 24px; text-transform: uppercase; display: block; }
+.club-options-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 68px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 24px 0; text-transform: uppercase; }
+.club-options-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0 0 48px 0; width: 100%; max-width: 520px; }
+
+/* Cards Container & 573x144 Box Dimensions */
+.club-options-cards { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 573px; }
+.club-option-card { position: relative; width: 573px; height: 144px; border-radius: 20px; box-sizing: border-box; overflow: hidden; display: flex; align-items: center; flex-shrink: 0; transition: transform 0.2s ease; }
+.club-option-card:hover { transform: translateY(-2px); }
+
+/* Card BG Image Layer */
+.club-option-card-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.club-option-card-bg img { width: 100%; height: 100%; object-fit: fill; display: block; }
+
+/* Icon & Content Overlay */
+.club-option-icon-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+.club-option-icon-overlay img { width: 100%; height: 100%; object-fit: fill; display: block; }
+.club-option-card-content { position: relative; z-index: 3; padding-left: 135px; padding-right: 28px; display: flex; flex-direction: column; justify-content: center; text-align: left; }
+.club-option-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 24px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 4px 0; line-height: 1.1; text-transform: uppercase; }
+.club-option-card-title .text-blue { color: #0091ff; margin-right: 6px; }
+.club-option-card-desc { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13.5px; line-height: 1.45; color: #8a99ad; margin: 0; }
+
+/* Visual Side */
+.club-options-visual { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 4; }
+.club-options-blue-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 750px; height: 750px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 145, 255, 0.4) 0%, rgba(0, 145, 255, 0.1) 45%, rgba(7, 10, 15, 0) 70%); z-index: 1; pointer-events: none; }
+.club-monitor-img { position: relative; z-index: 2; width: 100%; max-width: 820px; height: auto; display: block; filter: drop-shadow(0 25px 60px rgba(0,0,0,0.65)); }
+
+@media (max-width: 1380px) { .club-options-layout { flex-direction: column; text-align: center; } .club-options-content { align-items: center; text-align: center; max-width: 100%; } .club-options-lead { text-align: center; } .club-options-cards { align-items: center; max-width: 100%; } .club-option-card { width: 100%; max-width: 573px; } .club-option-card-content { text-align: left; } .club-monitor-img { max-width: 100%; } }
+
+
+
+
+/* ========================================================================== MYCLUB PAGE: SECTION 5 (CTA BANNER) ========================================================================== */
+.club-banner-section { position: relative; width: 100%; min-height: 708px; display: flex; align-items: center; justify-content: center; background: #091018; overflow: hidden; box-sizing: border-box; padding: 100px 20px; }
+.club-banner-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.club-banner-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+.club-banner-container { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; box-sizing: border-box; }
+.club-banner-sub { color: #0091ff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 18px; font-weight: 600; letter-spacing: 0.8px; margin-bottom: 20px; text-transform: uppercase; display: block; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.9); }
+.club-banner-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 84px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 24px 0; text-transform: uppercase; text-shadow: 0 5px 25px #000000, 0 2px 10px #000000, 0 0 40px rgba(0, 0, 0, 0.8); }
+.club-banner-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 18px; line-height: 1.6; color: #ffffff; margin: 0 0 36px 0; width: 100%; max-width: 860px; text-shadow: 0 4px 16px #000000, 0 2px 6px #000000, 0 0 20px rgba(0, 0, 0, 0.9); font-weight: 500; }
+.club-banner-btn { padding: 16px 42px; font-size: 16px; border-radius: 999px; text-decoration: none; box-shadow: 0 10px 30px rgba(0, 145, 255, 0.35), 0 4px 15px rgba(0, 0, 0, 0.6); }
+@media (max-width: 840px) { .club-banner-title.font-bebas { font-size: 58px; } .club-banner-lead { font-size: 16px; } }
+@media (max-width: 560px) { .club-banner-title.font-bebas { font-size: 42px; } }
+
+
+
+
+/* ========================================================================== MYCLUB PAGE: SECTION 7 (RESPONSIVE SHOWCASE) ========================================================================== */
+.club-responsive-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
+.club-responsive-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.club-responsive-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+.club-responsive-container { position: relative; z-index: 10; width: 100%; max-width: 1680px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; }
+
+/* Visual Display Image (Vergrößert) */
+.club-responsive-visual { position: relative; z-index: 5; width: 100%; max-width: 1480px; margin-top: 20px; display: flex; justify-content: center; align-items: center; }
+.club-responsive-img { width: 100%; height: auto; max-width: 1420px; display: block; filter: drop-shadow(0 25px 60px rgba(0,0,0,0.7)); }
+
+@media (max-width: 840px) { .club-responsive-section { padding: 80px 0 100px 0; } .club-responsive-visual { margin-top: 10px; } }
+
+
+/* ========================================================================== MYCLUB PAGE: SECTION 8 (VIDEO OVERVIEW) ========================================================================== */
+.club-overview-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #070a0f; overflow: hidden; box-sizing: border-box; }
+.club-overview-layout { position: relative; z-index: 10; width: 100%; max-width: 1540px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 60px; }
+.club-overview-content { max-width: 520px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; flex-shrink: 0; }
+.club-overview-sub { color: #0091ff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 24px; text-transform: uppercase; display: block; }
+.club-overview-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 68px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 24px 0; text-transform: uppercase; }
+.club-overview-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0 0 40px 0; width: 100%; max-width: 480px; }
+.club-overview-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #0091ff; color: #ffffff; padding: 16px 36px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; box-shadow: 0 10px 25px rgba(0, 145, 255, 0.3); }
+.club-overview-btn:hover { background: #0077d6; transform: translateY(-2px); }
+.club-overview-btn .btn-arrow { font-size: 18px; line-height: 1; }
+
+/* Video Preview Visual */
+.club-overview-visual { flex: 1; display: flex; align-items: center; justify-content: flex-end; position: relative; z-index: 4; }
+.club-video-wrapper { position: relative; width: 100%; max-width: 820px; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75); display: flex; align-items: center; justify-content: center; }
+.club-video-thumb { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Floating Blue Play Button */
+.club-play-btn { position: absolute; width: 90px; height: 90px; border-radius: 50%; background: rgba(7, 10, 15, 0.4); border: 2.5px solid #0091ff; display: flex; align-items: center; justify-content: center; cursor: pointer; outline: none; padding: 0; padding-left: 5px; box-shadow: 0 0 30px rgba(0, 145, 255, 0.4), inset 0 0 15px rgba(0, 145, 255, 0.2); transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease; z-index: 5; }
+.club-play-btn:hover { transform: scale(1.08); background: rgba(0, 145, 255, 0.2); box-shadow: 0 0 45px rgba(0, 145, 255, 0.6), inset 0 0 20px rgba(0, 145, 255, 0.4); }
+
+@media (max-width: 1280px) { .club-overview-layout { flex-direction: column; text-align: center; } .club-overview-content { align-items: center; text-align: center; max-width: 100%; } .club-overview-lead { text-align: center; } .club-overview-visual { justify-content: center; width: 100%; } }

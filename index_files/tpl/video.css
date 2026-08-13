@@ -1,0 +1,134 @@
+/* ========================================================================== VIDEO PAGE: SECTION 1 HERO ========================================================================== */
+.video-hero-section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; background: #091018; overflow: hidden; box-sizing: border-box; padding: 120px 0 100px 0; }
+.video-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.video-hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center right; display: block; }
+.video-hero-container { position: relative; z-index: 10; width: 100%; max-width: 1520px; margin: 0 auto; padding: 0 60px; box-sizing: border-box; display: flex; align-items: center; }
+.video-hero-content { max-width: 580px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.video-hero-sub { color: #00e676; font-family: var(--font-main, 'Inter', sans-serif); font-size: 16px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 20px; display: block; }
+.video-hero-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 88px; font-weight: 400; line-height: 0.95; letter-spacing: 1.5px; color: #ffffff; margin: 0 0 28px 0; text-transform: uppercase; }
+.video-hero-title .text-green { color: #00e676; }
+.video-hero-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0 0 40px 0; max-width: 500px; }
+.video-hero-buttons { display: flex; align-items: center; gap: 28px; }
+.btn-primary-green { background: #00e676; color: #091018; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 700; padding: 16px 36px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 10px 30px rgba(0, 230, 118, 0.3); }
+.btn-primary-green:hover { background: #00c853; transform: translateY(-2px); box-shadow: 0 14px 35px rgba(0, 230, 118, 0.4); }
+.btn-primary-green .btn-arrow { font-size: 18px; line-height: 1; }
+.btn-secondary-link { color: #ffffff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 500; text-decoration: underline; text-underline-offset: 6px; transition: color 0.2s ease; }
+.btn-secondary-link:hover { color: #00e676; }
+@media (max-width: 1280px) { .video-hero-title.font-bebas { font-size: 72px; } }
+@media (max-width: 992px) { .video-hero-container { padding: 0 30px; } .video-hero-title.font-bebas { font-size: 56px; } .video-hero-bg img { object-position: 70% center; } }
+@media (max-width: 560px) { .video-hero-buttons { flex-direction: column; align-items: flex-start; gap: 20px; } .video-hero-title.font-bebas { font-size: 42px; } }
+
+
+/* ========================================================================== VIDEO PAGE: SECTION 2 (WHAT YOU GET) ========================================================================== */
+.video-get-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
+.video-header { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto 60px auto; padding: 0 20px; text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; }
+.video-bg-watermark.font-bebas { position: absolute; top: 88px; left: 50%; transform: translate(-50%, -50%); font-family: 'Bebas Neue', sans-serif; font-size: 180px; color: rgba(255, 255, 255, 0.025); letter-spacing: 4px; pointer-events: none; z-index: 1; white-space: nowrap; }
+.video-sub-title { color: #11d86e; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 16px; display: block; position: relative; z-index: 2; }
+.video-main-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 68px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 20px 0; text-transform: uppercase; position: relative; z-index: 2; }
+.video-lead-text { font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0; width: 100%; max-width: 100%; position: relative; z-index: 2; }
+.video-cards-container { position: relative; z-index: 10; width: 100%; max-width: 1580px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.video-card { position: relative; width: 290px; height: 339px; background-image: url('../../img/sections/video/sec_2/Card-Bg-290-339.png'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; border-radius: 20px; padding: 0 18px 24px 18px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
+.video-card::before { content: ""; position: absolute; inset: 0; width: 100%; height: 100%; background-image: url('../../img/sections/video/sec_2/Card-Lines.svg'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; pointer-events: none; z-index: 2; }
+.video-card-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.video-card-overlay img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.video-card-content { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; width: 100%; }
+.video-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 8px 0; line-height: 1.05; text-transform: uppercase; min-height: 56px; display: flex; align-items: center; justify-content: center; }
+.video-card-desc { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13px; line-height: 1.4; color: #8a99ad; margin: 0; min-height: 55px; display: flex; align-items: flex-start; justify-content: center; }
+@media (max-width: 1560px) { .video-cards-container { justify-content: center; } }
+@media (max-width: 640px) { .video-main-title.font-bebas { font-size: 48px; } .video-bg-watermark.font-bebas { font-size: 100px; top: 60px; } }
+
+
+/* ========================================================================== VIDEO PAGE: SECTION 3 (MATCH CONTROL HUB) ========================================================================== */
+.video-panel-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
+
+.video-panel-layout { position: relative; z-index: 10; width: 100%; max-width: 1600px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; align-items: stretch; justify-content: space-between; gap: 20px; }
+.video-panel-column { display: flex; flex-direction: column; justify-content: space-between; width: 381px; height: 460px; flex-shrink: 0; position: relative; z-index: 5; }
+.video-panel-center { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 4; height: 460px; }
+.video-tablet-img { position: relative; z-index: 2; height: 100%; width: auto; max-width: 100%; object-fit: contain; display: block; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.6)); }
+
+.video-panel-card { position: relative; width: 381px; height: 140px; background-image: url('../../img/sections/video/sec_3/Card-Bg-381-140.png'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; border-radius: 20px; box-sizing: border-box; flex-shrink: 0; overflow: hidden; display: flex; align-items: center; }
+.video-panel-icon-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.video-panel-icon-overlay img { width: 100%; height: 100%; object-fit: fill; display: block; }
+.video-panel-card-content { position: relative; z-index: 3; padding-left: 135px; padding-right: 20px; display: flex; flex-direction: column; justify-content: center; text-align: left; }
+.video-panel-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 24px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 4px 0; line-height: 1.1; text-transform: uppercase; }
+.video-panel-card-title .text-green { color: #11d86e; margin-right: 6px; }
+.video-panel-card-desc { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13.5px; line-height: 1.45; color: #8a99ad; margin: 0; max-width: 220px; }
+@media (max-width: 1400px) { .video-panel-layout { flex-direction: column; } .video-panel-column { width: 100%; max-width: 381px; } }
+
+
+/* ========================================================================== VIDEO PAGE: SECTION 4 (LIVE MATCH ACTIONS) ========================================================================== */
+.video-actions-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
+.video-header { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto 60px auto; padding: 0 20px; text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; }
+.video-bg-watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -65%); font-family: 'Bebas Neue', sans-serif; font-size: 160px; color: rgba(255, 255, 255, 0.02); letter-spacing: 4px; pointer-events: none; white-space: nowrap; z-index: 1; text-transform: uppercase; }
+.video-sub-title { position: relative; z-index: 2; color: #11d86e; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 16px; text-transform: uppercase; display: block; }
+.video-main-title.font-bebas { position: relative; z-index: 2; font-family: 'Bebas Neue', sans-serif; font-size: 64px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 20px 0; text-transform: uppercase; }
+.video-lead-text { position: relative; z-index: 2; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0; max-width: 780px; }
+.video-actions-layout { position: relative; z-index: 10; width: 100%; max-width: 1540px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.video-actions-grid { display: grid; grid-template-columns: repeat(2, 204px); grid-template-rows: repeat(4, 136px); gap: 16px; flex-shrink: 0; }
+.action-btn { position: relative; width: 204px; height: 136px; background: rgba(13, 19, 28, 0.95); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08); outline: none; padding: 0; display: flex; align-items: flex-end; justify-content: center; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; box-sizing: border-box; overflow: hidden; }
+.action-btn:hover { transform: translateY(-2px); border-color: rgba(255, 255, 255, 0.2); }
+.action-btn.active { background: radial-gradient(circle at 50% 30%, rgba(17, 216, 110, 0.25) 0%, rgba(9, 16, 24, 0.95) 80%); border: 1.5px solid #11d86e; box-shadow: 0 0 25px rgba(17, 216, 110, 0.25); }
+.action-btn-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.action-btn-overlay img { width: 100%; height: 100%; object-fit: fill; display: block; position: absolute; inset: 0; transition: opacity 0.2s ease; }
+.action-btn-overlay .bg-normal { opacity: 0.9; }
+.action-btn-overlay .bg-active { opacity: 0; }
+.action-btn.active .action-btn-overlay .bg-normal { opacity: 0; }
+.action-btn.active .action-btn-overlay .bg-active { opacity: 1; }
+
+/* Standard Underlay Icon (Volle Kartengröße) */
+.action-icon-underlay { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; pointer-events: none; z-index: 2; display: block; }
+
+/* Gezielte Korrektur für das Penalty-Icon */
+.action-btn .action-icon-underlay.penalty-fix { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); width: 44px; height: 44px; object-fit: contain; inset: auto; margin: 0; }
+
+.action-btn-content { position: relative; z-index: 4; width: 100%; padding-bottom: 20px; display: flex; align-items: center; justify-content: center; text-align: center; pointer-events: none; }
+.action-btn-text.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.8px; color: #ffffff; margin: 0; line-height: 1; text-transform: uppercase; pointer-events: none; }
+
+.video-actions-screen { flex: 1; max-width: 1040px; border-radius: 20px; overflow: hidden; position: relative; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+.video-actions-screen img { width: 100%; height: auto; object-fit: cover; display: block; border-radius: 20px; }
+@media (max-width: 1380px) { .video-actions-layout { flex-direction: column; align-items: center; } .video-actions-grid { grid-template-columns: repeat(4, 204px); grid-template-rows: repeat(2, 136px); } }
+@media (max-width: 900px) { .video-actions-grid { grid-template-columns: repeat(2, 204px); grid-template-rows: repeat(4, 136px); } }
+
+
+/* ========================================================================== VIDEO PAGE: SECTION 5 (STREAMING DESTINATIONS) ========================================================================== */
+.video-destinations-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
+.video-destinations-container { position: relative; z-index: 10; width: 100%; max-width: 1580px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; align-items: flex-start; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.video-destination-card { display: flex; flex-direction: column; align-items: center; text-align: center; width: 220px; flex-shrink: 0; }
+.video-destination-icon { width: 180px; height: 180px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; }
+.video-destination-icon img { width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 14px 28px rgba(0,0,0,0.5)); }
+.video-destination-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0; line-height: 1.1; text-transform: uppercase; }
+@media (max-width: 1380px) { .video-destinations-container { gap: 24px; } .video-destination-card { width: 180px; } .video-destination-icon { width: 150px; height: 150px; } }
+@media (max-width: 600px) { .video-destinations-container { display: grid; grid-template-columns: repeat(2, 1fr); justify-items: center; gap: 28px 12px; } .video-destination-card { width: 100%; } }
+
+
+
+/* ========================================================================== VIDEO PAGE: SECTION 6 (CTA BANNER) ========================================================================== */
+.video-banner-section { position: relative; width: 100%; min-height: 708px; display: flex; align-items: center; justify-content: center; background: #091018; overflow: hidden; box-sizing: border-box; padding: 100px 20px; }
+.video-banner-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.video-banner-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+.video-banner-container { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; box-sizing: border-box; }
+.video-banner-sub { color: #11d86e; font-family: var(--font-main, 'Inter', sans-serif); font-size: 18px; font-weight: 600; letter-spacing: 0.8px; margin-bottom: 20px; text-transform: uppercase; display: block; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.9); }
+.video-banner-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 84px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 24px 0; text-transform: uppercase; text-shadow: 0 5px 25px #000000, 0 2px 10px #000000, 0 0 40px rgba(0, 0, 0, 0.8); }
+.video-banner-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 18px; line-height: 1.6; color: #ffffff; margin: 0 0 36px 0; width: 100%; max-width: 860px; text-shadow: 0 4px 16px #000000, 0 2px 6px #000000, 0 0 20px rgba(0, 0, 0, 0.9); font-weight: 500; }
+.video-banner-btn { padding: 16px 42px; font-size: 16px; border-radius: 999px; text-decoration: none; box-shadow: 0 10px 30px rgba(17, 216, 110, 0.35), 0 4px 15px rgba(0, 0, 0, 0.6); }
+@media (max-width: 840px) { .video-banner-title.font-bebas { font-size: 58px; } .video-banner-lead { font-size: 16px; } }
+@media (max-width: 560px) { .video-banner-title.font-bebas { font-size: 42px; } }
+
+
+/* ========================================================================== VIDEO PAGE: SECTION 7 (VIDEO PREVIEW) ========================================================================== */
+.video-preview-section { position: relative; width: 100%; padding: 120px 0 160px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
+.video-preview-layout { position: relative; z-index: 10; width: 100%; max-width: 1520px; margin: 0 auto; padding: 0 60px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 60px; }
+.video-preview-content { max-width: 500px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.video-preview-sub { color: #11d86e; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 24px; display: block; text-transform: uppercase; }
+.video-preview-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 68px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 24px 0; text-transform: uppercase; }
+.video-preview-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0 0 36px 0; width: 100%; }
+.video-preview-btn { padding: 16px 36px; font-size: 16px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.video-preview-placeholder { flex: 1; max-width: 800px; height: 450px; position: relative; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+.video-poster-wrapper { width: 100%; height: 100%; background: linear-gradient(135deg, #0f1722 0%, #070a0f 100%); display: flex; align-items: center; justify-content: center; position: relative; cursor: pointer; }
+.video-poster-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; inset: 0; }
+.video-play-btn { position: relative; z-index: 5; width: 84px; height: 84px; border-radius: 50%; border: 2px solid #11d86e; background: rgba(9, 16, 24, 0.65); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease; box-shadow: 0 0 30px rgba(17, 216, 110, 0.35); }
+.video-poster-wrapper:hover .video-play-btn { transform: scale(1.1); background: rgba(17, 216, 110, 0.25); box-shadow: 0 0 45px rgba(17, 216, 110, 0.5); }
+.video-play-btn .play-icon { width: 0; height: 0; border-top: 14px solid transparent; border-bottom: 14px solid transparent; border-left: 22px solid #11d86e; margin-left: 5px; }
+@media (max-width: 1280px) { .video-preview-layout { flex-direction: column; text-align: center; } .video-preview-content { align-items: center; text-align: center; max-width: 100%; } .video-preview-placeholder { width: 100%; height: 400px; } }
+@media (max-width: 840px) { .video-preview-title.font-bebas { font-size: 48px; } .video-preview-placeholder { height: 280px; } }
+@media (max-width: 560px) { .video-preview-title.font-bebas { font-size: 38px; } }

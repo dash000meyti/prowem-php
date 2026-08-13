@@ -1,0 +1,132 @@
+/* ========================================================================== ORGANISATION PAGE: SECTION 1 HERO ========================================================================== */
+.org-hero-section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; background: #0b0e14; overflow: hidden; box-sizing: border-box; padding: 160px 0 100px 0; }
+.org-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.org-hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: right center; display: block; opacity: 1; }
+.org-hero-container { position: relative; z-index: 10; width: 100%; max-width: 1520px; margin: 0 auto; padding: 0 60px; box-sizing: border-box; display: flex; justify-content: flex-start; }
+.org-hero-content { max-width: 680px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.org-hero-sub { color: #FF6249; font-family: var(--font-main, 'Inter', sans-serif); font-size: 16px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 36px; display: block; text-transform: uppercase; }
+.org-hero-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 92px; font-weight: 400; line-height: 0.95; letter-spacing: 1px; color: #ffffff; margin: 0 0 36px 0; text-transform: uppercase; }
+.org-hero-title .text-orange { color: #FF6249; display: block; }
+.org-hero-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 16px; line-height: 1.65; color: #8a99ad; margin: 0 0 52px 0; max-width: 520px; }
+.org-hero-actions { display: flex; align-items: center; gap: 32px; }
+.btn-primary-orange { background: #FF6249; color: #ffffff; padding: 15px 34px; border-radius: 999px; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.2s ease, background-color 0.2s ease; border: none; box-shadow: none; }
+.btn-primary-orange:hover { background: #ff7761; transform: translateY(-2px); }
+.btn-primary-orange .btn-arrow { font-size: 18px; line-height: 1; }
+.btn-secondary-link { color: #ffffff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.4); padding-bottom: 2px; transition: border-color 0.2s ease, opacity 0.2s ease; }
+.btn-secondary-link:hover { border-color: #ffffff; opacity: 0.9; }
+
+@media (max-width: 1280px) { .org-hero-title.font-bebas { font-size: 76px; } }
+@media (max-width: 992px) { .org-hero-container { padding: 0 30px; } .org-hero-title.font-bebas { font-size: 60px; } }
+@media (max-width: 560px) { .org-hero-actions { flex-direction: column; align-items: flex-start; gap: 20px; } .org-hero-title.font-bebas { font-size: 46px; } }
+
+/* ========================================================================== ORGANISATION PAGE: SECTION 2 (WHAT YOU GET) ========================================================================== */
+.org-get-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #0b0e14; overflow: hidden; box-sizing: border-box; }
+.org-header { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto 60px auto; padding: 0 20px; text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; }
+.org-bg-watermark.font-bebas { position: absolute; top: 88px; left: 50%; transform: translate(-50%, -50%); font-family: 'Bebas Neue', sans-serif; font-size: 180px; color: rgba(255, 255, 255, 0.025); letter-spacing: 4px; pointer-events: none; z-index: 1; white-space: nowrap; }
+.org-sub-title { color: #FF6249; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 16px; display: block; position: relative; z-index: 2; text-transform: uppercase; }
+.org-main-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 68px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 20px 0; text-transform: uppercase; position: relative; z-index: 2; }
+.org-lead-text { font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0; width: 100%; max-width: 100%; position: relative; z-index: 2; }
+.org-cards-container { position: relative; z-index: 10; width: 100%; max-width: 1580px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.org-card { position: relative; width: 290px; height: 339px; background-image: url('../../img/sections/organisation/sec_2/Card-BG-290-339.png'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; border-radius: 20px; padding: 0 18px 24px 18px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
+.org-card::before { content: ""; position: absolute; inset: 0; width: 100%; height: 100%; background-image: url('../../img/sections/organisation/sec_2/Card-Lines.svg'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; pointer-events: none; z-index: 2; }
+.org-card-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.org-card-overlay img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.org-card-content { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; width: 100%; }
+.org-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 8px 0; line-height: 1.05; text-transform: uppercase; min-height: 56px; display: flex; align-items: center; justify-content: center; }
+.org-card-desc { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13px; line-height: 1.4; color: #8a99ad; margin: 0; min-height: 55px; display: flex; align-items: flex-start; justify-content: center; }
+@media (max-width: 1560px) { .org-cards-container { justify-content: center; } }
+@media (max-width: 640px) { .org-main-title.font-bebas { font-size: 48px; } .org-bg-watermark.font-bebas { font-size: 100px; top: 60px; } }
+
+
+/* ========================================================================== ORGANISATION PAGE: SECTION 3 (AUTOMATION GRID) ========================================================================== */
+.org-operation-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #0b0e14; overflow: hidden; box-sizing: border-box; }
+
+.org-operation-grid-container { position: relative; z-index: 10; width: 100%; max-width: 1540px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: grid; grid-template-columns: repeat(3, 494px); gap: 24px; justify-content: center; }
+
+.org-auto-card { position: relative; width: 494px; height: 423px; background-image: url('../../img/sections/organisation/sec_3/Box-Bg.png'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; border-radius: 20px; padding: 0 0 24px 0; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
+.org-auto-card::before { content: ""; position: absolute; inset: 0; width: 100%; height: 100%; background-image: url('../../img/sections/organisation/sec_3/Box-Lines.svg'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; pointer-events: none; z-index: 5; }
+
+.org-auto-card-media { position: relative; z-index: 1; width: 100%; height: 280px; border-radius: 20px 20px 0 0; overflow: hidden; flex-shrink: 0; }
+.org-auto-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 20px 20px 0 0; }
+
+.org-auto-card-content { position: relative; z-index: 3; display: flex; flex-direction: column; justify-content: flex-end; width: 100%; text-align: left; padding: 0 24px; box-sizing: border-box; }
+.org-auto-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 6px 0; line-height: 1.1; text-transform: uppercase; }
+.org-auto-card-desc { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13.5px; line-height: 1.45; color: #8a99ad; margin: 0; }
+
+@media (max-width: 1580px) { .org-operation-grid-container { grid-template-columns: repeat(2, 494px); } }
+@media (max-width: 1060px) { .org-operation-grid-container { grid-template-columns: 1fr; } .org-auto-card { width: 100%; max-width: 494px; } }
+
+
+
+
+/* ========================================================================== ORGANISATION PAGE: SECTION 4 (CONNECTED SYSTEM) ========================================================================== */
+.org-system-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #0b0e14; overflow: hidden; box-sizing: border-box; }
+.org-system-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.org-system-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+
+.org-system-container { position: relative; z-index: 10; width: 100%; max-width: 1540px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 60px; }
+
+/* Linker Textbereich */
+.org-system-content { max-width: 540px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; flex-shrink: 0; }
+.org-system-sub { color: #FF6249; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 24px; text-transform: uppercase; display: block; }
+.org-system-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 68px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 24px 0; text-transform: uppercase; }
+.org-system-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0 0 36px 0; max-width: 480px; }
+
+/* Bullet Points mit orangenem Punkt */
+.org-system-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
+.org-system-list li { display: flex; align-items: center; gap: 12px; font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: #ffffff; letter-spacing: 0.8px; text-transform: uppercase; }
+.org-system-list .dot { width: 10px; height: 10px; border-radius: 50%; background-color: #FF6249; display: inline-block; flex-shrink: 0; }
+
+/* Rechter Bildbereich */
+.org-system-visual { flex: 1; display: flex; align-items: center; justify-content: flex-end; position: relative; z-index: 4; }
+.org-system-visual img { width: 100%; max-width: 860px; height: auto; display: block; object-fit: contain; filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.6)); }
+
+@media (max-width: 1280px) { .org-system-container { flex-direction: column; text-align: center; } .org-system-content { align-items: center; text-align: center; max-width: 100%; } .org-system-lead { max-width: 680px; } .org-system-list { align-items: center; } .org-system-visual { justify-content: center; width: 100%; } }
+@media (max-width: 640px) { .org-system-title.font-bebas { font-size: 48px; } }
+
+
+
+/* ========================================================================== ORGANISATION PAGE: SECTION 5 (CTA BANNER) ========================================================================== */
+.org-banner-section { position: relative; width: 100%; min-height: 580px; padding: 120px 0; background: #0b0e14; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; }
+.org-banner-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.org-banner-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+
+.org-banner-container { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; }
+.org-banner-content { max-width: 820px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+.banner-sub-title { color: #FF6249; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 20px; text-transform: uppercase; display: block; }
+.banner-main-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 80px; font-weight: 400; line-height: 0.95; letter-spacing: 1px; color: #ffffff; margin: 0 0 20px 0; text-transform: uppercase; }
+.banner-lead-text { font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0 0 36px 0; max-width: 640px; }
+
+/* Orange CTA Button */
+.btn-primary-orange { background: #FF6249; color: #ffffff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 700; padding: 16px 36px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: transform 0.2s ease, background-color 0.2s ease; box-shadow: none; border: none; }
+.btn-primary-orange:hover { background: #ff7761; transform: translateY(-2px); box-shadow: none; }
+
+@media (max-width: 768px) { .banner-main-title.font-bebas { font-size: 52px; } }
+
+
+
+
+/* ========================================================================== ORGANISATION PAGE: SECTION 6 (VIDEO SHOWCASE) ========================================================================== */
+.org-video-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #0b0e14; overflow: hidden; box-sizing: border-box; }
+.org-video-layout { position: relative; z-index: 10; width: 100%; max-width: 1540px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 60px; }
+
+.org-video-content { max-width: 540px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; flex-shrink: 0; }
+.org-video-sub { color: #FF6249; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 24px; text-transform: uppercase; display: block; }
+.org-video-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 68px; font-weight: 400; line-height: 0.98; letter-spacing: 1px; color: #ffffff; margin: 0 0 24px 0; text-transform: uppercase; }
+.org-video-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; line-height: 1.6; color: #8a99ad; margin: 0 0 36px 0; max-width: 480px; }
+
+.org-video-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #FF6249; color: #ffffff; padding: 16px 36px; border-radius: 999px; font-size: 15px; font-weight: 700; text-decoration: none; transition: background-color 0.2s ease, transform 0.2s ease; border: none; box-shadow: none; }
+.org-video-btn:hover { background: #ff7761; transform: translateY(-2px); box-shadow: none; }
+.org-video-btn .btn-arrow { font-size: 18px; line-height: 1; }
+
+/* Video Frame mit Orange-Styling & CSS Hintergrund */
+.org-video-visual { flex: 1; display: flex; align-items: center; justify-content: flex-end; position: relative; z-index: 4; }
+.org-video-wrapper { position: relative; width: 100%; max-width: 820px; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background-image: url('../../img/sections/organisation/sec_6/Video-BG.jpg'); background-size: cover; background-position: center center; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75); display: flex; align-items: center; justify-content: center; }
+
+/* Floating Orange Play Button */
+.org-play-btn { position: relative; width: 90px; height: 90px; border-radius: 50%; background: rgba(11, 14, 20, 0.5); border: 2.5px solid #FF6249; display: flex; align-items: center; justify-content: center; cursor: pointer; outline: none; padding: 0; padding-left: 5px; box-shadow: 0 0 30px rgba(255, 98, 73, 0.35), inset 0 0 15px rgba(255, 98, 73, 0.2); transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease; z-index: 5; }
+.org-play-btn:hover { transform: scale(1.08); background: rgba(255, 98, 73, 0.25); box-shadow: 0 0 45px rgba(255, 98, 73, 0.6), inset 0 0 20px rgba(255, 98, 73, 0.4); }
+
+@media (max-width: 1280px) { .org-video-layout { flex-direction: column; text-align: center; } .org-video-content { align-items: center; text-align: center; max-width: 100%; } .org-video-visual { justify-content: center; width: 100%; } }
+@media (max-width: 640px) { .org-video-title.font-bebas { font-size: 48px; } }
