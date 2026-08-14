@@ -220,16 +220,17 @@
     content: "";
     position: absolute;
     top: 80px;
-    bottom: 8px;
+    bottom: 0;
     left: 50%;
-    width: 3px;
+    width: 4px;
     transform: translateX(-50%);
     background: #FF6249;
     box-shadow:
-      0 0 10px #FF6249,
-      0 0 22px #FF6249,
-      0 0 42px rgba(255, 98, 73, 0.95),
-      0 0 80px rgba(255, 98, 73, 0.7);
+      0 0 12px #FF6249,
+      0 0 24px #FF6249,
+      0 0 48px #FF6249,
+      0 0 80px rgba(255, 98, 73, 1),
+      0 0 120px rgba(255, 98, 73, 0.85);
     z-index: 0;
     pointer-events: none;
   }
@@ -264,8 +265,8 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-    min-height: 92px;
-    padding: 16px 18px;
+    min-height: 112px;
+    padding: 16px 20px 16px 12px;
     background: rgba(12, 17, 26, 0.94);
     background-image: none;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -274,32 +275,42 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 14px;
+    gap: 8px;
     box-sizing: border-box;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    overflow: visible;
+    isolation: isolate;
   }
   .panel-icon-overlay {
     position: relative;
     inset: auto;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    overflow: hidden;
+    width: 108px;
+    height: 108px;
     flex-shrink: 0;
-    background: radial-gradient(circle at 50% 40%, rgba(255, 98, 73, 0.22) 0%, rgba(12, 17, 26, 0.95) 72%);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    align-self: center;
+    border-radius: 0;
+    overflow: hidden;
+    background: none;
+    border: none;
+    z-index: 3;
   }
   .panel-icon-overlay img {
+    display: block;
     height: 100%;
     width: auto;
     max-width: none;
-    object-fit: cover;
-    object-position: left center;
-    display: block;
+    object-fit: unset;
+    object-position: unset;
+    transform: scale(1);
+    transform-origin: 54px center;
+    position: relative;
+    left: 0;
+    margin: 0;
+    filter: drop-shadow(0 0 10px rgba(255, 98, 73, 0.45));
   }
   .panel-card-content { padding: 0; display: flex; flex-direction: column; text-align: left; }
-  .panel-card-title.font-bebas { font-size: 20px; margin: 0 0 4px 0; line-height: 1.1; }
-  .panel-card-desc { font-size: 13px; line-height: 1.4; color: #8a99ad; max-width: 100%; }
+  .panel-card-title.font-bebas { font-size: 23px; margin: 0 0 4px 0; line-height: 1.1; }
+  .panel-card-desc { font-size: 14.5px; line-height: 1.4; color: #8a99ad; max-width: 100%; }
 }
 
 @media (max-width: 1440px) {
