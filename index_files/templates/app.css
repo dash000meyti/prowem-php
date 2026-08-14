@@ -209,7 +209,16 @@
 }
 @media (max-width: 768px) {
 
-  .event-hero-section { min-height: auto; padding: 100px 0 60px 0; }
+  .event-hero-section {
+    min-height: auto;
+    padding: 100px 0 60px 0;
+    background: #0b0e14 url('../../img/sections/app/Mobile Hero BG E.png') center center / cover no-repeat;
+  }
+  .event-hero-bg { display: none; }
+  .event-banner-section {
+    background: #0b0e14 url('../../img/sections/app/Mobile Banner BG E.png') center center / cover no-repeat;
+  }
+  .banner-bg-wrapper { display: none; }
   .event-hero-container { padding: 0 20px; justify-content: center; }
   .event-hero-content { align-items: center; text-align: center; }
   .event-hero-content h1.font-bebas { font-size: 46px; margin-bottom: 20px; }
