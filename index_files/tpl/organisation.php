@@ -7,7 +7,10 @@
   
   <!-- Hintergrundbild Hero-BG.png -->
   <div class="org-hero-bg">
-    <img src="img/sections/organisation/Hero-BG.png" alt="Let Us Organize Your Event Background">
+    <picture>
+      <source media="(max-width: 768px)" srcset="img/sections/organisation/Mobile%20Hero%20BG%20O.png">
+      <img src="img/sections/organisation/Hero-BG.png" alt="Let Us Organize Your Event Background">
+    </picture>
   </div>
 
   <div class="org-hero-container">

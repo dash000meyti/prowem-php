@@ -21,7 +21,10 @@
 
     <!-- Background Image -->
     <div class="club-hero-bg">
-      <img src="img/sections/myClub/Hero-BG.png" onerror="this.onerror=null; this.src='../img/sections/myClub/sec_1/hero-bg.png';" alt="MyClub Hero Background">
+      <picture>
+        <source media="(max-width: 768px)" srcset="img/sections/myClub/Mobile%20Hero%20BG%20M.png">
+        <img src="img/sections/myClub/Hero-BG.png" onerror="this.onerror=null; this.src='../img/sections/myClub/sec_1/hero-bg.png';" alt="MyClub Hero Background">
+      </picture>
     </div>
 
     <div class="club-hero-container">

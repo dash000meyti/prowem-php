@@ -17,7 +17,83 @@
 
 @media (max-width: 1280px) { .org-hero-title.font-bebas { font-size: 76px; } }
 @media (max-width: 992px) { .org-hero-container { padding: 0 30px; } .org-hero-title.font-bebas { font-size: 60px; } }
-@media (max-width: 560px) { .org-hero-actions { flex-direction: column; align-items: flex-start; gap: 20px; } .org-hero-title.font-bebas { font-size: 46px; } }
+@media (max-width: 768px) {
+  .org-hero-section {
+    min-height: auto;
+    padding: 0 0 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #0b0e14;
+    overflow: hidden;
+  }
+  .org-hero-bg {
+    display: block;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 68vh;
+    min-height: 480px;
+    max-height: 720px;
+    overflow: hidden;
+  }
+  .org-hero-bg picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .org-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .org-hero-bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48%;
+    background: linear-gradient(to bottom, rgba(11, 14, 20, 0) 0%, rgba(11, 14, 20, 0.55) 45%, #0b0e14 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .org-hero-container {
+    margin-top: -240px;
+    padding: 0 24px 0;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+  .org-hero-content {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 100%;
+  }
+  .org-hero-sub { display: none; }
+  .org-hero-title.font-bebas { font-size: 42px; line-height: 0.95; margin-bottom: 16px; }
+  .org-hero-lead { color: #c5cdd6; margin-bottom: 28px; max-width: 100%; }
+  .org-hero-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+  }
+  .org-hero-section .btn-primary-orange {
+    width: auto;
+    color: #000;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .org-hero-section .btn-secondary-link {
+    width: auto;
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 560px) { .org-hero-title.font-bebas { font-size: 42px; } }
 
 /* ========================================================================== ORGANISATION PAGE: SECTION 2 (WHAT YOU GET) ========================================================================== */
 .org-get-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #0b0e14; overflow: hidden; box-sizing: border-box; }

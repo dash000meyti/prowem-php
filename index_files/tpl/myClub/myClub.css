@@ -16,6 +16,81 @@
 .btn-secondary-link:hover { border-color: #ffffff; opacity: 0.9; }
 @media (max-width: 1280px) { .club-hero-container { padding: 0 30px; } .club-hero-content h1.font-bebas { font-size: 72px; } }
 @media (max-width: 840px) { .club-hero-content h1.font-bebas { font-size: 52px; } .club-hero-lead { font-size: 15px; } .club-hero-actions { flex-direction: column; align-items: flex-start; gap: 20px; } }
+@media (max-width: 768px) {
+  .club-hero-section {
+    min-height: auto;
+    padding: 0 0 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #070a0f;
+    overflow: hidden;
+  }
+  .club-hero-bg {
+    display: block;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 68vh;
+    min-height: 480px;
+    max-height: 720px;
+    overflow: hidden;
+  }
+  .club-hero-bg picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .club-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .club-hero-bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48%;
+    background: linear-gradient(to bottom, rgba(7, 10, 15, 0) 0%, rgba(7, 10, 15, 0.55) 45%, #070a0f 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .club-hero-container {
+    margin-top: -240px;
+    padding: 0 24px 0;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+  .club-hero-content {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 100%;
+  }
+  .club-hero-sub { display: none; }
+  .club-hero-content h1.font-bebas { font-size: 42px; line-height: 0.95; margin-bottom: 16px; }
+  .club-hero-lead { color: #c5cdd6; margin-bottom: 28px; max-width: 100%; }
+  .club-hero-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+  }
+  .club-hero-section .btn-primary-blue {
+    width: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .club-hero-section .btn-secondary-link {
+    width: auto;
+    text-align: left;
+    white-space: nowrap;
+  }
+}
 
 
 
