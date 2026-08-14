@@ -58,6 +58,11 @@ class App {
         echo '<!DOCTYPE html><html lang="'.($_SESSION['language'] ?? 'de').'"><head>';
         echo '<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">';
         echo '<title>Professional World Event Manager</title>';
+        echo '<link rel="icon" href="img/favicon/favicon.ico" sizes="16x16">';
+        echo '<link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml" sizes="any">';
+        echo '<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32.png">';
+        echo '<link rel="icon" type="image/png" sizes="256x256" href="img/favicon/favicon-256.png">';
+        echo '<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">';
         echo '<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">';
         echo '<link rel="stylesheet" href="index_files/css/style.css?v4">';
         echo '<script src="form_handler.js" defer></script>';
