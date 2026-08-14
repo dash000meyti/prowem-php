@@ -363,13 +363,18 @@
 
 /* ========================================================================== VIDEO PAGE: SECTION 5 (STREAMING DESTINATIONS) ========================================================================== */
 .video-destinations-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
-.video-destinations-container { position: relative; z-index: 10; width: 100%; max-width: 1580px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; align-items: flex-start; justify-content: center; gap: 32px; flex-wrap: wrap; }
-.video-destination-card { display: flex; flex-direction: column; align-items: center; text-align: center; width: 220px; flex-shrink: 0; }
-.video-destination-icon { width: 180px; height: 180px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; }
+.video-destinations-container { position: relative; z-index: 10; width: 100%; max-width: 1580px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: grid; grid-template-columns: repeat(6, minmax(0, 220px)); justify-content: center; justify-items: center; gap: 32px; }
+.video-destination-card { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 220px; flex-shrink: 0; }
+.video-destination-icon { width: 180px; max-width: 100%; aspect-ratio: 1; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; }
 .video-destination-icon img { width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 14px 28px rgba(0,0,0,0.5)); }
 .video-destination-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0; line-height: 1.1; text-transform: uppercase; }
-@media (max-width: 1380px) { .video-destinations-container { gap: 24px; } .video-destination-card { width: 180px; } .video-destination-icon { width: 150px; height: 150px; } }
-@media (max-width: 600px) { .video-destinations-container { display: grid; grid-template-columns: repeat(2, 1fr); justify-items: center; gap: 28px 12px; } .video-destination-card { width: 100%; } }
+@media (max-width: 1280px) {
+  .video-destinations-container { grid-template-columns: repeat(3, minmax(0, 220px)); gap: 36px 48px; }
+}
+@media (max-width: 768px) {
+  .video-destinations-section { padding: 50px 20px; }
+  .video-destinations-container { grid-template-columns: repeat(2, minmax(0, 220px)); gap: 28px 24px; }
+}
 
 
 

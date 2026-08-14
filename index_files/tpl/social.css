@@ -322,15 +322,20 @@
 
 /* ========================================================================== SOCIAL MEDIA PAGE: SECTION 6 (PLATFORMS) ========================================================================== */
 .social-platforms-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #091018; overflow: hidden; box-sizing: border-box; }
-.social-platforms-container { position: relative; z-index: 10; width: 100%; max-width: 1580px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; justify-content: center; gap: 32px; flex-wrap: nowrap; }
-.social-platform-card { display: flex; flex-direction: column; align-items: center; text-align: center; width: 220px; flex-shrink: 0; }
-.platform-icon { width: 180px; height: 180px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.25s ease; }
+.social-platforms-container { position: relative; z-index: 10; width: 100%; max-width: 1580px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: grid; grid-template-columns: repeat(6, minmax(0, 220px)); justify-content: center; justify-items: center; gap: 32px; }
+.social-platform-card { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 220px; flex-shrink: 0; }
+.platform-icon { width: 180px; max-width: 100%; aspect-ratio: 1; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.25s ease; }
 .platform-icon img { width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 14px 28px rgba(0,0,0,0.5)); }
 .social-platform-card:hover .platform-icon { transform: translateY(-4px); }
 .platform-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0; line-height: 1.1; text-transform: uppercase; }
 .platform-sub.font-inter { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13px; color: #8a99ad; display: block; margin-top: 4px; line-height: 1.2; }
-@media (max-width: 1380px) { .social-platforms-container { gap: 16px; } .social-platform-card { width: 160px; } .platform-icon { width: 140px; height: 140px; } }
-@media (max-width: 900px) { .social-platforms-container { flex-wrap: wrap; display: grid; grid-template-columns: repeat(2, 1fr); justify-items: center; gap: 28px 12px; } .social-platform-card { width: 100%; } }
+@media (max-width: 1280px) {
+  .social-platforms-container { grid-template-columns: repeat(3, minmax(0, 220px)); gap: 36px 48px; }
+}
+@media (max-width: 768px) {
+  .social-platforms-section { padding: 50px 20px; }
+  .social-platforms-container { grid-template-columns: repeat(2, minmax(0, 220px)); gap: 28px 24px; }
+}
 
 
 
