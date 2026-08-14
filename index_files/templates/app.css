@@ -1,7 +1,7 @@
 /* ========================================================================== HERO SECTION ========================================================================== */
 .event-hero-section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; background: #0b0e14; overflow: hidden; box-sizing: border-box; padding: 160px 0 100px 0; }
 .event-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
-.event-hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: right center; display: block; opacity: 1; }
+.event-hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: 1; }
 .event-hero-container { position: relative; z-index: 10; width: 100%; max-width: 1520px; margin: 0 auto; padding: 0 60px; box-sizing: border-box; display: flex; justify-content: flex-start; }
 .event-hero-content { max-width: 680px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
 .event-hero-sub { color: #FF6249; font-family: var(--font-main, 'Inter', sans-serif); font-size: 16px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 36px; display: block; }
