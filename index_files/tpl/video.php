@@ -7,7 +7,10 @@
   
   <!-- Hintergrundbild Hero-BG.png -->
   <div class="video-hero-bg">
-    <img src="img/sections/video/Hero-BG.png" alt="Broadcast Every Match Background">
+    <picture>
+      <source media="(max-width: 768px)" srcset="img/sections/video/Mobile%20Hero%20BG%20L.png">
+      <img src="img/sections/video/Hero-BG.png" alt="Broadcast Every Match Background">
+    </picture>
   </div>
 
   <div class="video-hero-container">

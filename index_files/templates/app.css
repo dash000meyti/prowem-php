@@ -211,20 +211,84 @@
 
   .event-hero-section {
     min-height: auto;
-    padding: 100px 0 60px 0;
-    background: #0b0e14 url('../../img/sections/app/Mobile Hero BG E.png') center center / cover no-repeat;
+    padding: 0 0 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #0b0e14;
+    overflow: hidden;
   }
-  .event-hero-bg { display: none; }
+  .event-hero-bg {
+    display: block;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 68vh;
+    min-height: 480px;
+    max-height: 720px;
+    overflow: hidden;
+  }
+  .event-hero-bg picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .event-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+  }
+  .event-hero-bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48%;
+    background: linear-gradient(to bottom, rgba(11, 14, 20, 0) 0%, rgba(11, 14, 20, 0.55) 45%, #0b0e14 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .event-hero-container {
+    margin-top: -140px;
+    padding: 0 24px 0;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+  .event-hero-content {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 100%;
+  }
+  .event-hero-sub { display: none; }
+  .event-hero-content h1.font-bebas { font-size: 42px; line-height: 0.95; margin-bottom: 16px; }
+  .event-hero-lead { color: #c5cdd6; margin-bottom: 28px; max-width: 100%; }
+  .event-hero-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+  }
+  .event-hero-section .btn-primary-orange {
+    width: auto;
+    color: #000;
+    justify-content: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  .event-hero-section .btn-secondary-link {
+    width: auto;
+    text-align: left;
+    white-space: nowrap;
+  }
   .event-banner-section {
     background: #0b0e14 url('../../img/sections/app/Mobile Banner BG E.png') center center / cover no-repeat;
   }
   .banner-bg-wrapper { display: none; }
-  .event-hero-container { padding: 0 20px; justify-content: center; }
-  .event-hero-content { align-items: center; text-align: center; }
-  .event-hero-content h1.font-bebas { font-size: 46px; margin-bottom: 20px; }
-  .event-hero-sub { margin-bottom: 16px; }
-  .event-hero-lead { margin-bottom: 30px; }
-  .event-hero-actions { flex-direction: column; width: 100%; gap: 16px; }
   .btn-primary-orange { width: 100%; justify-content: center; box-sizing: border-box; }
   .btn-secondary-link { width: 100%; text-align: center; }
   .event-features-section, .event-panel-section, .event-quick-section, .event-banner-section, .event-automation-section, .event-public-section, .event-army-section, .event-video-section { padding: 50px 20px; }

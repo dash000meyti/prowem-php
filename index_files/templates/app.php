@@ -6,7 +6,10 @@
 <section class="event-hero-section">
   <!-- Hintergrund-Medium -->
   <div class="event-hero-bg">
-    <img src="img/sections/app/Hero-Bg.png" alt="Build The Event" loading="eager">
+    <picture>
+      <source media="(max-width: 768px)" srcset="img/sections/app/Mobile%20Hero%20BG%20E.png">
+      <img src="img/sections/app/Hero-Bg.png" alt="Build The Event" loading="eager">
+    </picture>
   </div>
 
   <!-- Hero Content Left -->

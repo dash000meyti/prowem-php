@@ -16,7 +16,82 @@
 .btn-secondary-link:hover { color: #00e676; }
 @media (max-width: 1280px) { .video-hero-title.font-bebas { font-size: 72px; } }
 @media (max-width: 992px) { .video-hero-container { padding: 0 30px; } .video-hero-title.font-bebas { font-size: 56px; } .video-hero-bg img { object-position: 70% center; } }
-@media (max-width: 560px) { .video-hero-buttons { flex-direction: column; align-items: flex-start; gap: 20px; } .video-hero-title.font-bebas { font-size: 42px; } }
+@media (max-width: 768px) {
+  .video-hero-section {
+    min-height: auto;
+    padding: 0 0 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #091018;
+    overflow: hidden;
+  }
+  .video-hero-bg {
+    display: block;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 68vh;
+    min-height: 480px;
+    max-height: 720px;
+    overflow: hidden;
+  }
+  .video-hero-bg picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .video-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+  }
+  .video-hero-bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48%;
+    background: linear-gradient(to bottom, rgba(9, 16, 24, 0) 0%, rgba(9, 16, 24, 0.55) 45%, #091018 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .video-hero-container {
+    margin-top: -140px;
+    padding: 0 24px 0;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+  .video-hero-content {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 100%;
+  }
+  .video-hero-sub { display: none; }
+  .video-hero-title.font-bebas { font-size: 42px; line-height: 0.95; margin-bottom: 16px; }
+  .video-hero-lead { color: #c5cdd6; margin-bottom: 28px; max-width: 100%; }
+  .video-hero-buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+  }
+  .video-hero-section .btn-primary-green {
+    width: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .video-hero-section .btn-secondary-link {
+    width: auto;
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 560px) { .video-hero-title.font-bebas { font-size: 42px; } }
 
 
 /* ========================================================================== VIDEO PAGE: SECTION 2 (WHAT YOU GET) ========================================================================== */
