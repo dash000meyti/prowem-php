@@ -193,7 +193,120 @@
 .video-panel-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 24px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 4px 0; line-height: 1.1; text-transform: uppercase; }
 .video-panel-card-title .text-green { color: #11d86e; margin-right: 6px; }
 .video-panel-card-desc { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13.5px; line-height: 1.45; color: #8a99ad; margin: 0; max-width: 220px; }
-@media (max-width: 1400px) { .video-panel-layout { flex-direction: column; } .video-panel-column { width: 100%; max-width: 381px; } }
+@media (max-width: 1400px) and (min-width: 1201px) {
+  .video-panel-layout {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 12px;
+  }
+  .video-panel-column {
+    flex: 1 1 0;
+    width: auto;
+    max-width: 340px;
+    min-width: 0;
+    height: auto;
+    gap: 12px;
+  }
+  .video-panel-center {
+    flex: 0 1 280px;
+    min-width: 0;
+    max-width: 360px;
+    height: auto;
+  }
+  .video-tablet-img { height: auto; width: 100%; max-width: 100%; }
+  .video-panel-card { width: 100%; max-width: 100%; }
+}
+@media (max-width: 1200px) {
+  .video-panel-section { padding: 80px 20px 90px; overflow: hidden; }
+  .video-panel-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+  .video-panel-layout::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    bottom: 8px;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, rgba(17, 216, 110, 0.95) 0%, rgba(17, 216, 110, 0.35) 100%);
+    box-shadow: 0 0 18px rgba(17, 216, 110, 0.65), 0 0 40px rgba(17, 216, 110, 0.25);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .video-panel-column {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 2;
+  }
+  .video-panel-center {
+    display: flex;
+    order: -1;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin: 0 0 10px;
+    z-index: 2;
+  }
+  .video-tablet-img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.55));
+  }
+  .video-panel-card {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 92px;
+    padding: 16px 18px;
+    background: rgba(12, 17, 26, 0.94);
+    background-image: none;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  }
+  .video-panel-icon-overlay {
+    position: relative;
+    inset: auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(17, 216, 110, 0.22) 0%, rgba(12, 17, 26, 0.95) 72%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .video-panel-icon-overlay img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    object-fit: cover;
+    object-position: left center;
+    display: block;
+  }
+  .video-panel-card-content { padding: 0; display: flex; flex-direction: column; text-align: left; }
+  .video-panel-card-title.font-bebas { font-size: 20px; margin: 0 0 4px 0; line-height: 1.1; }
+  .video-panel-card-desc { font-size: 13px; line-height: 1.4; color: #8a99ad; max-width: 100%; }
+}
 
 
 /* ========================================================================== VIDEO PAGE: SECTION 4 (LIVE MATCH ACTIONS) ========================================================================== */

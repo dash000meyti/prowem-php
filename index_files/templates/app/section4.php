@@ -34,7 +34,13 @@
           <img src="img/sections/app/sec_4/Line.png" alt="">
         </div>
       </div>
-      <div class="quick-step-text font-bebas">YOUR EVENT IS<br>READY</div>
+      <div class="quick-step-text font-bebas">YOUR EVENT IS READY</div>
+      <div class="quick-check-node" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="20" stroke="#FF6249" stroke-width="3"/>
+          <path d="M14.5 24.5l7 7.5 12.5-14" stroke="#FF6249" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
     </div>
 
     <!-- Rechter Bereich: 3 Cards Group -->

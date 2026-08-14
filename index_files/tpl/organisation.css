@@ -182,9 +182,9 @@
 /* ========================================================================== ORGANISATION PAGE: SECTION 3 (AUTOMATION GRID) ========================================================================== */
 .org-operation-section { position: relative; width: 100%; padding: 120px 0 140px 0; background: #0b0e14; overflow: hidden; box-sizing: border-box; }
 
-.org-operation-grid-container { position: relative; z-index: 10; width: 100%; max-width: 1540px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: grid; grid-template-columns: repeat(3, 494px); gap: 24px; justify-content: center; }
+.org-operation-grid-container { position: relative; z-index: 10; width: 100%; max-width: 1540px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 494px), 494px)); gap: 24px; justify-content: center; justify-items: center; }
 
-.org-auto-card { position: relative; width: 494px; height: 423px; background-image: url('../../img/sections/organisation/sec_3/Box-Bg.png'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; border-radius: 20px; padding: 0 0 24px 0; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
+.org-auto-card { position: relative; width: 100%; max-width: 494px; height: 423px; background-image: url('../../img/sections/organisation/sec_3/Box-Bg.png'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; border-radius: 20px; padding: 0 0 24px 0; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
 .org-auto-card::before { content: ""; position: absolute; inset: 0; width: 100%; height: 100%; background-image: url('../../img/sections/organisation/sec_3/Box-Lines.svg'); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; pointer-events: none; z-index: 5; }
 
 .org-auto-card-media { position: relative; z-index: 1; width: 100%; height: 280px; border-radius: 20px 20px 0 0; overflow: hidden; flex-shrink: 0; }
@@ -194,8 +194,7 @@
 .org-auto-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 6px 0; line-height: 1.1; text-transform: uppercase; }
 .org-auto-card-desc { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13.5px; line-height: 1.45; color: #8a99ad; margin: 0; }
 
-@media (max-width: 1580px) { .org-operation-grid-container { grid-template-columns: repeat(2, 494px); } }
-@media (max-width: 1060px) { .org-operation-grid-container { grid-template-columns: 1fr; } .org-auto-card { width: 100%; max-width: 494px; } }
+@media (max-width: 540px) { .org-auto-card { height: auto; min-height: 360px; } }
 
 
 
