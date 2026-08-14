@@ -7,7 +7,7 @@ class Footer {
         <footer class="site-footer">
           <div class="footer-inner">
             <div class="footer-left">
-              <img src="./logo.png" alt="Footer Logo" class="footer-logo">
+              <img src="./logo.svg" alt="Prowem" class="footer-logo">
               <p>prowem © 2025 - all rights reserved</p>
             </div>
             <div class="footer-right">

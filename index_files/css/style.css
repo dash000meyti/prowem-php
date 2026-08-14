@@ -17,7 +17,7 @@ main, .container { margin: 0; padding: 0; }
 .site-header.scrolled .header-inner { padding: 16px 40px; }
 .header-left { display: flex; align-items: center; gap: 60px; }
 .brand { display: flex; align-items: center; text-decoration: none; }
-.brand-logo { height: 38px; display: block; }
+.brand-logo { height: 24px; width: auto; display: block; }
 .nav-desktop { display: flex; align-items: center; }
 .nav-list { list-style: none; display: flex; align-items: center; gap: 32px; margin: 0; padding: 0; }
 .nav-list li { display: flex; align-items: center; }
@@ -218,7 +218,7 @@ main, .container { margin: 0; padding: 0; }
 .way-card-text .way-card-num.font-bebas { font-family: 'Bebas Neue', sans-serif !important; color: var(--color-orange); margin-right: 8px; font-size: 24px; }
 .way-card-text p { color: #8a99ad; font-size: 13px; line-height: 1.4; margin: 0; font-family: var(--font-main); }
 .way-card-sep { width: 2px; height: 80px; background: linear-gradient(to bottom, transparent, var(--color-orange), transparent); flex-shrink: 0; opacity: 0.7; }
-.beta-section { background-image: url('../../img/beta_banner.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center; height: 700px; font-family: var(--font-main, sans-serif); color: #fff; overflow: hidden; position: relative; display: flex; align-items: center; box-sizing: border-box; width: 100%; }
+.beta-section { background-image: url('../../img/beta_banner.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 700px; font-family: var(--font-main, sans-serif); color: #fff; overflow: hidden; position: relative; display: flex; align-items: center; box-sizing: border-box; width: 100%; }
 .beta-content { max-width: 800px; padding-left: 200px; padding-right: 20px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; position: relative; z-index: 2; box-sizing: border-box; }
 .beta-sub { color: var(--color-orange, #e16449); font-size: 26px; letter-spacing: 1px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; display: block; }
 .beta-content h2.font-bebas { font-family: 'Bebas Neue', sans-serif !important; font-size: 90px; font-weight: 400 !important; margin: 0 0 15px 0; letter-spacing: 1px; line-height: 0.95; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5); display: flex; flex-direction: column; }
@@ -230,7 +230,7 @@ main, .container { margin: 0; padding: 0; }
 .managed-section .motion-head { text-align: center; width: 100%; margin-bottom: 40px; }
 .managed-cards-grid { display: flex; gap: 25px; justify-content: center; align-items: stretch; max-width: 1000px; width: 100%; margin-top: auto; margin-bottom: 100px; box-sizing: border-box; }
 .motion-lead-managed { max-width: 700px; margin: 20px auto 0; color: #8a99ad; font-size: 15px; line-height: 1.6; z-index: 2; position: relative; }
-.managed-card { flex: 1; background-color: #0b0e14; background-image: url('../../img/icons/Card-Bg_managed.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center; border: 1px solid var(--card-border, rgba(255, 255, 255, 0.05)); border-radius: 16px; padding: 20px 12px 30px 12px; display: flex; align-items: center; gap: 15px; box-sizing: border-box; min-height: 140px; justify-content: flex-start; }
+.managed-card { flex: 1; background: rgba(11, 14, 20, 0.38); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 16px; padding: 20px 12px 30px 12px; display: flex; align-items: center; gap: 15px; box-sizing: border-box; min-height: 140px; justify-content: flex-start; backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28); }
 .managed-card-icon-wrap { width: 110px; height: 110px; background-image: url('../../img/icons/Icon-BG.png'); background-size: contain; background-repeat: no-repeat; background-position: center; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-sizing: border-box; margin-left: -10px; }
 .managed-card-icon { width: 60px; height: 60px; object-fit: contain; display: block; filter: brightness(0) saturate(100%) invert(53%) sepia(87%) saturate(1915%) hue-rotate(334deg) brightness(92%) contrast(92%) !important; }
 .managed-card-text { display: flex; flex-direction: column; gap: 4px; justify-content: center; text-align: left; max-width: 400px; }
@@ -259,6 +259,7 @@ body.theme-video { --theme-accent: #11D86E; --theme-accent-hover: #0eb85d; --the
 body.theme-social { --theme-accent: #9f46ff; --theme-accent-hover: #882ee0; --theme-footer-bg: #9f46ff; }
 body.theme-myclub { --theme-accent: #0091FF; --theme-accent-hover: #0077d6; --theme-footer-bg: #0091FF; }
 footer, .site-footer { background: var(--theme-footer-bg); transition: background 0.3s ease; }
+footer img, .footer-logo { filter: brightness(0); }
 
 @media (max-width: 1200px) {
   .hero-container { grid-template-columns: 1fr; padding: 40px 24px 80px 24px; gap: 40px; text-align: center; }
@@ -298,13 +299,13 @@ footer, .site-footer { background: var(--theme-footer-bg); transition: backgroun
   .cta-content h2.font-bebas { font-size: 44px; }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .site-header { width: 100vw; max-width: 100%; overflow: hidden; }
   .header-inner { padding: 16px 20px; width: 100%; justify-content: space-between; box-sizing: border-box; }
   .nav-desktop, .nav-cta { display: none; }
   .burger-btn { display: flex; flex-shrink: 0; margin-left: auto; }
-  .brand { flex-shrink: 1; max-width: 140px; }
-  .brand-logo { height: 32px; width: auto; object-fit: contain; }
+  .brand { flex-shrink: 1; max-width: 200px; }
+  .brand-logo { height: 20px; width: auto; object-fit: contain; }
 }
 
 @media (max-width: 900px) {
@@ -467,7 +468,7 @@ main, .container { margin: 0; padding: 0; }
 .site-header.scrolled .header-inner { padding: 16px 40px; }
 .header-left { display: flex; align-items: center; gap: 60px; }
 .brand { display: flex; align-items: center; text-decoration: none; }
-.brand-logo { height: 38px; display: block; }
+.brand-logo { height: 24px; width: auto; display: block; }
 .nav-desktop { display: flex; align-items: center; }
 .nav-list { list-style: none; display: flex; align-items: center; gap: 32px; margin: 0; padding: 0; }
 .nav-list li { display: flex; align-items: center; }
@@ -670,7 +671,7 @@ main, .container { margin: 0; padding: 0; }
 .way-card-text .way-card-num.font-bebas { font-family: 'Bebas Neue', sans-serif !important; color: var(--color-orange); margin-right: 8px; font-size: 24px; }
 .way-card-text p { color: #8a99ad; font-size: 13px; line-height: 1.4; margin: 0; font-family: var(--font-main); }
 .way-card-sep { width: 2px; height: 80px; background: linear-gradient(to bottom, transparent, var(--color-orange), transparent); flex-shrink: 0; opacity: 0.7; }
-.beta-section { background-image: url('../../img/beta_banner.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center; height: 700px; font-family: var(--font-main, sans-serif); color: #fff; overflow: hidden; position: relative; display: flex; align-items: center; box-sizing: border-box; width: 100%; }
+.beta-section { background-image: url('../../img/beta_banner.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 700px; font-family: var(--font-main, sans-serif); color: #fff; overflow: hidden; position: relative; display: flex; align-items: center; box-sizing: border-box; width: 100%; }
 .beta-content { max-width: 800px; padding-left: 200px; padding-right: 20px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; position: relative; z-index: 2; box-sizing: border-box; }
 .beta-sub { color: var(--color-orange, #e16449); font-size: 26px; letter-spacing: 1px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; display: block; }
 .beta-content h2.font-bebas { font-family: 'Bebas Neue', sans-serif !important; font-size: 90px; font-weight: 400 !important; margin: 0 0 15px 0; letter-spacing: 1px; line-height: 0.95; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5); display: flex; flex-direction: column; }
@@ -682,7 +683,7 @@ main, .container { margin: 0; padding: 0; }
 .managed-section .motion-head { text-align: center; width: 100%; margin-bottom: 40px; }
 .managed-cards-grid { display: flex; gap: 25px; justify-content: center; align-items: stretch; max-width: 1000px; width: 100%; margin-top: auto; margin-bottom: 100px; box-sizing: border-box; }
 .motion-lead-managed { max-width: 700px; margin: 20px auto 0; color: #8a99ad; font-size: 15px; line-height: 1.6; z-index: 2; position: relative; }
-.managed-card { flex: 1; background-color: #0b0e14; background-image: url('../../img/icons/Card-Bg_managed.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center; border: 1px solid var(--card-border, rgba(255, 255, 255, 0.05)); border-radius: 16px; padding: 20px 12px 30px 12px; display: flex; align-items: center; gap: 15px; box-sizing: border-box; min-height: 140px; justify-content: flex-start; }
+.managed-card { flex: 1; background: rgba(11, 14, 20, 0.38); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 16px; padding: 20px 12px 30px 12px; display: flex; align-items: center; gap: 15px; box-sizing: border-box; min-height: 140px; justify-content: flex-start; backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28); }
 .managed-card-icon-wrap { width: 110px; height: 110px; background-image: url('../../img/icons/Icon-BG.png'); background-size: contain; background-repeat: no-repeat; background-position: center; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-sizing: border-box; margin-left: -10px; }
 .managed-card-icon { width: 60px; height: 60px; object-fit: contain; display: block; filter: brightness(0) saturate(100%) invert(53%) sepia(87%) saturate(1915%) hue-rotate(334deg) brightness(92%) contrast(92%) !important; }
 .managed-card-text { display: flex; flex-direction: column; gap: 4px; justify-content: center; text-align: left; max-width: 400px; }
@@ -711,6 +712,7 @@ body.theme-video { --theme-accent: #11D86E; --theme-accent-hover: #0eb85d; --the
 body.theme-social { --theme-accent: #9f46ff; --theme-accent-hover: #882ee0; --theme-footer-bg: #9f46ff; }
 body.theme-myclub { --theme-accent: #0091FF; --theme-accent-hover: #0077d6; --theme-footer-bg: #0091FF; }
 footer, .site-footer { background: var(--theme-footer-bg); transition: background 0.3s ease; }
+footer img, .footer-logo { filter: brightness(0); }
 
 @media (max-width: 1200px) {
   .hero-container { grid-template-columns: 1fr; padding: 40px 24px 80px 24px; gap: 40px; text-align: center; }
@@ -750,13 +752,13 @@ footer, .site-footer { background: var(--theme-footer-bg); transition: backgroun
   .cta-content h2.font-bebas { font-size: 44px; }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .site-header { width: 100vw; max-width: 100%; overflow: hidden; }
   .header-inner { padding: 16px 20px; width: 100%; justify-content: space-between; box-sizing: border-box; }
   .nav-desktop, .nav-cta { display: none; }
   .burger-btn { display: flex; flex-shrink: 0; margin-left: auto; }
-  .brand { flex-shrink: 1; max-width: 140px; }
-  .brand-logo { height: 32px; width: auto; object-fit: contain; }
+  .brand { flex-shrink: 1; max-width: 200px; }
+  .brand-logo { height: 20px; width: auto; object-fit: contain; }
 }
 
 @media (max-width: 900px) {

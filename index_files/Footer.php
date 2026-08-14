@@ -9,7 +9,7 @@ class Footer {
         .prowem-footer{background:#FF6249;color:#111;padding:60px 0;font-family:\'Ubuntu\',sans-serif;}
         .prowem-footer-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:260px 1fr 1fr 1fr;gap:40px;align-items:start;}
         .footer-brand{display:flex;flex-direction:column;gap:14px;}
-        .footer-brand img{width:140px;height:auto;}
+        .footer-brand img{width:140px;height:auto;filter:brightness(0);}
         .footer-brand span{font-size:13px;opacity:.7;}
         .footer-col{display:flex;flex-direction:column;gap:2px;}
         .footer-title{font-size:12px;font-weight:700;letter-spacing:1px;opacity:.6;margin-bottom:12px;}
@@ -24,7 +24,7 @@ class Footer {
       <div class="prowem-footer-inner">
 
         <div class="footer-brand">
-          <img src="./logo.png" alt="Prowem">
+          <img src="./logo.svg" alt="Prowem">
           <span>prowem © 2026 – all rights reserved</span>
         </div>
 

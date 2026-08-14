@@ -3,7 +3,7 @@
 
     <div class="header-left">
       <a href="index.php" class="brand">
-        <img src="./logo.png" alt="Prowem" class="brand-logo">
+        <img src="./logo.svg" alt="Prowem" class="brand-logo">
       </a>
 
       <nav class="nav-desktop">
