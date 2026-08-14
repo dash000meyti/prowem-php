@@ -1,7 +1,9 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 34.4443L46 34.4443" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M42.332 34.4443L42.332 9.99991C42.332 8.89534 41.4366 7.99991 40.332 7.99991L7.66538 7.99991C6.56081 7.99991 5.66538 8.89534 5.66538 9.99991L5.66538 34.4443" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-<path d="M38.5 8C37.7308 8.9615 36.5178 11.2099 35.6291 14.63M34.5 34C34.5 34.2482 34.5 33.4612 34.5 29.4083" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.5 8C10.8333 9.66667 13.5 15.2 13.5 24C13.5 32.8 13.5 34.3333 13.5 34" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-<ellipse cx="32" cy="24" rx="6" ry="5.99999" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+<svg width="204" height="136" viewBox="0 0 204 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(78, 18)">
+    <path d="M2 34.4443L46 34.4443" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M42.332 34.4443L42.332 9.99991C42.332 8.89534 41.4366 7.99991 40.332 7.99991L7.66538 7.99991C6.56081 7.99991 5.66538 8.89534 5.66538 9.99991L5.66538 34.4443" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M38.5 8C37.7308 8.9615 36.5178 11.2099 35.6291 14.63M34.5 34C34.5 34.2482 34.5 33.4612 34.5 29.4083" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M9.5 8C10.8333 9.66667 13.5 15.2 13.5 24C13.5 32.8 13.5 34.3333 13.5 34" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+    <ellipse cx="32" cy="24" rx="6" ry="5.99999" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+  </g>
 </svg>

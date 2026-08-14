@@ -105,13 +105,13 @@
         </div>
       </button>
 
-      <!-- Button 8: PENALTY (Mit gezielter Skalierungsklasse) -->
+      <!-- Button 8: PENALTY -->
       <button type="button" class="action-btn">
         <div class="action-btn-overlay">
           <img src="img/sections/video/sec_4/Card-BG-204-136.png" class="bg-normal" alt="">
           <img src="img/sections/video/sec_4/Selected-Card-BG-204-136.png" class="bg-active" alt="">
         </div>
-        <img src="img/sections/video/sec_4/Penalty-Icon.svg" class="action-icon-underlay penalty-fix" alt="">
+        <img src="img/sections/video/sec_4/Penalty-Icon.svg" class="action-icon-underlay" alt="">
         <div class="action-btn-content">
           <span class="action-btn-text font-bebas">PENALTY</span>
         </div>
