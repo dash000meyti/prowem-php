@@ -242,7 +242,36 @@
 .btn-primary-orange { background: #FF6249; color: #ffffff; font-family: var(--font-main, 'Inter', sans-serif); font-size: 15px; font-weight: 700; padding: 16px 36px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: transform 0.2s ease, background-color 0.2s ease; box-shadow: none; border: none; }
 .btn-primary-orange:hover { background: #ff7761; transform: translateY(-2px); box-shadow: none; }
 
-@media (max-width: 768px) { .banner-main-title.font-bebas { font-size: 52px; } }
+@media (max-width: 768px) {
+  .banner-main-title.font-bebas { font-size: 52px; }
+  .org-banner-section {
+    background: #0b0e14 url('../../img/sections/organisation/Mobile Banner BG O.png') center center / cover no-repeat;
+    padding: 50px 20px;
+    min-height: 708px;
+  }
+  .org-banner-bg { display: none; }
+  .org-banner-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    width: 160%;
+    height: 72%;
+    background: radial-gradient(ellipse at 50% 45%, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.75) 38%, rgba(0, 0, 0, 0.35) 62%, transparent 78%);
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(12px);
+  }
+  .org-banner-section .banner-sub-title,
+  .org-banner-section .banner-main-title.font-bebas,
+  .org-banner-section .banner-lead-text {
+    text-shadow:
+      0 0px 200px rgba(0, 0, 0, 1),
+      0 0px 100px rgba(0, 0, 0, 1),
+      0 0px 50px rgba(0, 0, 0, 1);
+  }
+}
 
 
 

@@ -365,6 +365,34 @@
 .video-banner-lead { font-family: var(--font-main, 'Inter', sans-serif); font-size: 18px; line-height: 1.6; color: #ffffff; margin: 0 0 36px 0; width: 100%; max-width: 860px; text-shadow: 0 4px 16px #000000, 0 2px 6px #000000, 0 0 20px rgba(0, 0, 0, 0.9); font-weight: 500; }
 .video-banner-btn { padding: 16px 42px; font-size: 16px; border-radius: 999px; text-decoration: none; box-shadow: 0 10px 30px rgba(17, 216, 110, 0.35), 0 4px 15px rgba(0, 0, 0, 0.6); }
 @media (max-width: 840px) { .video-banner-title.font-bebas { font-size: 58px; } .video-banner-lead { font-size: 16px; } }
+@media (max-width: 768px) {
+  .video-banner-section {
+    background: #091018 url('../../img/sections/video/Mobile Banner BG L.png') center center / cover no-repeat;
+    padding: 50px 20px;
+  }
+  .video-banner-bg { display: none; }
+  .video-banner-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    width: 160%;
+    height: 72%;
+    background: radial-gradient(ellipse at 50% 45%, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.75) 38%, rgba(0, 0, 0, 0.35) 62%, transparent 78%);
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(12px);
+  }
+  .video-banner-sub,
+  .video-banner-title.font-bebas,
+  .video-banner-lead {
+    text-shadow:
+      0 0px 200px rgba(0, 0, 0, 1),
+      0 0px 100px rgba(0, 0, 0, 1),
+      0 0px 50px rgba(0, 0, 0, 1);
+  }
+}
 @media (max-width: 560px) { .video-banner-title.font-bebas { font-size: 42px; } }
 
 
