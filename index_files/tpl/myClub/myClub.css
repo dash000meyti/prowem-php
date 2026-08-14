@@ -122,11 +122,76 @@
 .club-card-content { position: relative; z-index: 5; width: 100%; height: 115px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; }
 .club-card-title.font-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 400; letter-spacing: 0.8px; color: #ffffff; margin: 0 0 8px 0; line-height: 1; text-transform: uppercase; height: 28px; display: flex; align-items: center; justify-content: center; }
 .club-card-text { font-family: var(--font-main, 'Inter', sans-serif); font-size: 13.5px; line-height: 1.45; color: #8a99ad; margin: 0; text-align: center; }
+.club-slider-nav { display: none; }
 
 /* Responsive Layout */
 @media (max-width: 1540px) { .club-features-container { gap: 16px; } .club-feature-card { width: 270px; } }
 @media (max-width: 1440px) { .club-features-container { justify-content: center; } }
-@media (max-width: 640px) { .club-feature-card { width: 100%; max-width: 320px; } }
+@media (max-width: 1200px) {
+  .club-features-section { padding: 80px 0 90px; overflow: hidden; }
+  .club-features-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 14px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 4px 20px 8px 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .club-features-container::-webkit-scrollbar { display: none; }
+  .club-feature-card {
+    flex: 0 0 290px;
+    width: 290px;
+    max-width: 290px;
+    height: 339px;
+    min-height: 339px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  .club-slider-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 22px 20px 0;
+    box-sizing: border-box;
+  }
+  .club-slider-counter {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .club-slider-current,
+  .club-slider-sep { color: #0091ff; }
+  .club-slider-total { color: #ffffff; }
+  .club-slider-bars { display: flex; align-items: center; gap: 6px; }
+  .club-slider-bars span {
+    display: block;
+    width: 14px;
+    height: 3px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    transition: width 0.25s ease, background 0.25s ease;
+  }
+  .club-slider-bars span.is-active { width: 32px; background: #0091ff; }
+}
+@media (max-width: 640px) { .club-feature-card { width: 290px; max-width: 290px; } }
 
 
 
