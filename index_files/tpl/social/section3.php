@@ -18,11 +18,22 @@
 
   <div class="social-library-layout">
 
+    <div class="social-library-mobile-tabs" role="tablist">
+      <button type="button" class="font-bebas" data-cat="0">BEFORE THE MATCH</button>
+      <button type="button" class="font-bebas is-active" data-cat="1">LIVE MOMENT</button>
+      <button type="button" class="font-bebas" data-cat="2">AFTER THE MATCH</button>
+    </div>
+
+    <div class="social-library-mobile-modes">
+      <button type="button" class="is-active" data-mode="a">WITH ASSETS</button>
+      <button type="button" data-mode="b">Data only</button>
+    </div>
+
     <!-- Linker Bereich: 3 Spalten mit Bebas-Labels und 12 Action Cards -->
     <div class="social-library-categories" id="socialLibraryCategories">
 
       <!-- SPALTE 1: BEFORE THE MATCH -->
-      <div class="social-cat-column">
+      <div class="social-cat-column" data-cat="0">
         <div class="cat-label-wrap">
           <span class="cat-label font-bebas active">BEFORE THE MATCH</span>
         </div>
@@ -65,7 +76,7 @@
       </div>
 
       <!-- SPALTE 2: LIVE MOMENT -->
-      <div class="social-cat-column">
+      <div class="social-cat-column is-active" data-cat="1">
         <div class="cat-label-wrap">
           <span class="cat-label font-bebas active">LIVE MOMENT</span>
         </div>
@@ -108,7 +119,7 @@
       </div>
 
       <!-- SPALTE 3: AFTER THE MATCH -->
-      <div class="social-cat-column">
+      <div class="social-cat-column" data-cat="2">
         <div class="cat-label-wrap">
           <span class="cat-label font-bebas active">AFTER THE MATCH</span>
         </div>
@@ -156,7 +167,7 @@
     <div class="social-modes-preview">
 
       <!-- MODE A -->
-      <div class="social-mode-item">
+      <div class="social-mode-item is-active" data-mode="a">
         <div class="mode-header">
           <span class="mode-title font-bebas">MODE A</span>
           <span class="mode-sub font-inter">With visual assets</span>
@@ -167,7 +178,7 @@
       </div>
 
       <!-- MODE B -->
-      <div class="social-mode-item">
+      <div class="social-mode-item" data-mode="b">
         <div class="mode-header">
           <span class="mode-title font-bebas">MODE B</span>
           <span class="mode-sub font-inter">Data only</span>
@@ -184,14 +195,45 @@
   <!-- Onclick-Script zum Aktivieren der Buttons -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      const layout = document.querySelector('.social-library-layout');
       const container = document.getElementById('socialLibraryCategories');
-      if (!container) return;
-      
+      if (!layout || !container) return;
+
+      const columns = container.querySelectorAll('.social-cat-column');
       const buttons = container.querySelectorAll('.social-action-btn');
+      const modeItems = layout.querySelectorAll('.social-mode-item');
+      const tabs = layout.querySelectorAll('.social-library-mobile-tabs button');
+      const modeBtns = layout.querySelectorAll('.social-library-mobile-modes button');
+
       buttons.forEach(btn => {
         btn.addEventListener('click', function () {
           buttons.forEach(b => b.classList.remove('active'));
           this.classList.add('active');
+        });
+      });
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          const idx = Number(this.dataset.cat);
+          tabs.forEach(t => t.classList.remove('is-active'));
+          this.classList.add('is-active');
+          columns.forEach((col, i) => col.classList.toggle('is-active', i === idx));
+
+          const colButtons = columns[idx].querySelectorAll('.social-action-btn');
+          const hasActive = Array.prototype.some.call(colButtons, b => b.classList.contains('active'));
+          if (!hasActive && colButtons[0]) {
+            buttons.forEach(b => b.classList.remove('active'));
+            colButtons[0].classList.add('active');
+          }
+        });
+      });
+
+      modeBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const mode = this.dataset.mode;
+          modeBtns.forEach(b => b.classList.remove('is-active'));
+          this.classList.add('is-active');
+          modeItems.forEach(item => item.classList.toggle('is-active', item.dataset.mode === mode));
         });
       });
     });
