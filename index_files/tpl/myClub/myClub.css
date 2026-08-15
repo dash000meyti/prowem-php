@@ -125,8 +125,22 @@
 .club-slider-nav { display: none; }
 
 /* Responsive Layout */
-@media (max-width: 1540px) { .club-features-container { gap: 16px; } .club-feature-card { width: 270px; } }
-@media (max-width: 1440px) { .club-features-container { justify-content: center; } }
+@media (max-width: 1540px) and (min-width: 1201px) {
+  .club-features-container {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: clamp(10px, 1vw, 20px);
+  }
+  .club-feature-card {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    max-width: 290px;
+    height: auto;
+    aspect-ratio: 290 / 339;
+  }
+}
 @media (max-width: 1200px) {
   .club-features-section { padding: 80px 0 90px; overflow: hidden; }
   .club-features-container {
@@ -383,7 +397,82 @@
 .club-options-blue-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 750px; height: 750px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 145, 255, 0.4) 0%, rgba(0, 145, 255, 0.1) 45%, rgba(7, 10, 15, 0) 70%); z-index: 1; pointer-events: none; }
 .club-monitor-img { position: relative; z-index: 2; width: 100%; max-width: 820px; height: auto; display: block; filter: drop-shadow(0 25px 60px rgba(0,0,0,0.65)); }
 
-@media (max-width: 1380px) { .club-options-layout { flex-direction: column; text-align: center; } .club-options-content { align-items: center; text-align: center; max-width: 100%; } .club-options-lead { text-align: center; } .club-options-cards { align-items: center; max-width: 100%; } .club-option-card { width: 100%; max-width: 573px; } .club-option-card-content { text-align: left; } .club-monitor-img { max-width: 100%; } }
+@media (max-width: 1380px) {
+  .club-options-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+  .club-options-content { display: contents; }
+  .club-options-sub,
+  .club-options-title.font-bebas,
+  .club-options-lead {
+    text-align: center;
+    max-width: 100%;
+  }
+  .club-options-lead { margin-bottom: 0; }
+  .club-options-visual {
+    order: 2;
+    flex: none;
+    width: 100%;
+    max-width: 720px;
+  }
+  .club-options-cards {
+    order: 3;
+    align-items: center;
+    max-width: 100%;
+  }
+  .club-option-card { width: 100%; max-width: 573px; }
+  .club-option-card-content { text-align: left; }
+  .club-monitor-img { max-width: 100%; }
+}
+@media (max-width: 670px) {
+  .club-option-card {
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 0px 16px 18px;
+    background: rgba(12, 17, 26, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    overflow: visible;
+    isolation: isolate;
+  }
+  .club-option-card-bg { display: none; }
+  .club-option-icon-overlay {
+    position: relative;
+    inset: auto;
+    width: 168px;
+    height: 168px;
+    flex-shrink: 0;
+    overflow: hidden;
+    z-index: 3;
+  }
+  .club-option-icon-overlay img {
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    object-fit: unset;
+    filter: drop-shadow(0 0 10px rgba(0, 145, 255, 0.45));
+  }
+  .club-option-card-content {
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .club-option-card-title.font-bebas {
+    justify-content: center;
+    font-size: 28px;
+  }
+  .club-option-card-desc { text-align: center; }
+}
 
 
 
@@ -439,9 +528,38 @@
 
 /* Visual Display Image (Vergrößert) */
 .club-responsive-visual { position: relative; z-index: 5; width: 100%; max-width: 1480px; margin-top: 20px; display: flex; justify-content: center; align-items: center; }
+.club-responsive-visual picture { width: 100%; max-width: 1420px; display: block; }
 .club-responsive-img { width: 100%; height: auto; max-width: 1420px; display: block; filter: drop-shadow(0 25px 60px rgba(0,0,0,0.7)); }
 
 @media (max-width: 840px) { .club-responsive-section { padding: 80px 0 100px 0; } .club-responsive-visual { margin-top: 10px; } }
+@media (max-width: 768px) {
+  .club-responsive-section {
+    background: #091018 url('../../../img/sections/myClub/My Club Section BG.png') center center / cover no-repeat;
+    padding: 110px 0 130px 0;
+  }
+  .club-responsive-bg { display: none; }
+  .club-responsive-section .club-header::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    width: 160%;
+    height: 120%;
+    background: radial-gradient(ellipse at 50% 45%, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.75) 38%, rgba(0, 0, 0, 0.35) 62%, transparent 78%);
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(12px);
+  }
+  .club-responsive-section .club-sub-title,
+  .club-responsive-section .club-main-title.font-bebas,
+  .club-responsive-section .club-lead-text {
+    text-shadow:
+      0 0px 200px rgba(0, 0, 0, 1),
+      0 0px 100px rgba(0, 0, 0, 1),
+      0 0px 50px rgba(0, 0, 0, 1);
+  }
+}
 
 
 /* ========================================================================== MYCLUB PAGE: SECTION 8 (VIDEO OVERVIEW) ========================================================================== */
@@ -457,7 +575,7 @@
 
 /* Video Preview Visual */
 .club-overview-visual { flex: 1; display: flex; align-items: center; justify-content: flex-end; position: relative; z-index: 4; }
-.club-video-wrapper { position: relative; width: 100%; max-width: 820px; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75); display: flex; align-items: center; justify-content: center; }
+.club-video-wrapper { position: relative; width: 100%; max-width: 820px; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background-image: url('../../../img/sections/myClub/Hero-BG.png'); background-size: cover; background-position: center center; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75); display: flex; align-items: center; justify-content: center; }
 .club-video-thumb { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Floating Blue Play Button */

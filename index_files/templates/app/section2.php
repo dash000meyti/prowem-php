@@ -67,9 +67,9 @@
         <p class="feature-card-desc">
           Broadcast matches with live overlays, scoreboards and highlight-ready video moments.
         </p>
-        <div class="feature-card-media">
+        <!-- <div class="feature-card-media">
           <img src="img/sections/app/Card-Preview-Livestream.png" alt="Live Streaming Preview">
-        </div>
+        </div> -->
       </div>
     </div>
 

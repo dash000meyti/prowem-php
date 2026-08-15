@@ -26,7 +26,10 @@
 
     <!-- Center Mockup Visual -->
     <div class="club-responsive-visual">
-      <img src="img/sections/myClub/sec_7/Section-Photo.png" class="club-responsive-img" alt="Your Club On Every Screen Mockup">
+      <picture>
+        <source media="(max-width: 768px)" srcset="img/sections/myClub/sec_7/Section-Photo-Mobile.png">
+        <img src="img/sections/myClub/sec_7/Section-Photo.png" class="club-responsive-img" alt="Your Club On Every Screen Mockup">
+      </picture>
     </div>
 
   </div>

@@ -25,7 +25,7 @@
     <!-- Rechte Spalte: Video Platzhalter -->
     <div class="video-preview-placeholder">
       <div class="video-poster-wrapper">
-        <img src="img/sections/video/sec_7/video-poster.png" onerror="this.style.display='none';" alt="Live Broadcast Preview">
+        <img src="img/sections/video/Hero-BG.png" alt="Live Broadcast Preview">
         
         <div class="video-play-btn">
           <div class="play-icon"></div>
