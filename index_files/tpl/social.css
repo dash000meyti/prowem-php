@@ -289,9 +289,10 @@
     padding: 12px 2px;
     color: #8a99ad;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 15px;
-    letter-spacing: 0.4px;
+    font-size: clamp(15px, 4.15vw, 30px);
+    letter-spacing: 0.3px;
     line-height: 1.15;
+    white-space: nowrap;
     text-align: center;
     cursor: pointer;
     transition: color 0.2s ease, border-color 0.2s ease;
