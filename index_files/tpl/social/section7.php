@@ -42,7 +42,29 @@
 
       <!-- 4. Split Connection Lines Right -->
       <div class="sync-element sync-lines-right">
-        <img src="img/sections/social/sec_7/Connect-Lines.png" alt="">
+        <img src="img/sections/social/sec_7/Connect-Lines.png" class="sync-lines-desktop" alt="">
+        <svg class="sync-lines-mobile" viewBox="0 0 360 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <filter id="syncMobileGlow" x="-40%" y="-20%" width="180%" height="150%">
+              <feGaussianBlur stdDeviation="5" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <g filter="url(#syncMobileGlow)" stroke="#b56bff" stroke-width="3" stroke-linecap="round">
+            <path d="M180 0 C180 48 52 82 52 138"/>
+            <path d="M180 0 V138"/>
+            <path d="M180 0 C180 48 308 82 308 138"/>
+          </g>
+          <g stroke="#ffffff" stroke-width="1.6" stroke-linecap="round">
+            <path d="M180 0 C180 48 52 82 52 138"/>
+            <path d="M180 0 V138"/>
+            <path d="M180 0 C180 48 308 82 308 138"/>
+          </g>
+        </svg>
       </div>
 
       <!-- 5. Posts Mockup Stack Right -->
