@@ -10,6 +10,9 @@ require_once __DIR__.'/Hero.php';
 require_once __DIR__.'/Router.php';
 require_once __DIR__.'/Footer.php';
 
+/**
+ * Front layout: auth dispatch, HTML shell, navigation, optional hero, routed page, footer.
+ */
 class App {
     private Auth $auth;
     private Navigation $nav;
@@ -51,20 +54,16 @@ class App {
             exit;
         }
 
-        ob_start(function($buffer) {
-            return \Prowem\Lang::autoTranslate($buffer);
-        });
-
-        echo '<!DOCTYPE html><html lang="'.($_SESSION['language'] ?? 'de').'"><head>';
+        echo '<!DOCTYPE html><html lang="'.htmlspecialchars(Lang::htmlLang(), ENT_QUOTES, 'UTF-8').'"><head>';
         echo '<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">';
-        echo '<title>Professional World Event Manager</title>';
+        echo '<title>'.\t('meta.title').'</title>';
         echo '<link rel="icon" href="img/favicon/favicon.ico" sizes="16x16">';
         echo '<link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml" sizes="any">';
         echo '<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32.png">';
         echo '<link rel="icon" type="image/png" sizes="256x256" href="img/favicon/favicon-256.png">';
         echo '<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">';
         echo '<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">';
-        echo '<link rel="stylesheet" href="index_files/css/style.css?v4">';
+        echo '<link rel="stylesheet" href="index_files/css/style.css?v5">';
         echo '<script src="form_handler.js" defer></script>';
         echo '</head><body>';
 

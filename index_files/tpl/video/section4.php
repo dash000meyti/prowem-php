@@ -5,14 +5,14 @@
 
   <!-- Header -->
   <div class="video-header">
-    <div class="video-bg-watermark font-bebas">MATCH ACTIONS</div>
+    <div class="video-bg-watermark font-bebas"><?= t('video.s4.watermark') ?></div>
 
-    <span class="video-sub-title font-inter">LIVE MATCH ACTIONS</span>
+    <span class="video-sub-title font-inter"><?= t('video.s4.sub') ?></span>
     <h2 class="video-main-title font-bebas">
-      EVERY ACTION<br>THE MATCH NEEDS.
+      <?= t('video.s4.title') ?>
     </h2>
     <p class="video-lead-text font-inter">
-      Record each key moment with a tap and instantly display the right broadcast graphic, while keeping the score, match data and player statistics up to date.
+      <?= t('video.s4.lead') ?>
     </p>
   </div>
 
@@ -29,7 +29,7 @@
         </div>
         <img src="img/sections/video/sec_4/Goal-Icon.svg" class="action-icon-underlay" alt="">
         <div class="action-btn-content">
-          <span class="action-btn-text font-bebas">GOAL!!!</span>
+          <span class="action-btn-text font-bebas"><?= t('video.s4.goal') ?></span>
         </div>
       </button>
 
@@ -41,7 +41,7 @@
         </div>
         <img src="img/sections/video/sec_4/Yellow-Card-Icon.svg" class="action-icon-underlay" alt="">
         <div class="action-btn-content">
-          <span class="action-btn-text font-bebas">YELLOW CARD</span>
+          <span class="action-btn-text font-bebas"><?= t('video.s4.yellow') ?></span>
         </div>
       </button>
 
@@ -53,7 +53,7 @@
         </div>
         <img src="img/sections/video/sec_4/Red-Card-Icon.svg" class="action-icon-underlay" alt="">
         <div class="action-btn-content">
-          <span class="action-btn-text font-bebas">RED CARD</span>
+          <span class="action-btn-text font-bebas"><?= t('video.s4.red') ?></span>
         </div>
       </button>
 
@@ -65,7 +65,7 @@
         </div>
         <img src="img/sections/video/sec_4/YR-Card-Icon.svg" class="action-icon-underlay" alt="">
         <div class="action-btn-content">
-          <span class="action-btn-text font-bebas">YELLOW RED CARD</span>
+          <span class="action-btn-text font-bebas"><?= t('video.s4.yellow_red') ?></span>
         </div>
       </button>
 
@@ -77,7 +77,7 @@
         </div>
         <img src="img/sections/video/sec_4/Sub-Icon.svg" class="action-icon-underlay" alt="">
         <div class="action-btn-content">
-          <span class="action-btn-text font-bebas">SUBSTITUTION</span>
+          <span class="action-btn-text font-bebas"><?= t('video.s4.sub_action') ?></span>
         </div>
       </button>
 
@@ -89,7 +89,7 @@
         </div>
         <img src="img/sections/video/sec_4/Blue-Card-Icon.svg" class="action-icon-underlay" alt="">
         <div class="action-btn-content">
-          <span class="action-btn-text font-bebas">BLUE CARD</span>
+          <span class="action-btn-text font-bebas"><?= t('video.s4.blue') ?></span>
         </div>
       </button>
 
@@ -101,7 +101,7 @@
         </div>
         <img src="img/sections/video/sec_4/Status-Icon.svg" class="action-icon-underlay" alt="">
         <div class="action-btn-content">
-          <span class="action-btn-text font-bebas">MATCH STATUS</span>
+          <span class="action-btn-text font-bebas"><?= t('video.s4.status') ?></span>
         </div>
       </button>
 
@@ -113,7 +113,7 @@
         </div>
         <img src="img/sections/video/sec_4/Penalty-Icon.svg" class="action-icon-underlay" alt="">
         <div class="action-btn-content">
-          <span class="action-btn-text font-bebas">PENALTY</span>
+          <span class="action-btn-text font-bebas"><?= t('video.s4.penalty') ?></span>
         </div>
       </button>
 
@@ -121,7 +121,7 @@
 
     <!-- Rechter Bildschirm Visual -->
     <div class="video-actions-screen">
-      <img src="img/sections/video/sec_4/screenshot.png" alt="Live Match Action Broadcast View">
+      <img src="img/sections/video/sec_4/screenshot.png" alt="<?= t('video.s4.alt') ?>">
     </div>
 
   </div>

@@ -9,7 +9,7 @@
   <div class="video-hero-bg">
     <picture>
       <source media="(max-width: 768px)" srcset="img/sections/video/Mobile%20Hero%20BG%20L.png">
-      <img src="img/sections/video/Hero-BG.png" alt="Broadcast Every Match Background">
+      <img src="img/sections/video/Hero-BG.png" alt="<?= t('video.hero.alt') ?>">
     </picture>
   </div>
 
@@ -17,23 +17,23 @@
     
     <!-- Linker Content-Bereich -->
     <div class="video-hero-content">
-      <span class="video-hero-sub font-inter">Live Stream</span>
+      <span class="video-hero-sub font-inter"><?= t('video.hero.sub') ?></span>
       
       <h1 class="video-hero-title font-bebas">
-        BROADCAST<br>
-        EVERY MATCH.<br>
-        <span class="text-green">LIKE A PRO.</span>
+        <?= t('video.hero.title_1') ?><br>
+        <?= t('video.hero.title_2') ?><br>
+        <span class="text-green"><?= t('video.hero.title_3') ?></span>
       </h1>
       
       <p class="video-hero-lead font-inter">
-        Stream with any camera, from your smartphone to a professional setup, and manage every match with live control, recording and professional broadcast graphics.
+        <?= t('video.hero.lead') ?>
       </p>
 
       <div class="video-hero-buttons">
         <a href="#" class="btn-primary-green">
-          Start live streaming <span class="btn-arrow">&rarr;</span>
+          <?= t('video.hero.cta') ?> <span class="btn-arrow">&rarr;</span>
         </a>
-        <a href="#" class="btn-secondary-link font-inter">Talk to Our Team</a>
+        <a href="#" class="btn-secondary-link font-inter"><?= t('video.hero.team') ?></a>
       </div>
     </div>
 

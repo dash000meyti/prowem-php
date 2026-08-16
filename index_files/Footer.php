@@ -1,12 +1,15 @@
 <?php
 namespace Prowem;
 
+/**
+ * Renders the site footer (inline markup, not templates/footer.php).
+ */
 class Footer {
   public function render(): void {
-    echo '
+    ?>
     <footer class="prowem-footer">
       <style>
-        .prowem-footer{background:#FF6249;color:#111;padding:60px 0;font-family:\'Ubuntu\',sans-serif;}
+        .prowem-footer{background:#FF6249;color:#111;padding:60px 0;font-family:'Ubuntu',sans-serif;}
         .prowem-footer-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:260px 1fr 1fr 1fr;gap:40px;align-items:start;}
         .footer-brand{display:flex;flex-direction:column;gap:14px;}
         .footer-brand img{width:140px;height:auto;filter:brightness(0);}
@@ -25,31 +28,31 @@ class Footer {
 
         <div class="footer-brand">
           <img src="./logo.svg" alt="Prowem">
-          <span>prowem © 2026 – all rights reserved</span>
+          <span><?= \t('footer.rights') ?></span>
         </div>
 
         <div class="footer-col">
-          <div class="footer-title">INFO</div>
-          <a class="footer-link" href="?page=app">Event-App</a>
-          <a class="footer-link" href="?page=videomanager">Video Manager</a>
-          <a class="footer-link" href="?page=socialmedia">Socialmedia-Manager</a>
+          <div class="footer-title"><?= \t('footer.info') ?></div>
+          <a class="footer-link" href="?page=app"><?= \t('footer.event_app') ?></a>
+          <a class="footer-link" href="?page=videomanager"><?= \t('footer.video_manager') ?></a>
+          <a class="footer-link" href="?page=socialmedia"><?= \t('footer.social_manager') ?></a>
           
         </div>
 
         <div class="footer-col">
-          <div class="footer-title">CONTACT US</div>
+          <div class="footer-title"><?= \t('footer.contact') ?></div>
           <div class="footer-text">+43 6641973537</div>
           <div class="footer-text">office@prowem.com</div>
         </div>
 
         <div class="footer-col">
-          <div class="footer-title">FIND US</div>
+          <div class="footer-title"><?= \t('footer.find_us') ?></div>
           <div class="footer-text">Lacknergasse 94/7<br>1180 Wien</div>
           
         </div>
 
       </div>
     </footer>
-    ';
+    <?php
   }
 }

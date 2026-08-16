@@ -4,29 +4,29 @@
     
     <!-- HEADER -->
     <div class="motion-head">
-      <span class="motion-sub">Manual to Smart</span>
-      <h2 class="font-bebas">LEAVE THE OLD WAY<br>LET PROWEM HANDLE THE REST</h2>
-      <div class="motion-bg-text">MANUAL SMART</div>
-      <p class="motion-lead">No more planning on paper, building fixtures by hand, switching between group chats, designing every post manually or editing videos late after each match. Prowem gives one organizer the power to do the work of a full event team, from planning and matchday operations to publishing updates, creating content through one connected football event system.</p>
+      <span class="motion-sub"><?= t('home.way.sub') ?></span>
+      <h2 class="font-bebas"><?= t_raw('home.way.title_html') ?></h2>
+      <div class="motion-bg-text"><?= t('home.way.watermark') ?></div>
+      <p class="motion-lead"><?= t('home.way.lead') ?></p>
     </div>
 
     <!-- MITTELBEREICH -->
     <div class="way-comparison-area">
       <div class="way-graphic-box">
-        <img src="img/icons/Old-way.png" alt="Old Way" class="way-main-img">
+        <img src="img/icons/Old-way.png" alt="<?= t('home.way.alt_old') ?>" class="way-main-img">
       </div>
       
       <!-- PFEIL & TEXT CONTAINER (WAAGERECHTER TEXT / PFEIL NACH UNTEN) -->
       <div class="way-arrow-flow">
-        <span class="font-bebas text-scattered">FROM SCATTERED</span>
+        <span class="font-bebas text-scattered"><?= t('home.way.from') ?></span>
         <div class="way-flow-arrow">
-          <img src="img/icons/Arrow-Right.svg" alt="to">
+          <img src="img/icons/Arrow-Right.svg" alt="<?= t('home.way.alt_to') ?>">
         </div>
-        <span class="font-bebas text-connected">TO CONNECTED</span>
+        <span class="font-bebas text-connected"><?= t('home.way.to') ?></span>
       </div>
 
       <div class="way-graphic-box">
-        <img src="img/icons/Prowem-way.png" alt="Prowem Way" class="way-main-img">
+        <img src="img/icons/Prowem-way.png" alt="<?= t('home.way.alt_new') ?>" class="way-main-img">
       </div>
     </div>
 
@@ -39,8 +39,8 @@
           <img src="img/icons/clipboard-text.svg" alt="" class="way-card-icon">
         </div>
         <div class="way-card-text">
-          <h4 class="font-bebas"><span class="way-card-num font-bebas">01</span> OPERATIONS</h4>
-          <p>Plan fixtures, teams, venues and results from one connected workflow instead of scattered sheets, notes and chats.</p>
+          <h4 class="font-bebas"><span class="way-card-num font-bebas">01</span> <?= t('home.way.card1.title') ?></h4>
+          <p><?= t('home.way.card1.text') ?></p>
         </div>
       </div>
 
@@ -52,8 +52,8 @@
           <img src="img/icons/Video-Play.svg" alt="" class="way-card-icon">
         </div>
         <div class="way-card-text">
-          <h4 class="font-bebas"><span class="way-card-num font-bebas">02</span> MEDIA</h4>
-          <p>Create match graphics, overlays and highlight-ready content without jumping between separate design and video tools.</p>
+          <h4 class="font-bebas"><span class="way-card-num font-bebas">02</span> <?= t('home.way.card2.title') ?></h4>
+          <p><?= t('home.way.card2.text') ?></p>
         </div>
       </div>
 
@@ -65,8 +65,8 @@
           <img src="img/icons/Users.svg" alt="" class="way-card-icon">
         </div>
         <div class="way-card-text">
-          <h4 class="font-bebas"><span class="way-card-num font-bebas">03</span> PUBLIC EXPERIENCE</h4>
-          <p>Publish event updates, match information and media in one professional place for teams, fans and partners.</p>
+          <h4 class="font-bebas"><span class="way-card-num font-bebas">03</span> <?= t('home.way.card3.title') ?></h4>
+          <p><?= t('home.way.card3.text') ?></p>
         </div>
       </div>
 

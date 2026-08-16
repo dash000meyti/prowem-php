@@ -5,21 +5,21 @@
 
   <!-- Hintergrundbild Banner BG.png -->
   <div class="video-banner-bg">
-    <img src="img/sections/video/sec_6/Banner BG.png" alt="Ready to go live background">
+    <img src="img/sections/video/sec_6/Banner BG.png" alt="<?= t('video.s6.alt') ?>">
   </div>
 
   <div class="video-banner-container">
-    <span class="video-banner-sub font-inter">READY TO GO LIVE?</span>
+    <span class="video-banner-sub font-inter"><?= t('video.s6.sub') ?></span>
     
     <h2 class="video-banner-title font-bebas">
-      STREAM EVERY MATCH WITH PROWEM
+      <?= t('video.s6.title') ?>
     </h2>
 
     <p class="video-banner-lead font-inter">
-      Stream with any camera, control every match event, add professional graphics and create highlights with one connected Prowem workflow.
+      <?= t('video.s6.lead') ?>
     </p>
 
-    <a href="#" class="btn-primary-green video-banner-btn">Get started Now</a>
+    <a href="#" class="btn-primary-green video-banner-btn"><?= t('video.s6.cta') ?></a>
   </div>
 
 </section>

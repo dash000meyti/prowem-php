@@ -36,8 +36,8 @@
 
 <div class="auth-page-wrapper">
   <div class="auth-container">
-    <h1 class="auth-title">Welcome</h1>
-    <p class="auth-subtitle">Create an account to complete your registration.</p>
+    <h1 class="auth-title"><?= t('auth.register.title') ?></h1>
+    <p class="auth-subtitle"><?= t('auth.register.subtitle') ?></p>
 
     <?php if (!empty($_SESSION['flash_error'])): ?>
       <div style="background:#ff4d4d; padding:12px; border-radius:10px; margin-bottom:20px; color:#fff; text-align:center; font-size:14px; font-weight:500;">
@@ -50,48 +50,48 @@
 
       <div class="form-grid">
           <div class="label-wrapper">
-            <label for="firstname">First Name</label>
-            <input type="text" name="firstname" id="firstname" placeholder="John" required>
+            <label for="firstname"><?= t('auth.first_name') ?></label>
+            <input type="text" name="firstname" id="firstname" placeholder="<?= t('auth.first_name_placeholder') ?>" required>
           </div>
           <div class="label-wrapper">
-            <label for="lastname">Last Name</label>
-            <input type="text" name="lastname" id="lastname" placeholder="Doe" required>
+            <label for="lastname"><?= t('auth.last_name') ?></label>
+            <input type="text" name="lastname" id="lastname" placeholder="<?= t('auth.last_name_placeholder') ?>" required>
           </div>
       </div>
 
       <div class="label-wrapper">
-        <label for="email">Email Address</label>
-        <input type="email" name="email" id="email" placeholder="you@example.com" required>
+        <label for="email"><?= t('auth.email') ?></label>
+        <input type="email" name="email" id="email" placeholder="<?= t('auth.email_placeholder') ?>" required>
       </div>
 
       <div class="label-wrapper">
-        <label for="phone">Phone Number</label>
-        <input type="tel" name="phone" id="phone" placeholder="+43 660 1234567" required>
+        <label for="phone"><?= t('auth.phone') ?></label>
+        <input type="tel" name="phone" id="phone" placeholder="<?= t('auth.phone_placeholder') ?>" required>
       </div>
 
       <div class="form-grid">
           <div class="label-wrapper">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="••••••" required>
+            <label for="password"><?= t('auth.password') ?></label>
+            <input type="password" name="password" id="password" placeholder="<?= t('auth.password_placeholder') ?>" required>
           </div>
           <div class="label-wrapper">
-            <label for="password_repeat">Confirm Password</label>
-            <input type="password" name="password_repeat" id="password_repeat" placeholder="••••••" required>
+            <label for="password_repeat"><?= t('auth.confirm_password') ?></label>
+            <input type="password" name="password_repeat" id="password_repeat" placeholder="<?= t('auth.password_placeholder') ?>" required>
           </div>
       </div>
 
       <div class="button-group">
-        <a href="index.php?page=login" class="back-btn" title="Back">
+        <a href="index.php?page=login" class="back-btn" title="<?= t('auth.back') ?>">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         </a>
         <button type="submit" name="pre_register" class="register-btn">
-          <span>Register</span>
+          <span><?= t('auth.register.submit') ?></span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </button>
       </div>
 
       <div class="login-redirect">
-          Already registered? <a href="index.php?page=login">Sign in</a>
+          <?= t('auth.register.already') ?> <a href="index.php?page=login"><?= t('auth.register.signin') ?></a>
       </div>
 
     </form>
@@ -101,11 +101,11 @@
 <?php if (!empty($_SESSION['flash_success'])): ?>
 <div class="modal-overlay" id="successModal">
   <div class="modal-box">
-    <div class="modal-title">Success</div>
+    <div class="modal-title"><?= t('auth.register.success_title') ?></div>
     <div class="modal-text">
       <?= $_SESSION['flash_success']; unset($_SESSION['flash_success']); ?>
     </div>
-    <button class="modal-btn" onclick="window.location.href='index.php'">To Homepage</button>
+    <button class="modal-btn" onclick="window.location.href='index.php'"><?= t('auth.register.to_home') ?></button>
   </div>
 </div>
 <?php endif; ?>
@@ -115,7 +115,7 @@ document.getElementById('preRegisterForm').addEventListener('submit',function(e)
   const p=document.getElementById('password').value;
   const r=document.getElementById('password_repeat').value;
   if(p!==r){
-    alert('Passwords do not match.');
+    alert(<?= json_encode(\Prowem\Lang::t('auth.register.passwords_mismatch'), JSON_UNESCAPED_UNICODE) ?>);
     e.preventDefault();
     return false;
   }

@@ -1,6 +1,9 @@
 <?php
 namespace Prowem;
 
+/**
+ * Removes an event from the user's CSV and deletes its directory.
+ */
 class DeleteEvent
 {
     public function delete()

@@ -5,14 +5,14 @@
 
   <!-- Header -->
   <div class="social-header">
-    <div class="social-bg-watermark font-bebas">WHAT YOU GET</div>
+    <div class="social-bg-watermark font-bebas"><?= t('social.s2.watermark') ?></div>
 
-    <span class="social-sub-title font-inter">WHAT YOU GET</span>
+    <span class="social-sub-title font-inter"><?= t('social.s2.watermark') ?></span>
     <h2 class="social-main-title font-bebas">
-      EVERYTHING YOU NEED TO<br>OWN THE MATCHDAY
+      <?= t('social.s2.title') ?>
     </h2>
     <p class="social-lead-text font-inter">
-      Prowem connects your event data with powerful broadcast tools to deliver a complete live streaming experience for organizers and viewers.
+      <?= t('social.s2.lead') ?>
     </p>
   </div>
 
@@ -22,12 +22,12 @@
     <!-- Card 1: EVERY MOMENT COVERED -->
     <div class="social-card">
       <div class="social-card-overlay">
-        <img src="img/sections/social/sec_2/Moment-Icon.png" alt="Every Moment Covered">
+        <img src="img/sections/social/sec_2/Moment-Icon.png" alt="<?= t('social.s2.card1.title') ?>">
       </div>
       <div class="social-card-content">
-        <h3 class="social-card-title font-bebas">EVERY MOMENT COVERED</h3>
+        <h3 class="social-card-title font-bebas"><?= t('social.s2.card1.title') ?></h3>
         <p class="social-card-desc font-inter">
-          Content for fixtures, squads, goals, results, standings, champions and more.
+          <?= t('social.s2.card1.text') ?>
         </p>
       </div>
     </div>
@@ -35,12 +35,12 @@
     <!-- Card 2: CREATE IN MINUTES -->
     <div class="social-card">
       <div class="social-card-overlay">
-        <img src="img/sections/social/sec_2/Minuets-Icon.png" alt="Create In Minutes">
+        <img src="img/sections/social/sec_2/Minuets-Icon.png" alt="<?= t('social.s2.card2.title') ?>">
       </div>
       <div class="social-card-content">
-        <h3 class="social-card-title font-bebas">CREATE IN MINUTES</h3>
+        <h3 class="social-card-title font-bebas"><?= t('social.s2.card2.title') ?></h3>
         <p class="social-card-desc font-inter">
-          Turn match data into professional, ready-to-share content in minutes.
+          <?= t('social.s2.card2.text') ?>
         </p>
       </div>
     </div>
@@ -48,12 +48,12 @@
     <!-- Card 3: READY MADE TEMPLATES -->
     <div class="social-card">
       <div class="social-card-overlay">
-        <img src="img/sections/social/sec_2/Ready-Made-Icon.png" alt="Ready Made Templates">
+        <img src="img/sections/social/sec_2/Ready-Made-Icon.png" alt="<?= t('social.s2.card3.title') ?>">
       </div>
       <div class="social-card-content">
-        <h3 class="social-card-title font-bebas">READY MADE TEMPLATES</h3>
+        <h3 class="social-card-title font-bebas"><?= t('social.s2.card3.title') ?></h3>
         <p class="social-card-desc font-inter">
-          Choose a template and customize it with your colors, logos and details.
+          <?= t('social.s2.card3.text') ?>
         </p>
       </div>
     </div>
@@ -61,12 +61,12 @@
     <!-- Card 4: READY FOR EVERY FORMAT -->
     <div class="social-card">
       <div class="social-card-overlay">
-        <img src="img/sections/social/sec_2/Format-Icon.png" alt="Ready For Every Format">
+        <img src="img/sections/social/sec_2/Format-Icon.png" alt="<?= t('social.s2.card4.title') ?>">
       </div>
       <div class="social-card-content">
-        <h3 class="social-card-title font-bebas">READY FOR EVERY FORMAT</h3>
+        <h3 class="social-card-title font-bebas"><?= t('social.s2.card4.title') ?></h3>
         <p class="social-card-desc font-inter">
-          Create consistent content for stories, posts and other digital formats.
+          <?= t('social.s2.card4.text') ?>
         </p>
       </div>
     </div>
@@ -74,12 +74,12 @@
     <!-- Card 5: CONNECTED MATCH DATA -->
     <div class="social-card">
       <div class="social-card-overlay">
-        <img src="img/sections/social/sec_2/Connected-Icon.png" alt="Connected Match Data">
+        <img src="img/sections/social/sec_2/Connected-Icon.png" alt="<?= t('social.s2.card5.title') ?>">
       </div>
       <div class="social-card-content">
-        <h3 class="social-card-title font-bebas">CONNECTED MATCH DATA</h3>
+        <h3 class="social-card-title font-bebas"><?= t('social.s2.card5.title') ?></h3>
         <p class="social-card-desc font-inter">
-          Sync teams, players, fixtures and results directly from Event Manager.
+          <?= t('social.s2.card5.text') ?>
         </p>
       </div>
     </div>

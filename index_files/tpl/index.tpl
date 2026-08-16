@@ -1,5 +1,7 @@
 <?php
 // login.php – Design adapted to Register page (English Version)
+$login_error = $_SESSION['flash_error'] ?? '';
+unset($_SESSION['flash_error']);
 ?>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -32,8 +34,8 @@
 
 <div class="auth-page-wrapper">
   <div class="auth-container">
-    <h1 class="auth-title">Login</h1>
-    <p class="auth-subtitle">Sign in to access your account.</p>
+    <h1 class="auth-title"><?= t('auth.login.title') ?></h1>
+    <p class="auth-subtitle"><?= t('auth.login.subtitle') ?></p>
 
     <?php if (!empty($login_error)): ?>
       <div class="error-message">
@@ -46,35 +48,35 @@
 
       <!-- Email -->
       <div class="label-wrapper">
-        <label for="username">Email Address</label>
-        <input type="email" id="username" name="username" required autocomplete="username" inputmode="email" placeholder="you@example.com" value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>">
+        <label for="username"><?= t('auth.email') ?></label>
+        <input type="email" id="username" name="username" required autocomplete="username" inputmode="email" placeholder="<?= t('auth.email_placeholder') ?>" value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>">
       </div>
 
       <!-- Password -->
       <div class="label-wrapper">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="••••••" required>
+        <label for="password"><?= t('auth.password') ?></label>
+        <input type="password" id="password" name="password" placeholder="<?= t('auth.password_placeholder') ?>" required>
       </div>
 
       <!-- Forgot Password -->
       <div class="forgot-wrapper">
-        <a href="index.php?page=forgot" class="forgot-link">Forgot password?</a>
+        <a href="index.php?page=forgot" class="forgot-link"><?= t('auth.forgot') ?></a>
       </div>
 
       <!-- Buttons -->
       <div class="button-group">
-        <a href="index.php" class="back-btn" title="Back">
+        <a href="index.php" class="back-btn" title="<?= t('auth.back') ?>">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         </a>
         <button type="submit" class="login-btn">
-          <span>Login</span>
+          <span><?= t('auth.login.submit') ?></span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </button>
       </div>
 
       <!-- Redirect to Register -->
       <div class="register-redirect">
-        Not a member yet? <a href="index.php?page=register">Register</a>
+        <?= t('auth.login.not_member') ?> <a href="index.php?page=register"><?= t('auth.login.register') ?></a>
       </div>
     </form>
   </div>

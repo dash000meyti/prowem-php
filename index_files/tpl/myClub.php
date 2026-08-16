@@ -2,11 +2,11 @@
 // myClub/myClub.php - Haupt-Landingpage für MyClub
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?= htmlspecialchars(\Prowem\Lang::htmlLang(), ENT_QUOTES, 'UTF-8') ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prowem - MyClub</title>
+  <title><?= t('club.page_title') ?></title>
   
   
   <!-- MyClub CSS Einbindung -->
@@ -23,7 +23,7 @@
     <div class="club-hero-bg">
       <picture>
         <source media="(max-width: 768px)" srcset="img/sections/myClub/Mobile%20Hero%20BG%20M.png">
-        <img src="img/sections/myClub/Hero-BG.png" onerror="this.onerror=null; this.src='../img/sections/myClub/sec_1/hero-bg.png';" alt="MyClub Hero Background">
+        <img src="img/sections/myClub/Hero-BG.png" onerror="this.onerror=null; this.src='../img/sections/myClub/sec_1/hero-bg.png';" alt="<?= t('club.hero.alt') ?>">
       </picture>
     </div>
 
@@ -31,22 +31,22 @@
       
       <!-- Linker Content-Bereich -->
       <div class="club-hero-content">
-        <span class="club-hero-sub font-inter">My club</span>
+        <span class="club-hero-sub font-inter"><?= t('club.hero.sub') ?></span>
 
         <h1 class="font-bebas">
-          WHERE YOUR CLUB<br>
-          <span class="text-blue">COMES ALIVE.</span>
+          <?= t('club.hero.title_1') ?><br>
+          <span class="text-blue"><?= t('club.hero.title_2') ?></span>
         </h1>
 
         <p class="club-hero-lead font-inter">
-          Build your club's digital home and manage teams, players, news, results, and media—all from one central dashboard.
+          <?= t('club.hero.lead') ?>
         </p>
 
         <div class="club-hero-actions">
           <a href="#" class="btn-primary-blue font-inter">
-            Create Your Club <span class="btn-arrow">&rarr;</span>
+            <?= t('club.hero.cta') ?> <span class="btn-arrow">&rarr;</span>
           </a>
-          <a href="#" class="btn-secondary-link font-inter">Talk to Our Team</a>
+          <a href="#" class="btn-secondary-link font-inter"><?= t('club.hero.team') ?></a>
         </div>
       </div>
 

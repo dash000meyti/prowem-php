@@ -10,7 +10,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-
+/**
+ * CSV-backed registration, login, password reset, and admin user actions.
+ */
 class Auth {
 
     private string $userFile;
@@ -55,14 +57,14 @@ class Auth {
         $required = ['firstname','lastname','email','phone','password','password_repeat'];
         foreach ($required as $f) {
             if (empty($_POST[$f])) {
-                $_SESSION['flash_error'] = 'Bitte alle Felder ausfüllen.';
+                $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.fill_all');
                 header('Location: index.php?page=register');
                 exit;
             }
         }
 
         if ($_POST['password'] !== $_POST['password_repeat']) {
-            $_SESSION['flash_error'] = 'Passwörter stimmen nicht überein.';
+            $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.passwords');
             header('Location: index.php?page=register');
             exit;
         }
@@ -70,7 +72,7 @@ class Auth {
         $users = $this->readUsers($this->userFile);
         foreach ($users as $u) {
             if (strcasecmp($u['username'], $_POST['email']) === 0) {
-                $_SESSION['flash_error'] = 'E-Mail existiert bereits.';
+                $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.email_exists');
                 header('Location: index.php?page=register');
                 exit;
             }
@@ -130,26 +132,26 @@ class Auth {
         $resetLink = "https://prowem.com/index.php?page=reset&token=".$token;
 
         $mail->isHTML(true);
-        $mail->Subject = 'Passwort zurücksetzen';
+        $mail->Subject = \Prowem\Lang::t('auth.mail.reset_subject');
         $mail->Body = "
-            <h2>Passwort zurücksetzen</h2>
-            <p>Klicke auf folgenden Link:</p>
+            <h2>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.reset_heading'), ENT_QUOTES, 'UTF-8') . "</h2>
+            <p>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.reset_body'), ENT_QUOTES, 'UTF-8') . "</p>
             <p><a href='{$resetLink}'>{$resetLink}</a></p>
-            <p>Der Link ist 60 Minuten gültig.</p>
+            <p>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.reset_valid'), ENT_QUOTES, 'UTF-8') . "</p>
         ";
 
         $mail->setFrom('noreply@prowem.com', 'PROWEM');
         $mail->addAddress('moshiriannima1977@gmail.com');
 
         $mail->isHTML(true);
-        $mail->Subject = 'Neue Registrierung PROWEM';
+        $mail->Subject = \Prowem\Lang::t('auth.mail.register_subject');
 
         $mail->Body = "
-            <h2>Neue Registrierung</h2>
-            <p><strong>Vorname:</strong> {$_POST['firstname']}</p>
-            <p><strong>Nachname:</strong> {$_POST['lastname']}</p>
-            <p><strong>Email:</strong> {$_POST['email']}</p>
-            <p><strong>Telefon:</strong> {$_POST['phone']}</p>
+            <h2>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.register_heading'), ENT_QUOTES, 'UTF-8') . "</h2>
+            <p><strong>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.first_name'), ENT_QUOTES, 'UTF-8') . "</strong> {$_POST['firstname']}</p>
+            <p><strong>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.last_name'), ENT_QUOTES, 'UTF-8') . "</strong> {$_POST['lastname']}</p>
+            <p><strong>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.email'), ENT_QUOTES, 'UTF-8') . "</strong> {$_POST['email']}</p>
+            <p><strong>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.phone'), ENT_QUOTES, 'UTF-8') . "</strong> {$_POST['phone']}</p>
         ";
 
         $mail->send();
@@ -158,7 +160,7 @@ class Auth {
         // optional: ignorieren oder loggen
     }
 
-        $_SESSION['flash_success'] = 'Registrierung erfolgreich.';
+        $_SESSION['flash_success'] = \Prowem\Lang::t('auth.success.registered');
         header('Location: index.php?page=register');
         exit;
     }
@@ -184,7 +186,7 @@ class Auth {
             if (strcasecmp($u['username'], $_POST['username']) === 0) {
 
                 if ($u['status'] !== 'accepted') {
-                    $_SESSION['flash_error'] = "Account nicht freigegeben.";
+                    $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.not_approved');
                     header("Location: index.php?page=login");
                     exit;
                 }
@@ -201,7 +203,7 @@ class Auth {
             }
         }
 
-        $_SESSION['flash_error'] = "Login fehlgeschlagen.";
+        $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.login_failed');
         header("Location: index.php?page=login");
         exit;
     }
@@ -215,7 +217,7 @@ public function handleForgotPassword(): void {
 
     $email = trim($_POST['email'] ?? '');
     if ($email === '') {
-        $_SESSION['flash_error'] = "Bitte E-Mail eingeben.";
+        $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.enter_email');
         header("Location: index.php?page=forgot");
         exit;
     }
@@ -237,7 +239,7 @@ public function handleForgotPassword(): void {
     unset($u);
 
     if (!$found) {
-        $_SESSION['flash_error'] = "E-Mail nicht gefunden.";
+        $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.email_not_found');
         header("Location: index.php?page=forgot");
         exit;
     }
@@ -289,12 +291,12 @@ public function handleForgotPassword(): void {
         $resetLink = "https://prowem.com/index.php?page=reset&token=".$token;
 
         $mail->isHTML(true);
-        $mail->Subject = 'Passwort zurücksetzen';
+        $mail->Subject = \Prowem\Lang::t('auth.mail.reset_subject');
         $mail->Body = "
-            <h2>Passwort zurücksetzen</h2>
-            <p>Klicke auf folgenden Link:</p>
+            <h2>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.reset_heading'), ENT_QUOTES, 'UTF-8') . "</h2>
+            <p>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.reset_body'), ENT_QUOTES, 'UTF-8') . "</p>
             <p><a href='{$resetLink}'>{$resetLink}</a></p>
-            <p>Der Link ist 60 Minuten gültig.</p>
+            <p>" . htmlspecialchars(\Prowem\Lang::t('auth.mail.reset_valid'), ENT_QUOTES, 'UTF-8') . "</p>
         ";
         $mail->SMTPDebug = 2;
         $mail->Debugoutput = 'html';
@@ -304,12 +306,12 @@ public function handleForgotPassword(): void {
         }
         
     } catch (\PHPMailer\PHPMailer\Exception $e) {
-        $_SESSION['flash_error'] = "Mail konnte nicht gesendet werden.";
+        $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.mail_failed');
         header("Location: index.php?page=forgot");
         exit;
     }
 
-    $_SESSION['flash_success'] = "Reset-Link wurde versendet.";
+    $_SESSION['flash_success'] = \Prowem\Lang::t('auth.success.reset_sent');
     header("Location: index.php?page=forgot");
     exit;
 }
@@ -328,7 +330,7 @@ public function handleResetPassword(): void {
     $password = $_POST['password'] ?? '';
 
     if ($token === '' || $password === '') {
-        $_SESSION['flash_error'] = "Ungültige Anfrage.";
+        $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.invalid_request');
         header("Location: index.php?page=forgot");
         exit;
     }
@@ -349,7 +351,7 @@ public function handleResetPassword(): void {
     unset($u);
 
     if (!$updated) {
-        $_SESSION['flash_error'] = "Token ungültig oder abgelaufen.";
+        $_SESSION['flash_error'] = \Prowem\Lang::t('auth.error.token');
         return;
     }
 
@@ -367,7 +369,7 @@ public function handleResetPassword(): void {
 
     fclose($fp);
 
-    $_SESSION['flash_success'] = "Passwort erfolgreich geändert.";
+    $_SESSION['flash_success'] = \Prowem\Lang::t('auth.success.password_changed');
     $_SESSION['flash_error'] = '';
     return;
 

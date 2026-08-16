@@ -5,15 +5,14 @@
 
   <!-- Header -->
   <div class="club-header">
-    <div class="club-bg-watermark font-bebas">WHAT YOU GET</div>
+    <div class="club-bg-watermark font-bebas"><?= t('club.s2.watermark') ?></div>
 
-    <span class="club-sub-title font-inter">What you get</span>
+    <span class="club-sub-title font-inter"><?= t('club.s2.sub') ?></span>
     <h2 class="club-main-title font-bebas">
-      EVERYTHING YOUR CLUB NEEDS<br>
-      ALL IN ONE PLACE.
+      <?= t('club.s2.title') ?>
     </h2>
     <p class="club-lead-text font-inter">
-      From your club website and squad to news, media, results, and standings—manage your entire digital presence from one central panel.
+      <?= t('club.s2.lead') ?>
     </p>
   </div>
 
@@ -28,13 +27,13 @@
       
       <!-- 100% x 100% Full Card Overlay Graphic -->
       <div class="club-card-full-icon">
-        <img src="img/sections/myClub/sec_2/Website-Icon.png" alt="Club Website">
+        <img src="img/sections/myClub/sec_2/Website-Icon.png" alt="<?= t('club.s2.card1.title') ?>">
       </div>
 
       <div class="club-card-content">
-        <h3 class="club-card-title font-bebas">CLUB WEBSITE</h3>
+        <h3 class="club-card-title font-bebas"><?= t('club.s2.card1.title') ?></h3>
         <p class="club-card-text font-inter">
-          Create a professional digital home for your club with all essential information
+          <?= t('club.s2.card1.text') ?>
         </p>
       </div>
     </div>
@@ -47,13 +46,13 @@
       </div>
 
       <div class="club-card-full-icon">
-        <img src="img/sections/myClub/sec_2/Players-Icon.png" alt="Teams & Players">
+        <img src="img/sections/myClub/sec_2/Players-Icon.png" alt="<?= t('club.s2.card2.title') ?>">
       </div>
 
       <div class="club-card-content">
-        <h3 class="club-card-title font-bebas">TEAMS & PLAYERS</h3>
+        <h3 class="club-card-title font-bebas"><?= t('club.s2.card2.title') ?></h3>
         <p class="club-card-text font-inter">
-          Manage your team and player profiles from one simple, centralized dashboard.
+          <?= t('club.s2.card2.text') ?>
         </p>
       </div>
     </div>
@@ -66,13 +65,13 @@
       </div>
 
       <div class="club-card-full-icon">
-        <img src="img/sections/myClub/sec_2/News-Icon.png" alt="News & Media">
+        <img src="img/sections/myClub/sec_2/News-Icon.png" alt="<?= t('club.s2.card3.title') ?>">
       </div>
 
       <div class="club-card-content">
-        <h3 class="club-card-title font-bebas">NEWS & MEDIA</h3>
+        <h3 class="club-card-title font-bebas"><?= t('club.s2.card3.title') ?></h3>
         <p class="club-card-text font-inter">
-          Publish club news and share images or videos directly on your website.
+          <?= t('club.s2.card3.text') ?>
         </p>
       </div>
     </div>
@@ -85,13 +84,13 @@
       </div>
 
       <div class="club-card-full-icon">
-        <img src="img/sections/myClub/sec_2/Standing-Icon.png" alt="Results & Standings">
+        <img src="img/sections/myClub/sec_2/Standing-Icon.png" alt="<?= t('club.s2.card4.title') ?>">
       </div>
 
       <div class="club-card-content">
-        <h3 class="club-card-title font-bebas">RESULTS & STANDINGS</h3>
+        <h3 class="club-card-title font-bebas"><?= t('club.s2.card4.title') ?></h3>
         <p class="club-card-text font-inter">
-          Enter match results manually and keep your league table updated automatically.
+          <?= t('club.s2.card4.text') ?>
         </p>
       </div>
     </div>
@@ -104,13 +103,13 @@
       </div>
 
       <div class="club-card-full-icon">
-        <img src="img/sections/myClub/sec_2/Panel-Icon.png" alt="Management Panel">
+        <img src="img/sections/myClub/sec_2/Panel-Icon.png" alt="<?= t('club.s2.card5.title') ?>">
       </div>
 
       <div class="club-card-content">
-        <h3 class="club-card-title font-bebas">MANAGEMENT PANEL</h3>
+        <h3 class="club-card-title font-bebas"><?= t('club.s2.card5.title') ?></h3>
         <p class="club-card-text font-inter">
-          Manage your website, squad, content, and match data from one central panel.
+          <?= t('club.s2.card5.text') ?>
         </p>
       </div>
     </div>

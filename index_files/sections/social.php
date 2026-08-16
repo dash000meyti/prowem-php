@@ -4,10 +4,10 @@
     
     <!-- HEADER -->
     <div class="motion-head">
-      <span class="motion-sub">Services at a glance</span>
-      <h2 class="font-bebas">SEE PROWEM<br>IN MOTION</h2>
-      <div class="motion-bg-text">SERVICES GLANCE</div>
-      <p class="motion-lead">Get a fast, visual overview of Prowem’s core services. From event management and live streaming to social content automation and club digitalization, each tool is designed to help organizers run better football events and create a stronger experience for teams, players and fans.</p>
+      <span class="motion-sub"><?= t('home.motion.sub') ?></span>
+      <h2 class="font-bebas"><?= t_raw('home.motion.title_html') ?></h2>
+      <div class="motion-bg-text"><?= t('home.motion.watermark') ?></div>
+      <p class="motion-lead"><?= t('home.motion.lead') ?></p>
     </div>
 
     <!-- CARDS GRID -->
@@ -18,13 +18,13 @@
         <div class="card-left-column">
           <span class="card-num font-bebas">01</span>
           <div class="card-icon-bg"><img src="img/icons/Cup%20Icon.svg" alt=""></div>
-          <h3>YOU RUN<br> TOURNAMENTS?</h3>
+          <h3><?= t_raw('home.motion.card1.title_html') ?></h3>
           <div class="title-divider"></div>
-          <p>Create events, teams, venues and fixtures, then manage results and standings from one organized system.</p>
+          <p><?= t('home.motion.card1.text') ?></p>
           <button class="card-arrow"><img src="img/icons/Arrow-Icon.svg" alt=""></button>
         </div>
         <div class="card-expanded-media">
-          <img src="img/icons/app_1.png" alt="Prowem Operations" class="main-video-img">
+          <img src="img/icons/app_1.png" alt="<?= t('home.motion.card1.alt') ?>" class="main-video-img">
         </div>
       </div>
 
@@ -33,13 +33,13 @@
         <div class="card-left-column">
           <span class="card-num font-bebas">02</span>
           <div class="card-icon-bg"><img src="img/icons/video%20Icon.svg" alt=""></div>
-          <h3>YOU ARE<br> STREAMER?</h3>
+          <h3><?= t_raw('home.motion.card2.title_html') ?></h3>
           <div class="title-divider"></div>
-          <p>Broadcast matches with live overlays, scoreboards and highlight-ready video moments.</p>
+          <p><?= t('home.motion.card2.text') ?></p>
           <button class="card-arrow"><img src="img/icons/Arrow-Icon.svg" alt=""></button>
         </div>
         <div class="card-expanded-media">
-          <img src="img/icons/app_2.png" alt="Prowem Live Streaming" class="main-video-img">
+          <img src="img/icons/app_2.png" alt="<?= t('home.motion.card2.alt') ?>" class="main-video-img">
         </div>
       </div>
 
@@ -48,13 +48,13 @@
         <div class="card-left-column">
           <span class="card-num font-bebas">03</span>
           <div class="card-icon-bg"><img src="img/icons/Mobile%20Icon.svg" alt=""></div>
-          <h3>YOU NEED<br> CONTENT?</h3>
+          <h3><?= t_raw('home.motion.card3.title_html') ?></h3>
           <div class="title-divider"></div>
-          <p>Automatically generate match graphics, stories and social posts from real event data.</p>
+          <p><?= t('home.motion.card3.text') ?></p>
           <button class="card-arrow"><img src="img/icons/Arrow-Icon.svg" alt=""></button>
         </div>
         <div class="card-expanded-media">
-          <img src="img/icons/app_3.png" alt="Prowem Social Content" class="main-video-img">
+          <img src="img/icons/app_3.png" alt="<?= t('home.motion.card3.alt') ?>" class="main-video-img">
         </div>
       </div>
 
@@ -63,13 +63,13 @@
         <div class="card-left-column">
           <span class="card-num font-bebas">04</span>
           <div class="card-icon-bg"><img src="img/icons/Club%20Icon.svg" alt=""></div>
-          <h3>YOU HAVE<br> A CLUB?</h3>
+          <h3><?= t_raw('home.motion.card4.title_html') ?></h3>
           <div class="title-divider"></div>
-          <p>Manage your club profile, players, matches, news and media in one digital home.</p>
+          <p><?= t('home.motion.card4.text') ?></p>
           <button class="card-arrow"><img src="img/icons/Arrow-Icon.svg" alt=""></button>
         </div>
         <div class="card-expanded-media">
-          <img src="img/icons/app_4.png" alt="Prowem Club" class="main-video-img">
+          <img src="img/icons/app_4.png" alt="<?= t('home.motion.card4.alt') ?>" class="main-video-img">
         </div>
       </div>
 

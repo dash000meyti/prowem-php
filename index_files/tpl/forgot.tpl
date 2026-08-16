@@ -30,8 +30,8 @@ unset($_SESSION['flash_error'], $_SESSION['flash_success']);
 
 <div class="auth-page-wrapper">
   <div class="auth-container">
-    <h1 class="auth-title">Forgot Password</h1>
-    <p class="auth-subtitle">Enter your email address to receive a reset link.</p>
+    <h1 class="auth-title"><?= t('auth.forgot.title') ?></h1>
+    <p class="auth-subtitle"><?= t('auth.forgot.subtitle') ?></p>
 
     <?php if (!empty($forgot_success)): ?>
       <div class="success-message">
@@ -50,17 +50,17 @@ unset($_SESSION['flash_error'], $_SESSION['flash_success']);
 
       <!-- Email -->
       <div class="label-wrapper">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <label for="email"><?= t('auth.email') ?></label>
+        <input type="email" id="email" name="email" placeholder="<?= t('auth.email_placeholder') ?>" required>
       </div>
 
       <!-- Buttons -->
       <div class="button-group">
-        <a href="index.php?page=login" class="back-btn" title="Back">
+        <a href="index.php?page=login" class="back-btn" title="<?= t('auth.back') ?>">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         </a>
         <button type="submit" class="login-btn">
-          <span>Send Link</span>
+          <span><?= t('auth.forgot.submit') ?></span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </button>
       </div>

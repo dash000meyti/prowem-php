@@ -3,14 +3,14 @@
   
   <div class="features-header">
     <!-- Riesiger Wasserzeichen-Text im Hintergrund -->
-    <div class="bg-watermark font-bebas">WHAT YOU GET</div>
+    <div class="bg-watermark font-bebas"><?= t('app.s2.watermark') ?></div>
 
-    <span class="features-sub">What you get</span>
+    <span class="features-sub"><?= t('app.s2.sub') ?></span>
     <h2 class="features-title font-bebas">
-      EVERYTHING YOUR EVENT<br>NEEDS ALL IN ONE PLACE.
+      <?= t('app.s2.title') ?>
     </h2>
     <p class="features-lead">
-      Prowem connects your event data with powerful broadcast tools to deliver a complete live streaming experience for organizers and viewers.
+      <?= t('app.s2.lead') ?>
     </p>
   </div>
 
@@ -21,15 +21,15 @@
       <div class="feature-card-header">
         <div class="feature-card-title-group">
           <div class="feature-icon-wrapper">
-            <img src="img/sections/app/Schedul-Icon.png" alt="Automated Scheduling">
+            <img src="img/sections/app/Schedul-Icon.png" alt="<?= t('app.s2.card1.title') ?>">
           </div>
-          <h3 class="feature-card-title font-bebas">AUTOMATED SCHEDULING</h3>
+          <h3 class="feature-card-title font-bebas"><?= t('app.s2.card1.title') ?></h3>
         </div>
         <div class="feature-accordion-arrow"></div>
       </div>
       <div class="feature-card-body">
         <p class="feature-card-desc">
-          Automatically generate fixtures and tables based on your teams, venues and event format.
+          <?= t('app.s2.card1.text') ?>
         </p>
       </div>
     </div>
@@ -39,15 +39,15 @@
       <div class="feature-card-header">
         <div class="feature-card-title-group">
           <div class="feature-icon-wrapper">
-            <img src="img/sections/app/Website-Icon.png" alt="Event Website">
+            <img src="img/sections/app/Website-Icon.png" alt="<?= t('app.s2.card2.title') ?>">
           </div>
-          <h3 class="feature-card-title font-bebas">EVENT WEBSITE</h3>
+          <h3 class="feature-card-title font-bebas"><?= t('app.s2.card2.title') ?></h3>
         </div>
         <div class="feature-accordion-arrow"></div>
       </div>
       <div class="feature-card-body">
         <p class="feature-card-desc">
-          Publish fixtures, results, tables, teams and news on a dedicated event website.
+          <?= t('app.s2.card2.text') ?>
         </p>
       </div>
     </div>
@@ -57,15 +57,15 @@
       <div class="feature-card-header">
         <div class="feature-card-title-group">
           <div class="feature-icon-wrapper">
-            <img src="img/sections/app/Livestream-Icon.png" alt="Live Streaming">
+            <img src="img/sections/app/Livestream-Icon.png" alt="<?= t('app.s2.card3.title') ?>">
           </div>
-          <h3 class="feature-card-title font-bebas">LIVE STREAMING</h3>
+          <h3 class="feature-card-title font-bebas"><?= t('app.s2.card3.title') ?></h3>
         </div>
         <div class="feature-accordion-arrow"></div>
       </div>
       <div class="feature-card-body">
         <p class="feature-card-desc">
-          Broadcast matches with live overlays, scoreboards and highlight-ready video moments.
+          <?= t('app.s2.card3.text') ?>
         </p>
         <!-- <div class="feature-card-media">
           <img src="img/sections/app/Card-Preview-Livestream.png" alt="Live Streaming Preview">
@@ -78,15 +78,15 @@
       <div class="feature-card-header">
         <div class="feature-card-title-group">
           <div class="feature-icon-wrapper">
-            <img src="img/sections/app/Highlight-Icon.png" alt="Match Highlights">
+            <img src="img/sections/app/Highlight-Icon.png" alt="<?= t('app.s2.card4.title') ?>">
           </div>
-          <h3 class="feature-card-title font-bebas">MATCH HIGHLIGHTS</h3>
+          <h3 class="feature-card-title font-bebas"><?= t('app.s2.card4.title') ?></h3>
         </div>
         <div class="feature-accordion-arrow"></div>
       </div>
       <div class="feature-card-body">
         <p class="feature-card-desc">
-          Capture key match moments and automatically turn them into a ready-to-watch highlight video.
+          <?= t('app.s2.card4.text') ?>
         </p>
       </div>
     </div>
@@ -96,15 +96,15 @@
       <div class="feature-card-header">
         <div class="feature-card-title-group">
           <div class="feature-icon-wrapper">
-            <img src="img/sections/app/Content-Icon.png" alt="Social Content">
+            <img src="img/sections/app/Content-Icon.png" alt="<?= t('app.s2.card5.title') ?>">
           </div>
-          <h3 class="feature-card-title font-bebas">SOCIAL CONTENT</h3>
+          <h3 class="feature-card-title font-bebas"><?= t('app.s2.card5.title') ?></h3>
         </div>
         <div class="feature-accordion-arrow"></div>
       </div>
       <div class="feature-card-body">
         <p class="feature-card-desc">
-          Automatically create ready-to-publish posts for matches, goals, results and more.
+          <?= t('app.s2.card5.text') ?>
         </p>
       </div>
     </div>

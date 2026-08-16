@@ -64,32 +64,32 @@
 <div class="auth-container">
     <div class="admin-inner">
 
-        <h1>Admin Bereich</h1>
+        <h1><?= t('admin.title') ?></h1>
 
         <div class="toggle-section">
 
             <div class="toggle-header-container">
-                <h2 class="toggle-header" data-target="open-users">Open Users</h2>
-                <h2 class="toggle-header active" data-target="all-users">All Users</h2>
+                <h2 class="toggle-header" data-target="open-users"><?= t('admin.open_users') ?></h2>
+                <h2 class="toggle-header active" data-target="all-users"><?= t('admin.all_users') ?></h2>
             </div>
 
             <!-- OPEN USERS -->
             <div id="open-users" class="user-list">
 
                 <?php if (empty($openUsers)): ?>
-                    <p>Keine offenen User</p>
+                    <p><?= t('admin.no_open') ?></p>
                 <?php else: ?>
 
                     <?php foreach ($openUsers as $user): ?>
                         <div class="user-item">
 
-                            <p><strong>Vorname:</strong> <?= htmlspecialchars($user['firstname'] ?? '') ?></p>
-                            <p><strong>Nachname:</strong> <?= htmlspecialchars($user['lastname'] ?? '') ?></p>
-                            <p><strong>Email:</strong> <?= htmlspecialchars($user['username'] ?? '') ?></p>
-                            <p><strong>Tel:</strong> <?= htmlspecialchars($user['tel'] ?? '') ?></p>
+                            <p><strong><?= t('admin.first_name') ?></strong> <?= htmlspecialchars($user['firstname'] ?? '') ?></p>
+                            <p><strong><?= t('admin.last_name') ?></strong> <?= htmlspecialchars($user['lastname'] ?? '') ?></p>
+                            <p><strong><?= t('admin.email') ?></strong> <?= htmlspecialchars($user['username'] ?? '') ?></p>
+                            <p><strong><?= t('admin.tel') ?></strong> <?= htmlspecialchars($user['tel'] ?? '') ?></p>
 
                             <?php if (!empty($user['id_upload'])): ?>
-                                <img src="<?= htmlspecialchars($user['id_upload']) ?>" class="user-id-image" alt="Ausweis">
+                                <img src="<?= htmlspecialchars($user['id_upload']) ?>" class="user-id-image" alt="<?= t('admin.id_alt') ?>">
                             <?php endif; ?>
 
                             <div class="button-group">
@@ -107,20 +107,20 @@
             <div id="all-users" class="user-list active">
 
                 <?php if (empty($allUsers)): ?>
-                    <p>Keine User gefunden</p>
+                    <p><?= t('admin.no_users') ?></p>
                 <?php else: ?>
 
                     <div class="all-users-desktop">
                         <table class="user-table">
                             <thead>
                                 <tr>
-                                    <th>Vorname</th>
-                                    <th>Nachname</th>
-                                    <th>Email</th>
-                                    <th>Tel</th>
-                                    <th>Status</th>
-                                    <th>Login</th>
-                                    <th>Delete</th>
+                                    <th><?= t('admin.col_first') ?></th>
+                                    <th><?= t('admin.col_last') ?></th>
+                                    <th><?= t('admin.col_email') ?></th>
+                                    <th><?= t('admin.col_tel') ?></th>
+                                    <th><?= t('admin.col_status') ?></th>
+                                    <th><?= t('admin.login') ?></th>
+                                    <th><?= t('admin.delete') ?></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -138,7 +138,7 @@
                                         </td>
                                         <td>
                                             <a href="index.php?page=admin&action=login_as&username=<?= urlencode($user['username']) ?>" class="delete-user-btn" style="background:#3498db;">
-                                                Login
+                                                <?= t('admin.login') ?>
                                             </a>
                                         </td>
                                         <td>
@@ -153,10 +153,10 @@
                     <div class="all-users-mobile">
                         <?php foreach ($allUsers as $user): ?>
                             <div class="user-card">
-                                <div class="user-card-row"><span class="user-card-label">Vorname</span><span class="user-card-value"><?= htmlspecialchars($user['firstname'] ?? '') ?></span></div>
-                                <div class="user-card-row"><span class="user-card-label">Nachname</span><span class="user-card-value"><?= htmlspecialchars($user['lastname'] ?? '') ?></span></div>
-                                <div class="user-card-row"><span class="user-card-label">Email</span><span class="user-card-value"><?= htmlspecialchars($user['username'] ?? '') ?></span></div>
-                                <div class="user-card-row"><span class="user-card-label">Tel</span><span class="user-card-value"><?= htmlspecialchars($user['tel'] ?? '') ?></span></div>
+                                <div class="user-card-row"><span class="user-card-label"><?= t('admin.col_first') ?></span><span class="user-card-value"><?= htmlspecialchars($user['firstname'] ?? '') ?></span></div>
+                                <div class="user-card-row"><span class="user-card-label"><?= t('admin.col_last') ?></span><span class="user-card-value"><?= htmlspecialchars($user['lastname'] ?? '') ?></span></div>
+                                <div class="user-card-row"><span class="user-card-label"><?= t('admin.col_email') ?></span><span class="user-card-value"><?= htmlspecialchars($user['username'] ?? '') ?></span></div>
+                                <div class="user-card-row"><span class="user-card-label"><?= t('admin.col_tel') ?></span><span class="user-card-value"><?= htmlspecialchars($user['tel'] ?? '') ?></span></div>
 
                                 <div class="user-card-actions">
 
@@ -166,7 +166,7 @@
                                     </div>
 
                                     <a href="index.php?page=admin&action=login_as&username=<?= urlencode($user['username']) ?>" class="delete-user-btn" style="background:#3498db;">
-                                        Login
+                                        <?= t('admin.login') ?>
                                     </a>
 
                                     <button class="delete-user-btn" data-username="<?= htmlspecialchars((string)($user['username'] ?? '')) ?>">🗑</button>

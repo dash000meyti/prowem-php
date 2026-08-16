@@ -5,23 +5,23 @@
 
   <!-- Stadion-Hintergrund -->
   <div class="social-banner-bg">
-    <img src="img/sections/social/sec_5/Banner-BG.png" alt="Stadium Lights Background">
+    <img src="img/sections/social/sec_5/Banner-BG.png" alt="<?= t('social.s5.alt') ?>">
   </div>
 
   <!-- Content Layer -->
   <div class="social-banner-container">
     <div class="social-banner-content">
-      <span class="banner-sub-title font-inter">READY TO STAND OUT?</span>
+      <span class="banner-sub-title font-inter"><?= t('social.s5.sub') ?></span>
 
       <h2 class="banner-main-title font-bebas">
-        TURN EVERY MATCH INTO CONTENT.
+        <?= t('social.s5.title') ?>
       </h2>
 
       <p class="banner-lead-text font-inter">
-        Create professional, ready-to-share graphics for every moment of your competition — with or without visual assets.
+        <?= t('social.s5.lead') ?>
       </p>
 
-      <a href="?page=register" class="btn-primary-purple font-inter">Start Creating Now</a>
+      <a href="?page=register" class="btn-primary-purple font-inter"><?= t('social.s5.cta') ?></a>
     </div>
   </div>
 

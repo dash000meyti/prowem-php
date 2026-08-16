@@ -29,7 +29,7 @@
 </style>
 <div class="auth-container">
   <div style="max-width:900px;margin:0 auto;">
-    <h1>Meine Events</h1>
+    <h1><?= t('event.my_title') ?></h1>
 
     <div class="event-list">
       <ul>
@@ -54,18 +54,18 @@
                         echo '<li class="event-row">';
                           echo '<div class="event-main">';
                             echo '<div class="event-name">', $eventName, '</div>';
-                            echo '<div class="event-id">ID: <code>', $eventId , '</code></div>';
+                            echo '<div class="event-id">', t('event.id'), ' <code>', $eventId , '</code></div>';
                           echo '</div>';
 
                           echo '<div class="event-actions">';
                             // Link zum Eventmanager
-                            echo '<a href="', $eventId , '/spielplan.php" class="admin-btn" target="_blank">Eventmanager</a>';
+                            echo '<a href="', $eventId , '/spielplan.php" class="admin-btn" target="_blank">', t('event.manager'), '</a>';
 
                             // Neues Löschformular
                             echo '<form method="post" action="index.php?page=delete_event" class="delete-form">';
                               echo '<input type="hidden" name="event_id" value="', $eventId, '">';
-                              echo '<button type="button" class="del-btn" title="Event löschen">';
-                                echo '<span class="trash" aria-hidden="true">🗑️</span> Löschen';
+                              echo '<button type="button" class="del-btn" title="', t('event.delete_title'), '">';
+                                echo '<span class="trash" aria-hidden="true">🗑️</span> ', t('event.delete');
                               echo '</button>';
                             echo '</form>';
                           echo '</div>';
@@ -76,7 +76,7 @@
             }
 
             if (!$has_events) {
-                echo '<p>Keine Events gefunden.</p>';
+                echo '<p>', t('event.none'), '</p>';
             }
         }
         ?>
@@ -90,13 +90,13 @@
   <div class="modal__overlay" data-close-delete></div>
   <div class="modal__dialog" role="document" aria-labelledby="delete-modal-title">
     <div class="modal__header">
-      <div class="modal__title" id="delete-modal-title">Event wirklich löschen?</div>
-      <button class="modal__close" type="button" aria-label="Schließen" title="Schließen" data-close-delete>&times;</button>
+      <div class="modal__title" id="delete-modal-title"><?= t('event.confirm_delete') ?></div>
+      <button class="modal__close" type="button" aria-label="<?= t('event.close') ?>" title="<?= t('event.close') ?>" data-close-delete>&times;</button>
     </div>
     <div class="modal__body" id="delete-modal-body"></div>
     <div class="modal__footer">
-      <button type="button" class="btn btn-secondary" data-close-delete>Abbrechen</button>
-      <button type="button" class="btn btn-danger" data-confirm-delete>Ja, endgültig löschen</button>
+      <button type="button" class="btn btn-secondary" data-close-delete><?= t('event.cancel') ?></button>
+      <button type="button" class="btn btn-danger" data-confirm-delete><?= t('event.delete_forever') ?></button>
     </div>
   </div>
 </div>
@@ -133,6 +133,11 @@
   const body  = document.getElementById('delete-modal-body');
   const confirm = modal.querySelector('[data-confirm-delete]');
   let formToSubmit = null;
+  const eventI18n = {
+    intro: <?= json_encode(\Prowem\Lang::t('event.delete_intro'), JSON_UNESCAPED_UNICODE) ?>,
+    details: <?= json_encode(\Prowem\Lang::t('event.delete_details'), JSON_UNESCAPED_UNICODE) ?>,
+    irreversible: <?= json_encode(\Prowem\Lang::t('event.delete_irreversible'), JSON_UNESCAPED_UNICODE) ?>
+  };
 
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.del-btn');
@@ -141,13 +146,14 @@
 
     const row  = btn.closest('.event-row');
     const name = (row?.querySelector('.event-name')?.textContent || '').trim();
-    const id   = (row?.querySelector('.event-id')?.textContent || '').replace(/^ID:\s*/,'').trim();
+    const id   = (row?.querySelector('.event-id code')?.textContent || '').trim();
     formToSubmit = btn.closest('form');
 
+    const intro = eventI18n.intro.replace('{id}', id || '-').replace('{name}', name || '');
     body.innerHTML = `
-      <p>Du bist dabei, dein Event zu löschen. (ID <code>${id || '-'}</code> - <strong>${name || 'Event'}</strong>)</p>
-      <p>Damit werden alle Daten des Turniers entfernt: Teams, Spielpläne, Ergebnisse, Einstellungen und Dateien.</p>
-      <p>Dieser Vorgang kann nicht rückgängig gemacht werden. Fortfahren?</p>
+      <p>${intro}</p>
+      <p>${eventI18n.details}</p>
+      <p>${eventI18n.irreversible}</p>
     `;
 
     modal.classList.add('open');

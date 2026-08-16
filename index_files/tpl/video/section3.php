@@ -5,14 +5,14 @@
 
   <!-- Header -->
   <div class="video-header">
-    <div class="video-bg-watermark font-bebas">MATCH CONTROL HUB</div>
+    <div class="video-bg-watermark font-bebas"><?= t('video.s3.sub') ?></div>
 
-    <span class="video-sub-title font-inter">MATCH CONTROL HUB</span>
+    <span class="video-sub-title font-inter"><?= t('video.s3.sub') ?></span>
     <h2 class="video-main-title font-bebas">
-      RUN THE ENTIRE MATCH<br>FROM ONE CONTROL PANEL
+      <?= t('video.s3.title') ?>
     </h2>
     <p class="video-lead-text font-inter">
-      Manage the entire match from one browser-based panel, designed for fast and simple use on iPad. Control the clock and score, select players, record goals, cards, penalties and substitutions, and update your live broadcast graphics in real time.
+      <?= t('video.s3.lead') ?>
     </p>
   </div>
 
@@ -24,39 +24,39 @@
       <!-- Card 01 -->
       <div class="video-panel-card">
         <div class="video-panel-icon-overlay">
-          <img src="img/sections/video/sec_3/Icon-01.png" alt="Match Clock">
+          <img src="img/sections/video/sec_3/Icon-01.png" alt="<?= t('video.s3.item1.title') ?>">
         </div>
         <div class="video-panel-card-content">
           <h3 class="video-panel-card-title font-bebas">
-            <span class="text-green">01</span> MATCH CLOCK
+            <?php $item = explode(' ', t('video.s3.item1.title'), 2); ?><span class="text-green"><?= $item[0] ?></span> <?= $item[1] ?? '' ?>
           </h3>
-          <p class="video-panel-card-desc font-inter">Start, stop and correct the match time.</p>
+          <p class="video-panel-card-desc font-inter"><?= t('video.s3.item1.text') ?></p>
         </div>
       </div>
 
       <!-- Card 02 -->
       <div class="video-panel-card">
         <div class="video-panel-icon-overlay">
-          <img src="img/sections/video/sec_3/Icon-02.png" alt="Live Score">
+          <img src="img/sections/video/sec_3/Icon-02.png" alt="<?= t('video.s3.item2.title') ?>">
         </div>
         <div class="video-panel-card-content">
           <h3 class="video-panel-card-title font-bebas">
-            <span class="text-green">02</span> LIVE SCORE
+            <?php $item = explode(' ', t('video.s3.item2.title'), 2); ?><span class="text-green"><?= $item[0] ?></span> <?= $item[1] ?? '' ?>
           </h3>
-          <p class="video-panel-card-desc font-inter">Update the score across every connected output.</p>
+          <p class="video-panel-card-desc font-inter"><?= t('video.s3.item2.text') ?></p>
         </div>
       </div>
 
       <!-- Card 03 -->
       <div class="video-panel-card">
         <div class="video-panel-icon-overlay">
-          <img src="img/sections/video/sec_3/Icon-03.png" alt="Player Selection">
+          <img src="img/sections/video/sec_3/Icon-03.png" alt="<?= t('video.s3.item3.title') ?>">
         </div>
         <div class="video-panel-card-content">
           <h3 class="video-panel-card-title font-bebas">
-            <span class="text-green">03</span> PLAYER SELECTION
+            <?php $item = explode(' ', t('video.s3.item3.title'), 2); ?><span class="text-green"><?= $item[0] ?></span> <?= $item[1] ?? '' ?>
           </h3>
-          <p class="video-panel-card-desc font-inter">Assign each action to the correct player.</p>
+          <p class="video-panel-card-desc font-inter"><?= t('video.s3.item3.text') ?></p>
         </div>
       </div>
 
@@ -64,7 +64,7 @@
 
     <!-- Mittlerer Bereich: Tablet Visual -->
     <div class="video-panel-center">
-      <img src="img/sections/video/sec_3/Tablet-Panel.png" class="video-tablet-img" alt="Tablet Control Panel">
+      <img src="img/sections/video/sec_3/Tablet-Panel.png" class="video-tablet-img" alt="<?= t('video.s3.tablet_alt') ?>">
     </div>
 
     <!-- Rechte Spalte (Card 04 - 06) -->
@@ -73,39 +73,39 @@
       <!-- Card 04 -->
       <div class="video-panel-card">
         <div class="video-panel-icon-overlay">
-          <img src="img/sections/video/sec_3/Icon-04.png" alt="Match Events">
+          <img src="img/sections/video/sec_3/Icon-04.png" alt="<?= t('video.s3.item4.title') ?>">
         </div>
         <div class="video-panel-card-content">
           <h3 class="video-panel-card-title font-bebas">
-            <span class="text-green">04</span> MATCH EVENTS
+            <?php $item = explode(' ', t('video.s3.item4.title'), 2); ?><span class="text-green"><?= $item[0] ?></span> <?= $item[1] ?? '' ?>
           </h3>
-          <p class="video-panel-card-desc font-inter">Record goals, cards, penalties and substitutions.</p>
+          <p class="video-panel-card-desc font-inter"><?= t('video.s3.item4.text') ?></p>
         </div>
       </div>
 
       <!-- Card 05 -->
       <div class="video-panel-card">
         <div class="video-panel-icon-overlay">
-          <img src="img/sections/video/sec_3/Icon-05.png" alt="Broadcast Overlays">
+          <img src="img/sections/video/sec_3/Icon-05.png" alt="<?= t('video.s3.item5.title') ?>">
         </div>
         <div class="video-panel-card-content">
           <h3 class="video-panel-card-title font-bebas">
-            <span class="text-green">05</span> BROADCAST OVERLAYS
+            <?php $item = explode(' ', t('video.s3.item5.title'), 2); ?><span class="text-green"><?= $item[0] ?></span> <?= $item[1] ?? '' ?>
           </h3>
-          <p class="video-panel-card-desc font-inter">Show the right graphic at the right moment.</p>
+          <p class="video-panel-card-desc font-inter"><?= t('video.s3.item5.text') ?></p>
         </div>
       </div>
 
       <!-- Card 06 -->
       <div class="video-panel-card">
         <div class="video-panel-icon-overlay">
-          <img src="img/sections/video/sec_3/Icon-06.png" alt="Action History">
+          <img src="img/sections/video/sec_3/Icon-06.png" alt="<?= t('video.s3.item6.title') ?>">
         </div>
         <div class="video-panel-card-content">
           <h3 class="video-panel-card-title font-bebas">
-            <span class="text-green">06</span> ACTION HISTORY
+            <?php $item = explode(' ', t('video.s3.item6.title'), 2); ?><span class="text-green"><?= $item[0] ?></span> <?= $item[1] ?? '' ?>
           </h3>
-          <p class="video-panel-card-desc font-inter">Review, correct or remove recent actions.</p>
+          <p class="video-panel-card-desc font-inter"><?= t('video.s3.item6.text') ?></p>
         </div>
       </div>
 

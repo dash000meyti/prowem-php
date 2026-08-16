@@ -5,22 +5,21 @@
 
   <!-- Hintergrundbild Section-BG.png -->
   <div class="club-responsive-bg">
-    <img src="img/sections/myClub/sec_7/Section-BG.png" alt="Responsive Design Background">
+    <img src="img/sections/myClub/sec_7/Section-BG.png" alt="<?= t('club.s7.alt') ?>">
   </div>
 
   <div class="club-responsive-container">
     
     <!-- Header -->
     <div class="club-header">
-      <div class="club-bg-watermark font-bebas">RESPONSIVE DESIGN</div>
+      <div class="club-bg-watermark font-bebas"><?= t('club.s7.watermark') ?></div>
 
-      <span class="club-sub-title font-inter">RESPONSIVE BY DESIGN</span>
+      <span class="club-sub-title font-inter"><?= t('club.s7.sub') ?></span>
       <h2 class="club-main-title font-bebas">
-        YOUR CLUB<br>
-        ON EVERY SCREEN
+        <?= t('club.s7.title') ?>
       </h2>
       <p class="club-lead-text font-inter">
-        Give your fans a seamless experience with a club website that looks and works perfectly across every device.
+        <?= t('club.s7.lead') ?>
       </p>
     </div>
 
@@ -28,7 +27,7 @@
     <div class="club-responsive-visual">
       <picture>
         <source media="(max-width: 768px)" srcset="img/sections/myClub/sec_7/Section-Photo-Mobile.png">
-        <img src="img/sections/myClub/sec_7/Section-Photo.png" class="club-responsive-img" alt="Your Club On Every Screen Mockup">
+        <img src="img/sections/myClub/sec_7/Section-Photo.png" class="club-responsive-img" alt="<?= t('club.s7.mockup_alt') ?>">
       </picture>
     </div>
 

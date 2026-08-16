@@ -9,7 +9,7 @@
   <div class="video-hero-bg">
     <picture>
       <source media="(max-width: 768px)" srcset="img/sections/social/Mobile%20Hero%20BG%20S.png">
-      <img src="img/sections/social/Hero-BG.png" alt="Create Pro Content Background">
+      <img src="img/sections/social/Hero-BG.png" alt="<?= t('social.hero.alt') ?>">
     </picture>
   </div>
 
@@ -17,23 +17,23 @@
     
     <!-- Linker Content-Bereich -->
     <div class="video-hero-content">
-      <span class="video-hero-sub font-inter">Social Media</span>
+      <span class="video-hero-sub font-inter"><?= t('social.hero.sub') ?></span>
       
       <h1 class="video-hero-title font-bebas">
-        CREATE<br>
-        ONE KLICK.<br>
-        <span class="text-green">PRO CONTENT.</span>
+        <?= t('social.hero.title_1') ?><br>
+        <?= t('social.hero.title_2') ?><br>
+        <span class="text-green"><?= t('social.hero.title_3') ?></span>
       </h1>
       
       <p class="video-hero-lead font-inter">
-        Create professional, match-ready social media content for every moment with just a single click.
+        <?= t('social.hero.lead') ?>
       </p>
 
       <div class="video-hero-buttons">
         <a href="#" class="btn-primary-green">
-          Start creating content <span class="btn-arrow">&rarr;</span>
+          <?= t('social.hero.cta') ?> <span class="btn-arrow">&rarr;</span>
         </a>
-        <a href="#" class="btn-secondary-link font-inter">Talk to Our Team</a>
+        <a href="#" class="btn-secondary-link font-inter"><?= t('social.hero.team') ?></a>
       </div>
     </div>
 

@@ -1,6 +1,9 @@
 <?php
 namespace Prowem;
 
+/**
+ * Creates an event CSV row and copies a standard event folder for the logged-in user.
+ */
 class EventHandler
 {
     public function createEvent()
@@ -18,17 +21,17 @@ class EventHandler
 
         // === Validierung ===
         if (empty($event_name)) {
-            $_SESSION['create_error'] = 'Eventname erforderlich';
+            $_SESSION['create_error'] = \Prowem\Lang::t('event.error.name');
             header('Location: index.php?page=create_event');
             exit;
         }
         if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $event_date)) {
-            $_SESSION['create_error'] = 'Ungültiges Datum';
+            $_SESSION['create_error'] = \Prowem\Lang::t('event.error.date');
             header('Location: index.php?page=create_event');
             exit;
         }
         if (!preg_match('/^\d{6}$/', $pin)) { // 6-stellig laut Formular
-            $_SESSION['create_error'] = 'PIN muss 6-stellig sein';
+            $_SESSION['create_error'] = \Prowem\Lang::t('event.error.pin');
             header('Location: index.php?page=create_event');
             exit;
         }

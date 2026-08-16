@@ -5,14 +5,14 @@
 
   <!-- Header -->
   <div class="social-header">
-    <div class="social-bg-watermark font-bebas">HOW ITS WORK</div>
+    <div class="social-bg-watermark font-bebas"><?= t('social.s4.sub') ?></div>
 
-    <span class="social-sub-title font-inter">HOW ITS WORK</span>
+    <span class="social-sub-title font-inter"><?= t('social.s4.sub') ?></span>
     <h2 class="social-main-title font-bebas">
-      CREATE CONTENT<br>IN JUST A FEW CLICKS.
+      <?= t('social.s4.title') ?>
     </h2>
     <p class="social-lead-text font-inter">
-      Select the content you want to create, add your available assets and pick a template. Prowem turns it all into professional, ready-to-share content in just a few simple steps.
+      <?= t('social.s4.lead') ?>
     </p>
   </div>
 
@@ -23,10 +23,10 @@
       <div class="social-step-card">
         <div class="step-card-header">
           <span class="step-num font-bebas">01</span>
-          <span class="step-title font-bebas">CHOOSE CONTENT TYPE</span>
+          <span class="step-title font-bebas"><?= t('social.s4.step1.title') ?></span>
         </div>
         <div class="step-card-body">
-          <img src="img/sections/social/sec_4/Card-01.png" alt="Step 01 - Choose Content Type">
+          <img src="img/sections/social/sec_4/Card-01.png" alt="<?= t('social.s4.step1.alt') ?>">
         </div>
       </div>
 
@@ -34,10 +34,10 @@
       <div class="social-step-card">
         <div class="step-card-header">
           <span class="step-num font-bebas">02</span>
-          <span class="step-title font-bebas">ADD YOUR CONTENT</span>
+          <span class="step-title font-bebas"><?= t('social.s4.step2.title') ?></span>
         </div>
         <div class="step-card-body">
-          <img src="img/sections/social/sec_4/Card-02.png" alt="Step 02 - Add Your Content">
+          <img src="img/sections/social/sec_4/Card-02.png" alt="<?= t('social.s4.step2.alt') ?>">
         </div>
       </div>
 
@@ -45,10 +45,10 @@
       <div class="social-step-card">
         <div class="step-card-header">
           <span class="step-num font-bebas">03</span>
-          <span class="step-title font-bebas">SELECT A TEMPLATE</span>
+          <span class="step-title font-bebas"><?= t('social.s4.step3.title') ?></span>
         </div>
         <div class="step-card-body">
-          <img src="img/sections/social/sec_4/Card-03.png" alt="Step 03 - Select A Template">
+          <img src="img/sections/social/sec_4/Card-03.png" alt="<?= t('social.s4.step3.alt') ?>">
         </div>
       </div>
 
@@ -56,10 +56,10 @@
       <div class="social-step-card">
         <div class="step-card-header">
           <span class="step-num font-bebas">04</span>
-          <span class="step-title font-bebas">EXPORT & SHARE</span>
+          <span class="step-title font-bebas"><?= t('social.s4.step4.title') ?></span>
         </div>
         <div class="step-card-body">
-          <img src="img/sections/social/sec_4/Card-04.png" alt="Step 04 - Export & Share">
+          <img src="img/sections/social/sec_4/Card-04.png" alt="<?= t('social.s4.step4.alt') ?>">
         </div>
       </div>
 

@@ -9,7 +9,7 @@
   <div class="org-hero-bg">
     <picture>
       <source media="(max-width: 768px)" srcset="img/sections/organisation/Mobile%20Hero%20BG%20O.png">
-      <img src="img/sections/organisation/Hero-BG.png" alt="Let Us Organize Your Event Background">
+      <img src="img/sections/organisation/Hero-BG.png" alt="<?= t('org.hero.alt') ?>">
     </picture>
   </div>
 
@@ -17,23 +17,23 @@
     
     <!-- Linker Content-Bereich -->
     <div class="org-hero-content">
-      <span class="org-hero-sub font-inter">WE ORGANIZE</span>
+      <span class="org-hero-sub font-inter"><?= t('org.hero.sub') ?></span>
       
       <h1 class="org-hero-title font-bebas">
-        LET US<br>
-        ORGANIZE<br>
-        <span class="text-orange">YOUR EVENT</span>
+        <?= t('org.hero.title_1') ?><br>
+        <?= t('org.hero.title_2') ?><br>
+        <span class="text-orange"><?= t('org.hero.title_3') ?></span>
       </h1>
       
       <p class="org-hero-lead font-inter">
-        From complete tournament structures and match execution to digital overlays and live showcase — we handle your event with ultimate precision.
+        <?= t('org.hero.lead') ?>
       </p>
 
       <div class="org-hero-actions">
         <a href="?page=register" class="btn-primary-orange font-inter">
-          Get Started Now <span class="btn-arrow">&rarr;</span>
+          <?= t('org.hero.cta') ?> <span class="btn-arrow">&rarr;</span>
         </a>
-        <a href="#contact" class="btn-secondary-link font-inter">Talk to Our Team</a>
+        <a href="#contact" class="btn-secondary-link font-inter"><?= t('org.hero.team') ?></a>
       </div>
     </div>
 

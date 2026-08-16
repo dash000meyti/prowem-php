@@ -7,15 +7,15 @@
     
     <!-- Linker Textbereich -->
     <div class="video-content">
-      <span class="video-sub">SEE IT IN ACTION</span>
+      <span class="video-sub"><?= t('app.s9.sub') ?></span>
       <h2 class="video-title font-bebas">
-        SEE HOW YOUR EVENT<br>COMES TOGETHER.
+        <?= t('app.s9.title') ?>
       </h2>
       <p class="video-lead">
-        Watch how Prowem connects event setup, fixtures, live results, standings, player statistics, and the public event page in one seamless workflow.
+        <?= t('app.s9.lead') ?>
       </p>
       <a href="#" class="btn-primary-orange video-btn">
-        Start Creating <span class="arrow">&rarr;</span>
+        <?= t('app.s9.cta') ?>
       </a>
     </div>
 

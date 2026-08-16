@@ -23,20 +23,17 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+require_once __DIR__ . '/index_files/lang.php';
+
 if (isset($_GET['language'])) {
-    $_SESSION['language'] = strtolower($_GET['language']);
+    $_SESSION['language'] = \Prowem\Lang::normalize($_GET['language']);
 
-    // Wenn "page" in der URL vorhanden ist, darauf bleiben
     $page = $_GET['page'] ?? '';
-    $extra = '';
-
-    // Alle restlichen GET-Parameter erhalten (außer language)
     $params = $_GET;
     unset($params['language']);
     if ($page !== '') unset($params['page']);
     $query = http_build_query($params);
 
-    // Neue Ziel-URL zusammensetzen
     $redirect = 'index.php' . ($page ? '?page=' . urlencode($page) : '');
     if ($query) {
         $redirect .= ($page ? '&' : '?') . $query;
@@ -47,11 +44,12 @@ if (isset($_GET['language'])) {
 }
 
 if (empty($_SESSION['language'])) {
-    $_SESSION['language'] = 'de';
+    $_SESSION['language'] = \Prowem\Lang::DEFAULT;
+} else {
+    $_SESSION['language'] = \Prowem\Lang::normalize($_SESSION['language']);
 }
 
-require_once __DIR__ . '/index_files/lang.php';
-\Prowem\Lang::init(__DIR__ . '/data/lang.csv', $_SESSION['language']);
+\Prowem\Lang::init($_SESSION['language']);
 
 require_once __DIR__ . '/index_files/App.php';
 use Prowem\App;

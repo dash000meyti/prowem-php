@@ -1,5 +1,5 @@
 <div class="auth-container">
-  <h1 class="auth-title">Neues Passwort</h1>
+  <h1 class="auth-title"><?= t('auth.reset.title') ?></h1>
 
   <?php if (!empty($_SESSION['flash_error'])): ?>
     <div class="error-message">
@@ -18,7 +18,7 @@
     <input type="hidden" name="reset_password" value="1">
 
     <div class="label-wrapper password-wrapper">
-      <label for="password">Neues Passwort</label>
+      <label for="password"><?= t('auth.password') ?></label>
       <div class="password-field">
         <input type="password" id="password" name="password" required>
         <span class="toggle-password" onclick="togglePassword()">👁</span>
@@ -26,8 +26,8 @@
     </div>
 
     <div class="button-group">
-      <a href="index.php?page=login" class="back-btn">Zurück</a>
-      <button type="submit" class="login-btn">Speichern</button>
+      <a href="index.php?page=login" class="back-btn"><?= t('auth.back') ?></a>
+      <button type="submit" class="login-btn"><?= t('auth.reset.submit') ?></button>
     </div>
   </form>
 </div>

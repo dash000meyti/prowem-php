@@ -1,7 +1,7 @@
 <section class="hero-section">
   <!-- Hintergrund-Medium -->
   <div class="hero-bg-media">
-    <img src="img/Hero_BG.png" alt="Stadium Night" loading="eager">
+    <img src="img/Hero_BG.png" alt="<?= t('hero.alt_bg') ?>" loading="eager">
   </div>
 
   <!-- Haupt-Container mit 2er-Raster (Slider-Bereich + rechte Boxen) -->
@@ -13,21 +13,21 @@
       <!-- SLIDE 1 (Orange: FF6249) -->
       <div class="hero-slide active" data-slide="1">
         <div class="hero-col-left">
-          <div class="hero-badge"><span class="badge-num" style="color:#FF6249;">01</span> Event Management</div>
-          <h1 class="hero-main-title">FOOTBALL EVENTS<br><span style="color:#FF6249;">FULLY DIGITAL</span></h1>
-          <p class="hero-description">Everything you need to organize matches, produce media, and grow your football club or event digitally.</p>
+          <div class="hero-badge"><span class="badge-num" style="color:#FF6249;">01</span> <?= t('hero.slide1.badge') ?></div>
+          <h1 class="hero-main-title"><?= t('hero.slide1.title_1') ?><br><span style="color:#FF6249;"><?= t('hero.slide1.title_2') ?></span></h1>
+          <p class="hero-description"><?= t('hero.slide1.desc') ?></p>
           
           <!-- Statische Feature-Leiste -->
           <div class="hero-features-minimal">
-            <div class="feat-mini-item"><img src="img/icons/Cup%20Icon.svg" alt=""><span>Event<br>Management</span></div>
-            <div class="feat-mini-item"><img src="img/icons/video%20Icon.svg" alt=""><span>Live<br>Streaming</span></div>
-            <div class="feat-mini-item"><img src="img/icons/Mobile%20Icon.svg" alt=""><span>Social<br>Content</span></div>
-            <div class="feat-mini-item"><img src="img/icons/Club%20Icon.svg" alt=""><span>Club<br>Digitalization</span></div>
+            <div class="feat-mini-item"><img src="img/icons/Cup%20Icon.svg" alt=""><span><?= t_raw('hero.feat.event_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/video%20Icon.svg" alt=""><span><?= t_raw('hero.feat.streaming_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/Mobile%20Icon.svg" alt=""><span><?= t_raw('hero.feat.social_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/Club%20Icon.svg" alt=""><span><?= t_raw('hero.feat.club_html') ?></span></div>
           </div>
 
           <div class="hero-cta-group">
-            <a href="?page=register" class="btn-primary" style="background:#FF6249;">Start your journey <img src="img/icons/Arrow-right.svg" alt="" class="btn-icon"></a>
-            <a href="#team" class="btn-secondary">Talk to Our Team</a>
+            <a href="?page=register" class="btn-primary" style="background:#FF6249;"><?= t('hero.cta_start') ?> <img src="img/icons/Arrow-right.svg" alt="" class="btn-icon"></a>
+            <a href="#team" class="btn-secondary"><?= t('hero.cta_team') ?></a>
           </div>
         </div>
 
@@ -59,20 +59,20 @@
       <!-- SLIDE 2 (Green: 18D96B) -->
       <div class="hero-slide" data-slide="2">
         <div class="hero-col-left">
-          <div class="hero-badge"><span class="badge-num" style="color:#18D96B;">02</span> LiveStreaming</div>
-          <h1 class="hero-main-title">BROADCAST EVERY<br><span style="color:#18D96B;">FOOTBALL MOMENT</span></h1>
-          <p class="hero-description">Stream matches live, record key moments, and turn goals into ready-to-use highlights.</p>
+          <div class="hero-badge"><span class="badge-num" style="color:#18D96B;">02</span> <?= t('hero.slide2.badge') ?></div>
+          <h1 class="hero-main-title"><?= t('hero.slide2.title_1') ?><br><span style="color:#18D96B;"><?= t('hero.slide2.title_2') ?></span></h1>
+          <p class="hero-description"><?= t('hero.slide2.desc') ?></p>
           
           <div class="hero-features-minimal">
-            <div class="feat-mini-item"><img src="img/icons/Cup%20Icon.svg" alt=""><span>Event<br>Management</span></div>
-            <div class="feat-mini-item"><img src="img/icons/video%20Icon.svg" alt=""><span>Live<br>Streaming</span></div>
-            <div class="feat-mini-item"><img src="img/icons/Mobile%20Icon.svg" alt=""><span>Social<br>Content</span></div>
-            <div class="feat-mini-item"><img src="img/icons/Club%20Icon.svg" alt=""><span>Club<br>Digitalization</span></div>
+            <div class="feat-mini-item"><img src="img/icons/Cup%20Icon.svg" alt=""><span><?= t_raw('hero.feat.event_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/video%20Icon.svg" alt=""><span><?= t_raw('hero.feat.streaming_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/Mobile%20Icon.svg" alt=""><span><?= t_raw('hero.feat.social_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/Club%20Icon.svg" alt=""><span><?= t_raw('hero.feat.club_html') ?></span></div>
           </div>
 
           <div class="hero-cta-group">
-            <a href="?page=stream" class="btn-primary" style="background:#18D96B;">Start your journey <img src="img/icons/Arrow-right.svg" alt="" class="btn-icon"></a>
-            <a href="#team" class="btn-secondary">Talk to Our Team</a>
+            <a href="?page=stream" class="btn-primary" style="background:#18D96B;"><?= t('hero.cta_start') ?> <img src="img/icons/Arrow-right.svg" alt="" class="btn-icon"></a>
+            <a href="#team" class="btn-secondary"><?= t('hero.cta_team') ?></a>
           </div>
         </div>
         
@@ -104,20 +104,20 @@
       <!-- SLIDE 3 (Purple: 9F46FF) -->
       <div class="hero-slide" data-slide="3">
         <div class="hero-col-left">
-          <div class="hero-badge"><span class="badge-num" style="color:#9F46FF;">03</span> Social Content</div>
-          <h1 class="hero-main-title">EVERY MATCH<br><span style="color:#9F46FF;">BECOMES CONTENT</span></h1>
-          <p class="hero-description">Automatically create match previews, goal graphics, results, tables, and player stats for every channel.</p>
+          <div class="hero-badge"><span class="badge-num" style="color:#9F46FF;">03</span> <?= t('hero.slide3.badge') ?></div>
+          <h1 class="hero-main-title"><?= t('hero.slide3.title_1') ?><br><span style="color:#9F46FF;"><?= t('hero.slide3.title_2') ?></span></h1>
+          <p class="hero-description"><?= t('hero.slide3.desc') ?></p>
           
           <div class="hero-features-minimal">
-            <div class="feat-mini-item"><img src="img/icons/Cup%20Icon.svg" alt=""><span>Event<br>Management</span></div>
-            <div class="feat-mini-item"><img src="img/icons/video%20Icon.svg" alt=""><span>Live<br>Streaming</span></div>
-            <div class="feat-mini-item"><img src="img/icons/Mobile%20Icon.svg" alt=""><span>Social<br>Content</span></div>
-            <div class="feat-mini-item"><img src="img/icons/Club%20Icon.svg" alt=""><span>Club<br>Digitalization</span></div>
+            <div class="feat-mini-item"><img src="img/icons/Cup%20Icon.svg" alt=""><span><?= t_raw('hero.feat.event_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/video%20Icon.svg" alt=""><span><?= t_raw('hero.feat.streaming_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/Mobile%20Icon.svg" alt=""><span><?= t_raw('hero.feat.social_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/Club%20Icon.svg" alt=""><span><?= t_raw('hero.feat.club_html') ?></span></div>
           </div>
 
           <div class="hero-cta-group">
-            <a href="?page=media" class="btn-primary" style="background:#9F46FF;">Start your journey <img src="img/icons/Arrow-right.svg" alt="" class="btn-icon"></a>
-            <a href="#team" class="btn-secondary">Talk to Our Team</a>
+            <a href="?page=media" class="btn-primary" style="background:#9F46FF;"><?= t('hero.cta_start') ?> <img src="img/icons/Arrow-right.svg" alt="" class="btn-icon"></a>
+            <a href="#team" class="btn-secondary"><?= t('hero.cta_team') ?></a>
           </div>
         </div>
         
@@ -149,20 +149,20 @@
       <!-- SLIDE 4 (Blue: 02ABFF) -->
       <div class="hero-slide" data-slide="4">
         <div class="hero-col-left">
-          <div class="hero-badge"><span class="badge-num" style="color:#02ABFF;">04</span> Club Digitalization</div>
-          <h1 class="hero-main-title">A DIGITAL HOME<br><span style="color:#02ABFF;">FOR EVERY CLUB</span></h1>
-          <p class="hero-description">Give your club one digital space to manage matches, publish updates, and create social content.</p>
+          <div class="hero-badge"><span class="badge-num" style="color:#02ABFF;">04</span> <?= t('hero.slide4.badge') ?></div>
+          <h1 class="hero-main-title"><?= t('hero.slide4.title_1') ?><br><span style="color:#02ABFF;"><?= t('hero.slide4.title_2') ?></span></h1>
+          <p class="hero-description"><?= t('hero.slide4.desc') ?></p>
           
           <div class="hero-features-minimal">
-            <div class="feat-mini-item"><img src="img/icons/Cup%20Icon.svg" alt=""><span>Event<br>Management</span></div>
-            <div class="feat-mini-item"><img src="img/icons/video%20Icon.svg" alt=""><span>Live<br>Streaming</span></div>
-            <div class="feat-mini-item"><img src="img/icons/Mobile%20Icon.svg" alt=""><span>Social<br>Content</span></div>
-            <div class="feat-mini-item"><img src="img/icons/Club%20Icon.svg" alt=""><span>Club<br>Digitalization</span></div>
+            <div class="feat-mini-item"><img src="img/icons/Cup%20Icon.svg" alt=""><span><?= t_raw('hero.feat.event_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/video%20Icon.svg" alt=""><span><?= t_raw('hero.feat.streaming_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/Mobile%20Icon.svg" alt=""><span><?= t_raw('hero.feat.social_html') ?></span></div>
+            <div class="feat-mini-item"><img src="img/icons/Club%20Icon.svg" alt=""><span><?= t_raw('hero.feat.club_html') ?></span></div>
           </div>
 
           <div class="hero-cta-group">
-            <a href="?page=club" class="btn-primary" style="background:#02ABFF;">Start your journey <img src="img/icons/Arrow-right.svg" alt="" class="btn-icon"></a>
-            <a href="#team" class="btn-secondary">Talk to Our Team</a>
+            <a href="?page=club" class="btn-primary" style="background:#02ABFF;"><?= t('hero.cta_start') ?> <img src="img/icons/Arrow-right.svg" alt="" class="btn-icon"></a>
+            <a href="#team" class="btn-secondary"><?= t('hero.cta_team') ?></a>
           </div>
         </div>
         
@@ -194,9 +194,9 @@
 
     <!-- RECHTE SPALTE -->
     <div class="hero-col-right">
-      <div class="hero-info-card"><div class="hero-card-content"><span class="card-step">SETUP</span><h3>TEAMS & VENUES</h3><p>Clubs, fields, groups and rules</p></div></div>
-      <div class="hero-info-card"><div class="hero-card-content"><span class="card-step">STRUCTURE</span><h3>TOURNAMENT FLOW</h3><p>Group stage, knockout or hybrid</p></div></div>
-      <div class="hero-info-card"><div class="hero-card-content"><span class="card-step">PUBLISH</span><h3>LIVE EVENT MEDIA</h3><p>Results, standings, event pages and graphics</p></div></div>
+      <div class="hero-info-card"><div class="hero-card-content"><span class="card-step"><?= t('hero.card1.step') ?></span><h3><?= t('hero.card1.title') ?></h3><p><?= t('hero.card1.text') ?></p></div></div>
+      <div class="hero-info-card"><div class="hero-card-content"><span class="card-step"><?= t('hero.card2.step') ?></span><h3><?= t('hero.card2.title') ?></h3><p><?= t('hero.card2.text') ?></p></div></div>
+      <div class="hero-info-card"><div class="hero-card-content"><span class="card-step"><?= t('hero.card3.step') ?></span><h3><?= t('hero.card3.title') ?></h3><p><?= t('hero.card3.text') ?></p></div></div>
       
       <!-- Counter mit Progressbalken -->
       <div class="hero-slider-control">

@@ -15,9 +15,9 @@
             <path d="M20 6L9 17l-5-5"/>
         </svg>
     </div>
-    <h1>Registrierung erfolgreich</h1>
-    <p>Bitte warten Sie auf die Freigabe durch den Admin. Das kann bis zu einer Stunde dauern.</p>
+    <h1><?= t('auth.success.title') ?></h1>
+    <p><?= t('auth.success.body') ?></p>
     <div class="button-group">
-        <a href="index.php" class="back-btn">Zurück</a>
+        <a href="index.php" class="back-btn"><?= t('auth.success.back') ?></a>
     </div>
 </div>

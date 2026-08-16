@@ -7,25 +7,25 @@
     
     <!-- Linke Spalte: Text & Button -->
     <div class="video-preview-content">
-      <span class="video-preview-sub font-inter">LIVE STREAM OVERVIEW</span>
+      <span class="video-preview-sub font-inter"><?= t('video.s7.sub') ?></span>
       
       <h2 class="video-preview-title font-bebas">
-        EXPERIENCE THE FULL<br>LIVE BROADCAST
+        <?= t('video.s7.title') ?>
       </h2>
 
       <p class="video-preview-lead font-inter">
-        Watch how Prowem connects live match control, broadcast graphics and real-time streaming in one seamless experience.
+        <?= t('video.s7.lead') ?>
       </p>
 
       <a href="#" class="btn-primary-green video-preview-btn">
-        Start live streaming <span class="btn-arrow">&rarr;</span>
+        <?= t('video.s7.cta') ?> <span class="btn-arrow">&rarr;</span>
       </a>
     </div>
 
     <!-- Rechte Spalte: Video Platzhalter -->
     <div class="video-preview-placeholder">
       <div class="video-poster-wrapper">
-        <img src="img/sections/video/Hero-BG.png" alt="Live Broadcast Preview">
+        <img src="img/sections/video/Hero-BG.png" alt="<?= t('video.s7.alt') ?>">
         
         <div class="video-play-btn">
           <div class="play-icon"></div>

@@ -5,14 +5,14 @@
 
   <!-- Globaler Header -->
   <div class="features-header">
-    <div class="bg-watermark font-bebas">AUTOMATION</div>
+    <div class="bg-watermark font-bebas"><?= t('app.s6.watermark') ?></div>
 
-    <span class="features-sub">BUILT IN AUTOMATION</span>
+    <span class="features-sub"><?= t('app.s6.sub') ?></span>
     <h2 class="features-title font-bebas">
-      PROWEM RUNS THE<br>COMPETITION FOR YOU
+      <?= t('app.s6.title') ?>
     </h2>
     <p class="features-lead">
-      Choose any content type and create standout, professional graphics for every matchday moment. Use your available photos and logos when you have them — and when you don't, Prowem still turns your match data into visually engaging, ready-to-share content.
+      <?= t('app.s6.lead') ?>
     </p>
   </div>
 
@@ -22,11 +22,11 @@
     <div class="auto-card-frame">
       <div class="auto-card">
         <div class="auto-card-media">
-          <img src="img/sections/app/sec_6/Draw.png" alt="Groups & Draw">
+          <img src="img/sections/app/sec_6/Draw.png" alt="<?= t('app.s6.card1.title') ?>">
         </div>
         <div class="auto-card-content">
-          <h3 class="auto-card-title font-bebas">GROUPS & DRAW</h3>
-          <p class="auto-card-desc">Automatically run the draw and organize teams into groups based on the results.</p>
+          <h3 class="auto-card-title font-bebas"><?= t('app.s6.card1.title') ?></h3>
+          <p class="auto-card-desc"><?= t('app.s6.card1.text') ?></p>
         </div>
       </div>
     </div>
@@ -35,11 +35,11 @@
     <div class="auto-card-frame">
       <div class="auto-card">
         <div class="auto-card-media">
-          <img src="img/sections/app/sec_6/SCHEDULE.png" alt="Fixtures & Schedule">
+          <img src="img/sections/app/sec_6/SCHEDULE.png" alt="<?= t('app.s6.card2.title') ?>">
         </div>
         <div class="auto-card-content">
-          <h3 class="auto-card-title font-bebas">FIXTURES & SCHEDULE</h3>
-          <p class="auto-card-desc">Generate the complete match schedule based on the event structure.</p>
+          <h3 class="auto-card-title font-bebas"><?= t('app.s6.card2.title') ?></h3>
+          <p class="auto-card-desc"><?= t('app.s6.card2.text') ?></p>
         </div>
       </div>
     </div>
@@ -48,11 +48,11 @@
     <div class="auto-card-frame">
       <div class="auto-card">
         <div class="auto-card-media">
-          <img src="img/sections/app/sec_6/LIVE RESULTS.png" alt="Live Results">
+          <img src="img/sections/app/sec_6/LIVE RESULTS.png" alt="<?= t('app.s6.card3.title') ?>">
         </div>
         <div class="auto-card-content">
-          <h3 class="auto-card-title font-bebas">LIVE RESULTS</h3>
-          <p class="auto-card-desc">Update match results instantly from referee inputs.</p>
+          <h3 class="auto-card-title font-bebas"><?= t('app.s6.card3.title') ?></h3>
+          <p class="auto-card-desc"><?= t('app.s6.card3.text') ?></p>
         </div>
       </div>
     </div>
@@ -61,11 +61,11 @@
     <div class="auto-card-frame">
       <div class="auto-card">
         <div class="auto-card-media">
-          <img src="img/sections/app/sec_6/STANDINGS.png" alt="Standings">
+          <img src="img/sections/app/sec_6/STANDINGS.png" alt="<?= t('app.s6.card4.title') ?>">
         </div>
         <div class="auto-card-content">
-          <h3 class="auto-card-title font-bebas">STANDINGS</h3>
-          <p class="auto-card-desc">Recalculate tables and rankings after every match.</p>
+          <h3 class="auto-card-title font-bebas"><?= t('app.s6.card4.title') ?></h3>
+          <p class="auto-card-desc"><?= t('app.s6.card4.text') ?></p>
         </div>
       </div>
     </div>
@@ -74,11 +74,11 @@
     <div class="auto-card-frame">
       <div class="auto-card">
         <div class="auto-card-media">
-          <img src="img/sections/app/sec_6/PLAYER STATISTICS.png" alt="Player Statistics">
+          <img src="img/sections/app/sec_6/PLAYER STATISTICS.png" alt="<?= t('app.s6.card5.title') ?>">
         </div>
         <div class="auto-card-content">
-          <h3 class="auto-card-title font-bebas">PLAYER STATISTICS</h3>
-          <p class="auto-card-desc">Track goals, cards and player performance automatically.</p>
+          <h3 class="auto-card-title font-bebas"><?= t('app.s6.card5.title') ?></h3>
+          <p class="auto-card-desc"><?= t('app.s6.card5.text') ?></p>
         </div>
       </div>
     </div>
@@ -87,11 +87,11 @@
     <div class="auto-card-frame">
       <div class="auto-card">
         <div class="auto-card-media">
-          <img src="img/sections/app/sec_6/ROUND PROGRESSION.png" alt="Round Progression">
+          <img src="img/sections/app/sec_6/ROUND PROGRESSION.png" alt="<?= t('app.s6.card6.title') ?>">
         </div>
         <div class="auto-card-content">
-          <h3 class="auto-card-title font-bebas">ROUND PROGRESSION</h3>
-          <p class="auto-card-desc">Move qualified teams into the next stage automatically.</p>
+          <h3 class="auto-card-title font-bebas"><?= t('app.s6.card6.title') ?></h3>
+          <p class="auto-card-desc"><?= t('app.s6.card6.text') ?></p>
         </div>
       </div>
     </div>

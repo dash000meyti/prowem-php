@@ -1,6 +1,9 @@
 <?php
 namespace Prowem;
 
+/**
+ * Maps ?page= to a theme class and a template include.
+ */
 class Router {
     public function render(): void {
         $page = $_GET['page'] ?? 'home';

@@ -16,7 +16,7 @@
 
 <div class="auth-container">
     <div class="admin-inner">
-        <h1>All Events</h1>
+        <h1><?= t('event.all_title') ?></h1>
         <div class="event-list">
             <?php
             $csv_file = 'data/users.csv';
@@ -53,7 +53,7 @@
             }
             if (empty($all_events)):
             ?>
-                <p>Derzeit keine Events</p>
+                <p><?= t('event.all_none') ?></p>
             <?php else: ?>
                 <ul>
                     <?php foreach ($all_events as $index => $event): ?>

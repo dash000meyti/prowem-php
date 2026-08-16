@@ -5,15 +5,14 @@
 
   <!-- Header -->
   <div class="org-header">
-    <div class="org-bg-watermark font-bebas">BUILT IN OPERATION</div>
+    <div class="org-bg-watermark font-bebas"><?= t('org.s3.watermark') ?></div>
 
-    <span class="org-sub-title font-inter">THE COMPLETE OPERATION</span>
+    <span class="org-sub-title font-inter"><?= t('org.s3.sub') ?></span>
     <h2 class="org-main-title font-bebas">
-      EVERYTHING BEHIND<br>
-      A GREAT EVENT.
+      <?= t('org.s3.title') ?>
     </h2>
     <p class="org-lead-text font-inter">
-      A successful event is built on hundreds of moving parts. Prowem brings every team, detail and operation together—delivering one complete event from behind the scenes.
+      <?= t('org.s3.lead') ?>
     </p>
   </div>
 
@@ -24,12 +23,12 @@
     <div class="org-auto-card-frame">
       <div class="org-auto-card">
         <div class="org-auto-card-media">
-          <img src="img/sections/organisation/sec_3/VENUE-LOGISTICS.png" alt="Venue & Logistics">
+          <img src="img/sections/organisation/sec_3/VENUE-LOGISTICS.png" alt="<?= t('org.s3.card1.title') ?>">
         </div>
         <div class="org-auto-card-content">
-          <h3 class="org-auto-card-title font-bebas">VENUE & LOGISTICS</h3>
+          <h3 class="org-auto-card-title font-bebas"><?= t('org.s3.card1.title') ?></h3>
           <p class="org-auto-card-desc font-inter">
-            Venue setup, equipment, signage and complete event-day logistics.
+            <?= t('org.s3.card1.text') ?>
           </p>
         </div>
       </div>
@@ -39,12 +38,12 @@
     <div class="org-auto-card-frame">
       <div class="org-auto-card">
         <div class="org-auto-card-media">
-          <img src="img/sections/organisation/sec_3/TEAMS-REGISTRATION.png" alt="Teams & Registration">
+          <img src="img/sections/organisation/sec_3/TEAMS-REGISTRATION.png" alt="<?= t('org.s3.card2.title') ?>">
         </div>
         <div class="org-auto-card-content">
-          <h3 class="org-auto-card-title font-bebas">TEAMS & REGISTRATION</h3>
+          <h3 class="org-auto-card-title font-bebas"><?= t('org.s3.card2.title') ?></h3>
           <p class="org-auto-card-desc font-inter">
-            Team registration, player data and pre-event coordination.
+            <?= t('org.s3.card2.text') ?>
           </p>
         </div>
       </div>
@@ -54,12 +53,12 @@
     <div class="org-auto-card-frame">
       <div class="org-auto-card">
         <div class="org-auto-card-media">
-          <img src="img/sections/organisation/sec_3/OFFICIALS-REFEREES.png" alt="Officials & Referees">
+          <img src="img/sections/organisation/sec_3/OFFICIALS-REFEREES.png" alt="<?= t('org.s3.card3.title') ?>">
         </div>
         <div class="org-auto-card-content">
-          <h3 class="org-auto-card-title font-bebas">OFFICIALS & REFEREES</h3>
+          <h3 class="org-auto-card-title font-bebas"><?= t('org.s3.card3.title') ?></h3>
           <p class="org-auto-card-desc font-inter">
-            Qualified officials, referee scheduling and match supervision.
+            <?= t('org.s3.card3.text') ?>
           </p>
         </div>
       </div>
@@ -69,12 +68,12 @@
     <div class="org-auto-card-frame">
       <div class="org-auto-card">
         <div class="org-auto-card-media">
-          <img src="img/sections/organisation/sec_3/MATCH-OPERATIONS.png" alt="Match Operations">
+          <img src="img/sections/organisation/sec_3/MATCH-OPERATIONS.png" alt="<?= t('org.s3.card4.title') ?>">
         </div>
         <div class="org-auto-card-content">
-          <h3 class="org-auto-card-title font-bebas">MATCH OPERATIONS</h3>
+          <h3 class="org-auto-card-title font-bebas"><?= t('org.s3.card4.title') ?></h3>
           <p class="org-auto-card-desc font-inter">
-            Fixtures, results, standings and real-time event control.
+            <?= t('org.s3.card4.text') ?>
           </p>
         </div>
       </div>
@@ -84,12 +83,12 @@
     <div class="org-auto-card-frame">
       <div class="org-auto-card">
         <div class="org-auto-card-media">
-          <img src="img/sections/organisation/sec_3/LIVE-PRODUCTION.png" alt="Live Production">
+          <img src="img/sections/organisation/sec_3/LIVE-PRODUCTION.png" alt="<?= t('org.s3.card5.title') ?>">
         </div>
         <div class="org-auto-card-content">
-          <h3 class="org-auto-card-title font-bebas">LIVE PRODUCTION</h3>
+          <h3 class="org-auto-card-title font-bebas"><?= t('org.s3.card5.title') ?></h3>
           <p class="org-auto-card-desc font-inter">
-            Professional filming, live streaming and broadcast management.
+            <?= t('org.s3.card5.text') ?>
           </p>
         </div>
       </div>
@@ -99,12 +98,12 @@
     <div class="org-auto-card-frame">
       <div class="org-auto-card">
         <div class="org-auto-card-media">
-          <img src="img/sections/organisation/sec_3/SOCIAL-CONTENT.png" alt="Social Content">
+          <img src="img/sections/organisation/sec_3/SOCIAL-CONTENT.png" alt="<?= t('org.s3.card6.title') ?>">
         </div>
         <div class="org-auto-card-content">
-          <h3 class="org-auto-card-title font-bebas">SOCIAL CONTENT</h3>
+          <h3 class="org-auto-card-title font-bebas"><?= t('org.s3.card6.title') ?></h3>
           <p class="org-auto-card-desc font-inter">
-            Real-time graphics, match updates, highlights and event coverage.
+            <?= t('org.s3.card6.text') ?>
           </p>
         </div>
       </div>

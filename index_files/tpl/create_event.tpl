@@ -13,26 +13,26 @@
 
 <div class="auth-container">
   <div style="max-width:800px;width:100%;margin:0 auto;">
-    <h1 style="text-align:center;">Event erstellen</h1>
+    <h1 style="text-align:center;"><?= t('event.create_title') ?></h1>
 
     <form method="post" action="index.php?page=create_event" class="event-form">
       <div class="label-wrapper">
-        <label for="event_name">Eventname</label>
+        <label for="event_name"><?= t('event.name') ?></label>
         <input type="text" name="event_name" id="event_name" required>
       </div>
 
       <div class="label-wrapper">
-        <label for="event_date">Datum</label>
+        <label for="event_date"><?= t('event.date') ?></label>
         <input type="date" name="event_date" id="event_date" required>
       </div>
 
       <div class="label-wrapper">
-        <label for="pin">PIN (6-stellig)</label>
+        <label for="pin"><?= t('event.pin') ?></label>
         <input type="text" name="pin" id="pin" maxlength="6" pattern="\d{6}" required>
-        <span class="pin-hint">Bitte gib eine 6-stellige PIN ein.</span>
+        <span class="pin-hint"><?= t('event.pin_hint') ?></span>
       </div>
 
-      <button type="submit" class="create-event-btn">Event erstellen!</button>
+      <button type="submit" class="create-event-btn"><?= t('event.create_submit') ?></button>
     </form>
   </div>
 </div>
