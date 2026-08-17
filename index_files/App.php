@@ -63,7 +63,7 @@ class App {
         echo '<link rel="icon" type="image/png" sizes="256x256" href="img/favicon/favicon-256.png">';
         echo '<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">';
         echo '<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">';
-        echo '<link rel="stylesheet" href="index_files/css/style.css?v5">';
+        echo '<link rel="stylesheet" href="index_files/css/style.css?v7">';
         echo '<script src="form_handler.js" defer></script>';
         echo '</head><body>';
 
